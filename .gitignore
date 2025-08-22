@@ -1,1 +1,29 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Node & dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build / Output
+dist/
+build/
+vendor/
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Shopify-specific
+.shopifyignore
 config.yml
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
