@@ -251,10 +251,22 @@
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
       }
+      .desktop_screen{
+        display: none;
+      }
+      .mobile_screen{
+        display: block;
+      }
 
       @media screen and (min-width: 750px) {
         body {
           font-size: 1.6rem;
+        }
+        .desktop_screen{
+          display: block;
+        }
+        .mobile_screen{
+          display: none;
         }
       }
     {% endstyle %} 
@@ -262,6 +274,7 @@
     {{ 'tailwind.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
     {%- if settings.cart_type == 'drawer' -%}
       {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
@@ -295,7 +308,7 @@
         onload="this.media='all'"
       >
     {%- endif -%}
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
@@ -314,8 +327,12 @@
 
     {% sections 'header-group' %}
 
+<<<<<<< HEAD
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {% comment %} <p class="text-red-600">testing pooja hhh aaaaa</p>    {% endcomment %}
+=======
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1"> 
+>>>>>>> 5f3c3ed57afe264b992b7cad6b0bb86f3d4a72a3
     {{ content_for_layout }}
     </main>
 
@@ -325,7 +342,6 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
-
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
