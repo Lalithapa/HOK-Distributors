@@ -1,75 +1,75 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+    "single_banner_tGLbpc": {
+      "type": "single-banner",
+      "name": "Single Banner",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
+        "container": "w-full px-[20px]",
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 4,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "background_color": "#ffffff",
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 36,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "heading_text": "",
+        "link": "#",
+        "image": "shopify:\/\/shop_images\/HOKD_Banner.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/HOKD_Banner_mobile.jpg"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "statistics_kwVhVi": {
+      "type": "statistics",
+      "name": "Stats strip",
       "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": true,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "container": "w-full px-[20px]"
+      }
+    },
+    "single_banner_HfVkqL": {
+      "type": "single-banner",
+      "name": "Single Banner",
+      "settings": {
+        "container": "w-full px-[20px]",
+        "margin_top_desktop": 56,
+        "margin_bottom_desktop": 56,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "background_color": "#ffffff",
+        "margin_top_mobile": 16,
+        "margin_bottom_mobile": 16,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "heading_text": "",
+        "link": "#",
+        "image": "shopify:\/\/shop_images\/HokD_offer.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/HokD_offerMobile.jpg"
+      }
+    },
+    "product_slider_kPdfPy": {
+      "type": "product-slider",
+      "name": "Product slider",
+      "settings": {
+        "container": "page-width",
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 54,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 36,
+        "heading": "New items",
+        "collection": "all-products",
+        "products_to_show": 7,
+        "section_bg": "bg-white",
+        "navigation": false,
+        "scrollbar": true,
+        "loop": false
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "single_banner_tGLbpc",
+    "statistics_kwVhVi",
+    "single_banner_HfVkqL",
+    "product_slider_kPdfPy"
   ]
 }
