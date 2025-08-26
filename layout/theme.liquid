@@ -247,10 +247,22 @@
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
       }
+      .desktop_screen{
+        display: none;
+      }
+      .mobile_screen{
+        display: block;
+      }
 
       @media screen and (min-width: 750px) {
         body {
           font-size: 1.6rem;
+        }
+        .desktop_screen{
+          display: block;
+        }
+        .mobile_screen{
+          display: none;
         }
       }
     {% endstyle %} 
@@ -310,8 +322,7 @@
 
     {% sections 'header-group' %}
 
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      <h1>Testing Done for Hok distributor </h1>    
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1"> 
     {{ content_for_layout }}
     </main>
 
