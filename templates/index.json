@@ -2,7 +2,7 @@
   "sections": {
     "single_banner_tGLbpc": {
       "type": "single-banner",
-      "name": "Single Banner",
+      "name": "Single Banner", 
       "settings": {
         "container": "w-full px-[20px]",
         "margin_top_desktop": 0,
