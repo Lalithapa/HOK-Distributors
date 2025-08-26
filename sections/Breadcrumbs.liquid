@@ -1,0 +1,46 @@
+<div class="py-3 px-4  hidden lg:!block max-w-[160rem] m-auto">
+  <nav class="" aria-label="Breadcrumb">
+    <ol class="flex flex-wrap items-center space-x-2 text-gray-600">
+      <!-- Home -->
+      <li>
+        <a href="{{ routes.root_url }}" class="text-gray-400 text-[12px]">Home</a>
+      </li>
+
+      {% if template contains 'collection' %}
+        <li><span class="text-gray-400 text-[12px]">/</span></li>
+        <li>
+          <a href="{{ routes.collections_url }}" class="hover:text-gray-900 text-[12px]">Collections</a>
+        </li>
+        <li><span class="text-gray-400 text-[12px]">/</span></li>
+        <li class="text-gray-900 text-[12px]">{{ collection.title }}</li>
+
+      {% elsif template contains 'product' %}
+        {% if collection %}
+          <li><span class="text-gray-400 text-[12px]">/</span></li>
+          <li>
+            <a href="{{ collection.url }}" class="hover:text-gray-900 text-[12px]">{{ collection.title }}</a>
+          </li>
+        {% endif %}
+        <li><span class="text-gray-400 text-[12px]">/</span></li>
+        <li><span class="text-gray-400 text-[12px]"> product /</span></li>
+        <li class="text-gray-600 text-[12px]">{{ product.title|truncatewords: 4, '...'}}</li>
+
+      {% elsif template contains 'page' %}
+        <li><span class="text-gray-400 text-[12px]">/</span></li>
+        <li class="text-gray-900 text-[12px]">{{ page.title }}</li>
+
+      {% elsif template contains 'blog' %}
+        <li><span class="text-gray-400 stext-[12px]">/</span></li>
+        <li class="text-gray-900 font-medium text-[12px]">{{ blog.title }}</li>
+
+      {% elsif template contains 'article' %}
+        <li><span class="text-gray-400 text-[12px]">/</span></li>
+        <li>
+          <a href="{{ blog.url }}" class="hover:text-gray-900 text-[12px]">{{ blog.title }}</a>
+        </li>
+        <li><span class="text-gray-400 text-[12px]">/</span></li>
+        <li class="text-gray-900 font-medium text-[12px]">{{ article.title }}</li>
+      {% endif %}
+    </ol>
+  </nav>
+</div>

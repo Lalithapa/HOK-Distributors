@@ -76,7 +76,9 @@
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
-        {% render 'product-media-gallery', variant_images: variant_images %}
+        {% comment %} {% render 'product-media-gallery', variant_images: variant_images %} {% endcomment %}
+         {% render 'custom-media-gallery-slider', variant_images: variant_images %}
+
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
@@ -90,19 +92,30 @@
               {%- when '@app' -%}
                 {% render block %}
               {%- when 'text' -%}
+
                 <p
-                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                  class="!text-[18px] md:!text-[20px] font-semibold text-[#212121] product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
+                  <button 
+                type="button" 
+                class="share-btn  p-2 float-right"
+                onclick="navigator.share ? navigator.share({title: '{{ product.title }}', url: '{{ shop.url }}{{ product.url }}'}) : alert('Copy this link: {{ shop.url }}{{ product.url }}')">
+                
+                {% render 'share-icon', icon: 'share' %}
+              </button>
                 </p>
+               
+
+  
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
+                  <p !text-[14px] md:!text-[14px]>{{ product.title | escape }}</p>
                   <a href="{{ product.url }}" class="product__title">
-                    <h2 class="h1">
+                    <p class="!text-[14px] md:!text-[14px] h1">
                       {{ product.title | escape }}
-                    </h2>
+                    </p>
                   </a>
                 </div>
               {%- when 'price' -%}
@@ -198,6 +211,7 @@
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}
+                <div class="flex gap-[40px] justify-start items-center">
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
                   id="Sku-{{ section.id }}"
@@ -207,6 +221,8 @@
                   <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
+                <p class="text-[12px] text-[#7B676F]">{% render 'share-icon' icon:'sku-icon'%}<span>{{'Top-performing in stores'}}</span></p>
+                </div>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
@@ -789,6 +805,7 @@
       "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
     },
+    
     {
       "type": "sku",
       "name": "t:sections.main-product.blocks.sku.name",
