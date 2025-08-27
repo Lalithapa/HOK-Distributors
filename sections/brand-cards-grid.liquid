@@ -1,0 +1,144 @@
+<section id="section-{{ section.id }}" class="page-width">
+  <div class="mx-auto">
+    {% if section.settings.heading != blank %}
+      <h2 class="text-center text-xl md:text-2xl font-semibold text-gray-900">{{ section.settings.heading }}</h2>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <p class="mt-1 text-center text-sm text-gray-500">{{ section.settings.subheading }}</p>
+    {% endif %}
+
+    <!-- Grid -->
+    <div class="!grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-14 mt-[40px] place-items-center">
+      {% for block in section.blocks %}
+        {% assign bls = block.settings %}
+        <div {{ block.shopify_attributes }}
+
+          class="relative rounded-3xl bg-[#FBFAF5] shadow-xl ring-1 ring-black/5 overflow-hidden">
+          <!-- Top content -->
+          <div class="p-6 text-center">
+            {% if bls.badge_text != blank %}
+              <span class="inline-block rounded-full px-5 py-2 mt-[12px] mb-[20px]  text-[15px] font-bold text-gray-900 shadow"
+                    style="background-color: {{ bls.badge_bg | default: '#FDE047' }};">
+                {{ bls.badge_text }}
+              </span>
+            {% endif %}
+
+            <div class="mt-4 text-center">
+              {% if bls.brand_name_image != blank %}
+                 <img src="{{ bls.brand_name_image | image_url: height:24 }}" alt="{{ bls.brand_name_image.alt | escape }}"
+                 class="object-cover mx-auto my-2" width="auto" height="24">
+              {% endif %}
+              {% if bls.subtitle != blank %}
+                <p class="text-left w-[75%] text-[15px] leading-normal mx-auto text-[#8E8A8A] italic">{{ bls.subtitle }}</p>
+              {% endif %}
+            </div>
+          </div>
+
+          <!-- Image area -->
+          <div class="relative flex items-end justify-center">
+            <img src="{{ bls.image | image_url }}" alt="{{ bls.image.alt | escape }}" class="object-cover" width="100%" height="264">
+
+            <!-- CTA pill {{ bls.cta_link }}-->
+            <a href="#"
+                 class="absolute bottom-7 w-[calc(100%-16px)] inline-flex justify-between items-center rounded-full p-[10px] shadow-lg ring-1 ring-black/5 hover:shadow-xl transition border-2 border-[#E5E4E0]"
+                 style="background-color: {{ bls.cta_bg | default: '#FFFFFF' }};">
+                <span class="text-[16px] font-bold text-gray-900">{{ bls.cta_text | default: 'see brand' }}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" class="mr-3" viewBox="0 0 16 13" fill="none">
+                    <path d="M1 5.75C0.585786 5.75 0.25 6.08579 0.25 6.5C0.25 6.91421 0.585786 7.25 1 7.25V6.5V5.75ZM15.5303 7.03033C15.8232 6.73744 15.8232 6.26256 15.5303 5.96967L10.7574 1.1967C10.4645 0.903806 9.98959 0.903806 9.6967 1.1967C9.40381 1.48959 9.40381 1.96447 9.6967 2.25736L13.9393 6.5L9.6967 10.7426C9.40381 11.0355 9.40381 11.5104 9.6967 11.8033C9.98959 12.0962 10.4645 12.0962 10.7574 11.8033L15.5303 7.03033ZM1 6.5V7.25H15V6.5V5.75H1V6.5Z" fill="black"/>
+                  </svg>
+              </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+    <!-- Brands Strip (HTML + Tailwind only) -->
+  <div class="brands-strip-container mt-[60px] mb-[40px]">
+    <div class="rounded-2xl [background:linear-gradient(90deg,rgba(211,169,0,0.32)_0%,rgba(246,205,82,0.10)_100%)] from-amber-100 to-amber-50 p-[20px]">
+      <div class="flex items-center gap-3 md:gap-5">
+        <!-- Left: Title -->
+        <div class="shrink-0 w-40 md:w-56">
+          <p class="text-sm md:text-[18px] font-semibold text-[#2A2F38]">Other brands that we have</p>
+        </div>
+
+        <!-- Middle: Brand images -->
+        <div class="flex-1">
+          <ul class="flex items-center gap-3 md:gap-4 overflow-x-auto">
+            <!-- Brand tile -->
+            <li>
+              <div class="w-[68px] h-[68px] md:w-[130px] md:h-auto shadow-sm grid place-items-center">
+                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Koric" width="100%" height="100%" loading="lazy" class="rounded-4xl border border-[#3C5865]">
+              </div>
+            </li>
+            <li>
+              <div class="w-[68px] h-[68px] md:w-[130px] md:h-auto shadow-sm grid place-items-center">
+                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Nicka K" width="100%" height="100%" loading="lazy" class="rounded-4xl border border-[#3C5865]">
+              </div>
+            </li>
+            <li>
+              <div class="w-[68px] h-[68px] md:w-[130px] md:h-auto shadow-sm grid place-items-center">
+                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Pinkflash" width="100%" height="100%" loading="lazy" class="rounded-4xl border border-[#3C5865]">
+              </div>
+            </li>
+            <li>
+              <div class="w-[68px] h-[68px] md:w-[130px] md:h-auto shadow-sm grid place-items-center">
+                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Nicka K" width="100%" height="100%" loading="lazy" class="rounded-4xl border border-[#3C5865]">
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: CTA -->
+        <div class="shrink-0">
+          <a href="#"
+             class="inline-flex items-center rounded-full border border-[#3C5865] bg-white/60 hover:bg-white transition px-4 py-2 mr-[20px] text-[11px] md:text-[14px] font-semibold text-[#3C5865]">
+            VIEW ALL BRANDS
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Brand cards (grid)",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Explore the brands we’ve got" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Subheading" },
+    { "type": "range", "id": "cols_lg", "label": "Columns on desktop", "min": 2, "max": 5, "step": 1, "default": 4 },
+  ],
+  "blocks": [
+    {
+      "type": "brand_card",
+      "name": "Brand card",
+      "settings": [
+        { "type": "text", "id": "badge_text", "label": "Badge text", "default": "New stock" },
+        { "type": "color", "id": "badge_bg", "label": "Badge background", "default": "#FDE047" },
+
+        { "type": "image_picker", "id": "brand_name_image", "label": "Brand image" },
+        { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "for business focusing skincare" },
+
+        { "type": "image_picker", "id": "image", "label": "Image" },
+
+        { "type": "text", "id": "cta_text", "label": "CTA text", "default": "see brand" },
+        { "type": "url", "id": "cta_link", "label": "CTA link" },
+        { "type": "color", "id": "cta_bg", "label": "CTA pill background", "default": "#FFFFFF" },
+        { "type": "color", "id": "cta_icon_border", "label": "CTA icon border", "default": "#D1D5DB" }
+      ]
+    }
+  ],
+  "max_blocks": 16,
+  "presets": [
+    {
+      "name": "Brand cards (grid)",
+      "category": "Custom",
+      "blocks": [
+        { "type": "brand_card" },
+        { "type": "brand_card" },
+        { "type": "brand_card" },
+        { "type": "brand_card" }
+      ]
+    }
+  ]
+}
+{% endschema %}
