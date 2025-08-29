@@ -165,7 +165,7 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
-                  {% render 'card-product',
+                  {% comment %} {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
                     image_shape: section.settings.image_shape,
@@ -176,6 +176,11 @@
                     skip_styles: skip_card_product_styles,
                     quick_add: section.settings.quick_add,
                     section_id: section.id
+                  %} {% endcomment %}
+                  {% render 'product-pocket',
+                    card_product: product,
+                    lazy_load: true,
+                    section_id: section.id 
                   %}
                 </li>
                 {%- assign skip_card_product_styles = true -%}
