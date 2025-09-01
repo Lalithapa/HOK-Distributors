@@ -1,4 +1,5 @@
-<div class="product-gallery-product">
+
+<div class="sticky top-[6px] product-gallery-product lg:mt-[72px] lg:mb-[72px] lg:max-h-[525px]">
   <!-- Thumbnail Slider -->
     <!-- Up Arrow -->
      <div class="hidden lg:!block">
@@ -16,7 +17,9 @@
              data-swiper-slide-index="{{ forloop.index0 }}">
           <img src="{{ media | img_url: '200x200' }}" 
                alt="{{ media.alt | escape }}" 
-               class="border rounded" />
+               class="border border-[#F4F4F4]"
+                width="70"
+                height="70" />
         </div>
       {% endfor %}
     </div>
@@ -40,7 +43,10 @@
             {% when 'image' %}
               <img src="{{ media | img_url: '1024x1024' }}" 
                    alt="{{ media.alt | escape }}" 
-                   class="w-full h-auto" />
+                   class="w-[460] h-auto" 
+                    width="460"
+                    height="448"
+                   />
             {% when 'video' %}
               {{ media | video_tag: controls: true, autoplay: false, class: "w-full h-auto" }}
             {% when 'external_video' %}
@@ -55,17 +61,13 @@
   </div>
 </div>
 
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>  
 <script>
   // Thumbnail Swiper
   var thumbSwiper = new Swiper(".thumb-swiper", {
     direction: 'vertical',
     slidesPerView: 5,
-    spaceBetween: 10,
+    spaceBetween: 1,
     watchSlidesProgress: true,
     navigation: {
       nextEl: ".thumb-next", // bottom arrow
@@ -92,7 +94,7 @@
     display: flex;
     gap: 20px;
     align-items: flex-start;
-    position: relative;
+    /* position: relative; */
   }
 .product-gallery-product .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
   left: 35%;  
@@ -108,13 +110,21 @@
   }
   .product-gallery-product .swiper-button-prev {
     top: -3%;
-    left: 4%;
+    left: 2%;
+    height: 27px !important;
+    width: 50px;
+    border-radius: 17px;
+    border: 1px solid #CDCDCD;
   }
   .product-gallery-product .swiper-button-next{
     right: 0;
-    left: 0;
+    left: 3%;
     top:unset;
-    bottom:13%;
+    bottom:-4%;
+     height: 27px !important;
+    width: 50px;
+    border-radius: 17px;
+    border: 1px solid #CDCDCD;
   }
    .product-gallery-product .swiper-button-prev:after, .swiper-button-next:after {
     display:none;
@@ -127,7 +137,10 @@
     height: auto;
     cursor: pointer;
   }
-
+.swiper-slide.cursor-pointer.swiper-slide-visible.swiper-slide-active.swiper-slide-thumb-active img{
+  border:1px solid #848484;
+  border-radius: 10px; 
+}
   .product-gallery-product .thumb-swiper .swiper-button-prev,
   .product-gallery-product .thumb-swiper .swiper-button-next {
     width: 28px;
