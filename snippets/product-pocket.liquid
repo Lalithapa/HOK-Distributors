@@ -77,7 +77,7 @@ assign secondary_image = card_product.images[1].src
           class="product-variant-id" {% if card_product.selected_or_first_available_variant.available==false %} disabled
           {% endif %}>
         <button id="{{ product_form_id }}-submit" type="submit" name="add"
-          class="quick-add__submit flex-1 p-[8px] rounded-full
+          class="quick-add__submit flex-1 py-[8px] rounded-full
                     {% if card_product.selected_or_first_available_variant.available == false %} bg-[#e5e3e3] text-[#9d9d9d] cursor-not-allowed hover:bg-[#e5e3e3]{% else %} bg-[#edcc31] text-gray-900 hover:bg-yellow-300 cursor-pointer {% endif %} font-bold text-[12px] tracking-wide shadow  transition w-full uppercase"
           aria-haspopup="dialog"
           aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}" aria-live="polite"

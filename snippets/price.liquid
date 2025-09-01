@@ -30,7 +30,7 @@
   assign money_price_min = price_min | money
   assign money_price_max = price_max | money
   if settings.currency_code_enabled
-    assign money_price = price | money_with_currency
+    assign money_price = price | money_without_trailing_zeros
     assign money_price_min = price_min | money_with_currency
     assign money_price_max = price_max | money_with_currency
   endif
@@ -91,28 +91,37 @@
         {%- endif -%}
       </div>
       <div class="price__sale">
-        {%- unless product.price_varies == false and product.compare_at_price_varies %}
+        
+        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>  
+        <span class="text-[18px] text-[#212121] font-bold price-item price-item--sale price-item--last">
+          {{ money_price }} 
+        </span>
+          {%- unless product.price_varies == false and product.compare_at_price_varies %}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
           <span>
-            <s class="price-item price-item--regular">
+            <s class="text-[14px] text-[#7D7D7D] font-normal price-item price-item--regular">
               {% if settings.currency_code_enabled %}
-                {{ compare_at_price | money_with_currency }}
+                {{ compare_at_price | money_without_trailing_zeros }}
               {% else %}
-                {{ compare_at_price | money }}
+                {{ compare_at_price | money_without_trailing_zeros }}
               {% endif %}
             </s>
           </span>
         {%- endunless -%}
-        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-        <span class="price-item price-item--sale price-item--last">
-          {{ money_price }}
-        </span>
+        {% if template.name == 'product' %}
+  {% if product.compare_at_price > product.price %}
+    {% assign discount = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price %}
+    <span class="bg-green-600 text-[12px] font-semibold px-6 py-1  text-[#f2f7d3] rounded-[7px]">
+      {{ discount | round }}% Off
+    </span>
+  {% endif %}
+{% endif %}
       </div>
       {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
         {% render 'unit-price', price: product.selected_or_first_available_variant.unit_price, measurement: product.selected_or_first_available_variant.unit_price_measurement %}
       {%- endif -%}
     </div>
-    {%- if show_badges -%}
+    {% comment %} {%- if show_badges -%}
       <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
         {{ 'products.product.on_sale' | t }}
       </span>
@@ -120,6 +129,6 @@
       <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
         {{ 'products.product.sold_out' | t }}
       </span>
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
   </div>
 {% endunless %}
