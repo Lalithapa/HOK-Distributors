@@ -1,3 +1,8 @@
+{% liquid
+assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
+assign primary_image = card_product.images[0].src
+assign secondary_image = card_product.images[1].src
+%}
 <!-- Product Pocket Card -->
 <div class="max-w-[360px] bg-white rounded-2xl shadow-md overflow-hidden box-shadow-pocket">
   <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}">
@@ -5,12 +10,22 @@
     <div class="image-container">
       <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
         <!-- Plus sign -->
-        <!-- Single product with FREE badge -->
         <div class="relative">
-          <div class="relative aspect-[1] rounded-xl bg-[#F9F9F9] overflow-hidden">
-            <div class="absolute -left-3 -bottom-3 w-20 h-20 rounded-full bg-pink-200/70 blur-[2px]"></div>
-            <img src="{{ card_product.featured_image | image_url }}" width="100%" height="100%" alt="Free Product"
+          <div class="aspect-[1] rounded-xl bg-[#F9F9F9] overflow-hidden group">
+            {% comment %} <div class="absolute -left-3 -bottom-3 w-20 h-20 rounded-full bg-pink-200/70 blur-[2px]">
+            </div> {% endcomment %}
+            {% if card_product.images.size > 1 %}
+            <img src="{{ primary_image | image_url }}" width="100%" height="100%"
+              alt="{{ card_product.title | escape }}"
+              class="relative z-[1] h-full w-full object-contain mix-blend-multiply opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+            <img src="{{ secondary_image | image_url }}" width="100%" height="100%"
+              alt="{{ card_product.title | escape }}"
+              class="absolute inset-0 z-[1] h-full w-full object-contain mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {% else %}
+            <img src="{{ card_product.featured_image | image_url }}" width="100%" height="100%"
+              alt="{{ card_product.title | escape }}"
               class="relative z-[1] h-full w-full object-contain mix-blend-multiply">
+            {% endif %}
           </div>
         </div>
       </div>
@@ -20,13 +35,11 @@
     <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}">
       <!-- Text content -->
       <div class="text-content">
-        <h3 class="text-[16px] font-semibold text-gray-900">{{ card_product.vendor }}</h3>
+        <h4 class="text-[16px] font-semibold text-gray-900">{{ card_product.vendor }}</h4>
         <p class="text-[12px] leading-snug text-gray-500 mt-1 line-clamp-2">
           {{ card_product.title | escape }}
         </p>
       </div>
-
-
       <!-- Price row -->
       <div class="flex items-center gap-2 align-center">
         {%- assign product_price = card_product.selected_or_first_available_variant -%}
@@ -52,10 +65,47 @@
       </button>
 
       <!-- Add to Cart -->
-      <button type="button"
+      <product-form data-section-id="{{ section.id }}" class="w-full">
+        {%- form 'product',
+        card_product,
+        id: product_form_id,
+        class: 'form',
+        novalidate: 'novalidate',
+        data-type: 'add-to-cart-form'
+        -%}
+        <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}"
+          class="product-variant-id" {% if card_product.selected_or_first_available_variant.available==false %} disabled
+          {% endif %}>
+        <button id="{{ product_form_id }}-submit" type="submit" name="add"
+          class="quick-add__submit flex-1 py-[8px] rounded-full
+                    {% if card_product.selected_or_first_available_variant.available == false %} bg-[#e5e3e3] text-[#9d9d9d] cursor-not-allowed hover:bg-[#e5e3e3]{% else %} bg-[#edcc31] text-gray-900 hover:bg-yellow-300 cursor-pointer {% endif %} font-bold text-[12px] tracking-wide shadow  transition w-full uppercase"
+          aria-haspopup="dialog"
+          aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}" aria-live="polite"
+          data-sold-out-message="true" {% if card_product.selected_or_first_available_variant.available==false %}
+          disabled {% endif %}>
+          <span>
+            {%- if card_product.selected_or_first_available_variant.available -%}
+            {{ 'products.product.add_to_cart' | t }}
+            {%- else -%}
+            {{ 'products.product.sold_out' | t }}
+            {%- endif -%}
+          </span>
+          <span class="sold-out-message hidden">
+            {{ 'products.product.sold_out' | t }}
+          </span>
+          {%- if horizontal_quick_add -%}
+          <span class="icon-wrap">
+            {{- 'icon-plus.svg' | inline_asset_content -}}
+          </span>
+          {%- endif -%}
+          {%- render 'loading-spinner' -%}
+        </button>
+        {%- endform -%}
+      </product-form>
+      {% comment %} <button type="button"
         class="flex-1 p-[8px] rounded-full bg-yellow-400 text-gray-900 font-bold text-[12px] tracking-wide shadow hover:bg-yellow-300 transition">
         ADD TO CART
-      </button>
+      </button> {% endcomment %}
     </div>
   </div>
 </div>

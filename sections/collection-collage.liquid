@@ -1,0 +1,145 @@
+{%- style -%}
+    .section-{{ section.id }}-margin  {
+      margin-top: {{ section.settings.margin_top_desktop }}px;
+      margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .section-{{ section.id }}-margin  {
+        margin-top: {{ section.settings.margin_top_mobile }}px;
+        margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+      }
+    }
+{%- endstyle -%}
+<section class="page-width section-{{ section.id }}-margin">
+  <div class="mx-auto">
+    <!-- Header -->
+    <div class="flex items-start justify-between gap-4">
+      <h2 class="text-xl md:text-2xl font-semibold text-gray-900">
+        {{ section.settings.title }}
+      </h2>
+
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" class="inline-flex items-center rounded-full border border-[#3C5865] px-[3rem] py-2 text-[14px] font-semibold tracking-wide text-gray-800 hover:bg-gray-100 transition">
+           {{ section.settings.button_label }}
+        </a>
+      {% endif %}
+    </div>
+
+    <!-- Cards -->
+    <ul class="mt-6 !grid grid-cols-3 gap-[24px]">
+      {% for block in section.blocks %}
+        <li {{ block.shopify_attributes }}>
+          {% assign alt = block.settings.alt | default: section.settings.title %}
+          {% if block.settings.link != blank %}<a href="{{ block.settings.link }}" class="group block">{% endif %}
+            <div class="rounded-2xl overflow-hidden bg-white shadow-sm ring-1 ring-black/5 transition group-hover:-translate-y-0.5 group-hover:shadow-md">
+              {% if block.settings.image != blank %}
+                <div class="aspect-[4/3]">
+                    <img src="{{ block.settings.image | image_url }}" alt="{{ alt | escape }}" class="object-contain mix-blend-multiply" loading="lazy" width="100%" height="100%">
+                </div>
+              {% else %}
+                <div class="aspect-[4/3] grid place-items-center text-gray-400 text-sm">Upload image</div>
+              {% endif %}
+            </div>
+          {% if block.settings.link != blank %}</a>{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection Collage",
+  "settings": [
+     {
+    "type": "header",
+    "content": "Desktop Margin"
+    },
+  {
+    "type": "range",
+    "id": "margin_top_desktop",
+    "min": 0,
+    "max": 200,
+    "step": 2,
+    "unit": "px",
+    "label": "Margin Top",
+    "default": 36
+  },
+
+  {
+    "type": "range",
+    "id": "margin_bottom_desktop",
+    "min": 0,
+    "max": 200,
+    "step": 2,
+    "unit": "px",
+    "label": "Margin Bottom",
+    "default": 36
+  },
+   {
+    "type": "header",
+    "content": "Mobile Margin"
+  },
+  {
+    "type": "range",
+    "id": "margin_top_mobile",
+    "min": 0,
+    "max": 200,
+    "step": 2,
+    "unit": "px",
+    "label": "Margin Top",
+    "default": 36
+  },
+  {
+    "type": "range",
+    "id": "margin_bottom_mobile",
+    "min": 0,
+    "max": 200,
+    "step": 2,
+    "unit": "px",
+    "label": "Margin Bottom",
+    "default": 36
+  },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "What's New & Now"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "VIEW ALL"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "alt", "label": "Alt text (optional)" },
+        { "type": "url", "id": "link", "label": "Link (optional)" }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Collection Collage",
+      "blocks": [
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" }
+      ]
+    }
+  ]
+}
+{% endschema %}

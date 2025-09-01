@@ -12,47 +12,47 @@
     }
 {%- endstyle -%}
 
-<section class="section-{{ section.id }}-margin {{ section.settings.section_bg }}">
-  <div class="mx-auto {{ section.settings.container }}"> 
+<section class="section-{{ section.id }}-margin">
+  <div class="{{ section.settings.container }} mx-auto {{ section.settings.section_bg }} rounded-xl"> 
+    <div class="slider-container !py-[44px] {% if section.settings.container != 'page-width' %} page-width{% endif %}">
+      <!-- Header -->
+      <div class="flex items-center justify-between gap-4 pb-[24px]">
+        <h2 class="text-xl font-semibold text-gray-900 pl-[12px]">{{ section.settings.heading }}</h2>
 
-    <!-- Header -->
-    <div class="flex items-center justify-between gap-4 mb-4">
-      <h2 class="text-xl font-semibold text-gray-900">{{ section.settings.heading }}</h2>
-
-      {%- if section.settings.collection.products != blank -%}
-      <a href="{{ section.settings.collection.url }}"
-         class="inline-flex items-center rounded-full border border-gray-300 px-4 py-2 text-xs font-semibold tracking-wide text-gray-800 hover:bg-gray-100 transition">
-        {{ "View All" }}
-      </a>
-      {%- endif -%}
-    </div>
-
-    <!-- Slider -->
-    <div class="relative">
-      <!-- Swiper -->
-      <div class="swiper" id="swiper-{{ section.id }}">
-        <div class="swiper-wrapper px-[12px] pb-[24px]">
-        {% for product in section.settings.collection.products limit: section.settings.products_to_show %}
-          <div class="swiper-slide">
-            <!-- Slide inner: your product card goes here -->
-            {% render 'product-pocket' ,
-                  card_product: product,
-                  lazy_load: true,
-                  section_id: section.id 
-               %}
-          </div>
-          {%- endfor -%}
-        </div>
-
-        {%- if section.settings.scrollbar -%}
-          <div class="swiper-scrollbar !relative"></div>
+        {%- if section.settings.collection.products != blank -%}
+        <a href="{{ section.settings.collection.url }}"
+          class="inline-flex items-center rounded-full border border-[#3C5865] px-[3rem] py-2 text-[14px] font-semibold tracking-wide text-gray-800 hover:bg-gray-100 transition">
+          {{ "View All" }}
+        </a>
         {%- endif -%}
       </div>
+      <!-- Slider -->
+      <div class="relative">
+        <!-- Swiper -->
+        <div class="swiper" id="swiper-{{ section.id }}">
+          <div class="swiper-wrapper px-[12px] pb-[24px]">
+          {% for product in section.settings.collection.products limit: section.settings.products_to_show %}
+            <div class="swiper-slide">
+              <!-- Slide inner: your product card goes here -->
+              {% render 'product-pocket' ,
+                    card_product: product,
+                    lazy_load: true,
+                    section_id: section.id 
+                %}
+            </div>
+            {%- endfor -%}
+          </div>
 
-      {%- if section.settings.navigation -%}
-      <button class="swiper-button-prev !left-0 lg:-left-4 after:!text-base after:!font-bold" aria-label="Previous"></button>
-      <button class="swiper-button-next !right-0 lg:-right-4 after:!text-base after:!font-bold" aria-label="Next"></button>
-      {%- endif -%}
+          {%- if section.settings.scrollbar -%}
+            <div class="swiper-scrollbar !relative"></div>
+          {%- endif -%}
+        </div>
+
+        {%- if section.settings.navigation -%}
+        <button class="swiper-button-prev !left-0 lg:-left-4 after:!text-base after:!font-bold" aria-label="Previous"></button>
+        <button class="swiper-button-next !right-0 lg:-right-4 after:!text-base after:!font-bold" aria-label="Next"></button>
+        {%- endif -%}
+      </div>
     </div>
   </div>
 </section>
@@ -94,7 +94,7 @@
         "default": "page-width",
         "options": [
         { "value": "page-width", "label": "Theme Default" },
-        { "value": "w-full px-[20px]", "label": "Full width" }
+        { "value": "w-[calc(100%-40px)]", "label": "Full width (100%-40px)" }
         ]
     },
     {
@@ -161,6 +161,7 @@
       "default": 6,
       "label": "Number of products to show"
     },
+
     {
       "type": "select",
       "id": "section_bg",
@@ -168,7 +169,7 @@
       "default": "bg-white",
       "options": [
         { "value": "bg-white", "label": "White" },
-        { "value": "bg-gray-50", "label": "Gray 50" },
+        { "value": "bg-[#F1F0F0]", "label": "Gray 50" },
         { "value": "bg-transparent", "label": "Transparent" }
       ]
     },

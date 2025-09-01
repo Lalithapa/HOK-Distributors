@@ -1,0 +1,69 @@
+{% comment %}
+  Simple section: Two images + notice text
+  Save as: sections/two-images-notice.liquid
+{% endcomment %}
+
+<section class="page-width">
+  <div class="mx-auto">
+    <!-- Images -->
+    <div class="grid !flex-nowrap !gap-0">
+      <div class="overflow-hidden bg-gray-50">
+        {% if section.settings.image_left != blank %}
+          {{ section.settings.image_left
+            | image_url: width: 1400
+            | image_tag:
+              class: 'w-full h-full object-cover',
+              alt: section.settings.alt_left,
+              loading: 'lazy',
+              sizes: '(min-width: 768px) 50vw, 100vw' }}
+        {% else %}
+          <div class="aspect-[16/10] grid place-items-center text-gray-400 text-sm">Upload left image</div>
+        {% endif %}
+      </div>
+
+      <div class="overflow-hidden rounded-xl bg-gray-50">
+        {% if section.settings.image_right != blank %}
+          {{ section.settings.image_right
+            | image_url: width: 1400
+            | image_tag:
+              class: 'w-full h-full object-cover',
+              alt: section.settings.alt_right,
+              loading: 'lazy',
+              sizes: '(min-width: 768px) 50vw, 100vw' }}
+        {% else %}
+          <div class="aspect-[16/10] grid place-items-center text-gray-400 text-sm">Upload right image</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Notice -->
+    {% if section.settings.notice != blank %}
+      <div class="my-[50px] rounded-2xl border border-[#E6E6E6] bg-white p-5 md:p-20">
+        <p class="w-2/3 text-center text-sm md:text-[15px] leading-relaxed text-black m-auto">
+          {{ section.settings.notice }}
+        </p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Two images + notice",
+  "settings": [
+    { "type": "image_picker", "id": "image_left", "label": "Left image" },
+    { "type": "text", "id": "alt_left", "label": "Left image alt (optional)" },
+    { "type": "image_picker", "id": "image_right", "label": "Right image" },
+    { "type": "text", "id": "alt_right", "label": "Right image alt (optional)" },
+    {
+      "type": "text",
+      "id": "notice",
+      "label": "Notice text",
+      "default": "All sales are final. In case of damaged items or discrepancies, please reach out within 48 hours of delivery for resolution."
+    }
+  ],
+  "presets": [
+    { "name": "Two images with notice" }
+  ]
+}
+{% endschema %}

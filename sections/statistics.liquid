@@ -1,6 +1,11 @@
 <!-- Stats strip -->
-<section class="{{ section.settings.container }} relative bg-white">
-  <div class="mx-auto">
+<section class="{{ section.settings.container }} relative bg-white  
+  {% if section.settings.show_after_login %}
+    {% unless customer %}hidden{% endunless %}
+  {% else %}
+    {% if customer %}hidden{% endif %}
+  {% endif %}">
+<div class="mx-auto">
     <div class="relative rounded-2xl border border-gray-200 bg-[#F5F5F5] shadow-sm">
       <div class="grid gap-8 px-6 !py-[35px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 justify-evenly">
         <!-- Item 1 -->
@@ -68,8 +73,14 @@
       "default": "page-width",
       "options": [
         { "value": "page-width", "label": "Theme Default" },
-        { "value": "w-full px-[20px]", "label": "Full width" }
+        { "value": "w-[calc(100%-40px)]", "label": "Full width (100%-40px)" }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_after_login",
+      "label": "Show Stats Strip After Login",
+      "default": false
     }
   ],
   "presets": [
