@@ -95,7 +95,8 @@
       ],
       "custom_css": [
         "button.shopify-payment-button__button.shopify-payment-button__button--unbranded,.quantity__label.form__label,.product-form__error-message-wrapper {display: none;}",
-        ".button--secondary:after {display: none;}",
+        ".product__info-container .product-form,.product-form__input,.product-form__submit {margin: 0 !important;}",
+        ".button--secondary:after,.product-form__buttons .button:after{display: none;}",
         ".product-form__submit.button {background-color: #edcc31; border-radius: 0 100px 100px 0; text-transform: uppercase;}",
         ".quantity:after {box-shadow: unset;}",
         "ul {list-style: inside;}"
@@ -112,15 +113,21 @@
         "image_zoom": "none",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
     "related-products": {
       "type": "related-products",
+      "custom_css": [
+        ".box-shadow-pocket {box-shadow: unset;}",
+        ".pdp_price-row {gap: 8px !important; margin-top: 8px;}",
+        "@media screen and (max-width: 768px) {.pdp_price-row > :first-child {font-size: 14px; } .pdp_price-row .discont-tag {font-size: 11px; font-weight: 500; line-height: normal; letter-spacing: -0.55px; } .pdp_price-row {gap: 2px !important; }}"
+      ],
       "settings": {
-        "heading": "More from Makeup",
+        "heading": "More from",
         "heading_size": "h2",
+        "show_cta": true,
         "products_to_show": 8,
         "columns_desktop": 5,
         "columns_mobile": "2",
@@ -130,12 +137,21 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": true,
-        "padding_top": 36,
-        "padding_bottom": 28
+        "padding_top": 0,
+        "padding_bottom": 28,
+        "margin_top_desktop": 72,
+        "margin_bottom_desktop": 36,
+        "margin_top_mobile": 32,
+        "margin_bottom_mobile": 20
       }
     },
     "custom_best_seller_KiJLBX": {
       "type": "custom-best-seller",
+      "custom_css": [
+        ".box-shadow-pocket {box-shadow: unset;}",
+        ".pdp_price-row {gap: 8px !important; margin-top: 8px;}",
+        "@media screen and (max-width: 768px) {.pdp_price-row > :nth-child(3) {font-size: 11px; font-weight: 500; line-height: normal; letter-spacing: -0.55px; } .pdp_price-row {gap: 2px !important; }}"
+      ],
       "name": "Best Sellers",
       "settings": {
         "heading": "Customers also bought",
@@ -149,13 +165,17 @@
         "show_vendor": false,
         "show_rating": false,
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "margin_top_desktop": 72,
+        "margin_bottom_desktop": 72,
+        "margin_top_mobile": 32,
+        "margin_bottom_mobile": 20
       }
     }
-  }, 
+  },
   "order": [
-  "main",
+    "main",
     "related-products",
     "custom_best_seller_KiJLBX"
   ]
