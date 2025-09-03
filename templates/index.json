@@ -20,7 +20,7 @@
         "padding_bottom_desktop": 0,
         "background_color": "#ffffff",
         "margin_top_mobile": 0,
-        "margin_bottom_mobile": 36,
+        "margin_bottom_mobile": 8,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "heading_text": "",
@@ -33,7 +33,8 @@
       "type": "statistics",
       "name": "Stats strip",
       "settings": {
-        "container": "w-full px-[16px] lg:px-[20px]"
+        "container": "w-full px-[16px] lg:px-[20px]",
+        "show_after_login": false
       }
     },
     "collection_collage_VV8CNg": {
@@ -73,8 +74,8 @@
       "settings": {
         "margin_top_desktop": 56,
         "margin_bottom_desktop": 74,
-        "margin_top_mobile": 36,
-        "margin_bottom_mobile": 36,
+        "margin_top_mobile": 56,
+        "margin_bottom_mobile": 56,
         "title": "What's New & Now",
         "button_label": "VIEW ALL",
         "button_link": "shopify://collections"
@@ -107,8 +108,8 @@
         "container": "page-width",
         "margin_top_desktop": 36,
         "margin_bottom_desktop": 54,
-        "margin_top_mobile": 36,
-        "margin_bottom_mobile": 36,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 12,
         "heading": "New items",
         "collection": "all-products",
         "products_to_show": 7,
@@ -128,24 +129,24 @@
         "padding_top_desktop": 0,
         "padding_bottom_desktop": 0,
         "background_color": "#ffffff",
-        "margin_top_mobile": 16,
-        "margin_bottom_mobile": 16,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "heading_text": "",
         "link": "#",
         "image": "shopify://shop_images/clearence_deal.jpg",
-        "image_mobile": "shopify://shop_images/HokD_offerMobile.jpg"
+        "image_mobile": "shopify://shop_images/Clearence_dEAL_1c8d856d-95e8-4f0e-8b3e-5b82cd57f8df.jpg"
       }
     },
     "product_slider_rMpNYi": {
       "type": "product-slider",
       "name": "Product slider",
       "settings": {
-        "container": "w-[calc(100%-40px)]",
+        "container": "w-full lg:w-[calc(100%-40px)]",
         "margin_top_desktop": 36,
         "margin_bottom_desktop": 54,
-        "margin_top_mobile": 36,
+        "margin_top_mobile": 56,
         "margin_bottom_mobile": 36,
         "heading": "Popular items",
         "collection": "bh-cosmetics",
