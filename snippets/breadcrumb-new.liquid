@@ -1,29 +1,29 @@
-<div class=" hidden lg:!block max-w-[160rem] m-auto">
+<div class=" hidden lg:!block max-w-[160rem] m-auto -translate-x-[20px]">
   <nav class="" aria-label="Breadcrumb">
-    <ol class="flex flex-wrap items-center space-x-2 text-gray-600 ">
+    <ol class="flex flex-wrap items-center space-x-2 text-[#B1B1B1] pt-[40px]">
       <!-- Home -->
-      <li>
-        <a href="{{ routes.root_url }}" class="text-gray-400 text-[12px]">Home</a>
+      <li class="text-[12px] font-medium text-[#B1B1B1] leading-normal not-italic">
+        <a href="{{ routes.root_url }}" class="text-[12px] font-medium text-[#B1B1B1] leading-normal not-italic">Home</a>
       </li>
 
       {% if template contains 'collection' %}
-        <li><span class="text-gray-400 text-[12px]">/</span></li>
-        <li>
-          <a href="{{ routes.collections_url }}" class="hover:text-gray-900 text-[12px]">Collections</a>
+        <li><span class="text-[#B1B1B1]  text-[12px]">/</span></li>
+        <li class="text-[12px] font-medium text-[#B1B1B1] leading-normal not-italic">
+          <a href="{{ routes.collections_url }}" class=" text-[12px] font-medium text-[#B1B1B1] leading-normal not-italic">Collections</a>
         </li>
         <li><span class="text-gray-400 text-[12px]">/</span></li>
         <li class="text-gray-900 text-[12px]">{{ collection.title }}</li>
 
       {% elsif template contains 'product' %}
         {% if collection %}
-          <li><span class="text-gray-400 text-[12px]">/</span></li>
+          <li><span class="text-[#B1B1B1]  text-[12px]">/</span></li>
           <li>
             <a href="{{ collection.url }}" class="hover:text-gray-900 text-[12px]">{{ collection.title }}</a>
           </li>
         {% endif %}
         <li><span class="text-gray-400 text-[12px]">/</span></li>
-        <li><a href="{{ product.collections.first.title }}" class="text-gray-400 text-[12px]"> Collection /</a></li>
-        <li class="text-gray-600 text-[12px]">{{ product.title|truncatewords: 4, '...'}}</li>
+        <li><a href="{{ product.collections.first.title }}" class="text-[#B1B1B1]  text-[12px]"> Collection /</a></li>
+        <li class="text-[#626262] text-[12px] font-medium leading-normal not-italic">{{ product.title|truncatewords: 4, '...'}}</li>
 
       {% elsif template contains 'page' %}
         <li><span class="text-gray-400 text-[12px]">/</span></li>

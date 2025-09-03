@@ -2,12 +2,20 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
+ .section-{{ section.id }} {
+    margin-top: {{ section.settings.margin_top_mobile }}px;
+    margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+  }
   @media screen and (min-width: 750px) {
+   .section-{{ section.id }} {
+  margin-top: {{ section.settings.margin_top_desktop }}px;
+  margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -16,9 +24,9 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="best-sellers page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="best-sellers page-width section-{{ section.id }}-padding section-{{ section.id }}  isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     {% if section.settings.heading != blank %}
-      <h2 class="!text-[20px] !text-[#2A2F38] related-products__heading inline-richtext {{ section.settings.heading_size }}">
+      <h2 class="!text-[16px] lg:!text-[20px] !text-[#2A2F38] mb-[24px] related-products__heading inline-richtext {{ section.settings.heading_size }}">
         {{ section.settings.heading }}
       </h2>
     {% endif %}
@@ -27,14 +35,14 @@
 
     {% if best_sellers.size > 0 %}
       <ul
-        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down  lg:!gap-y-[32px]"
         role="list"
       >
         {% assign skip_card_product_styles = false %}
         {% for product in best_sellers limit: section.settings.products_to_show %}
-          <li class="grid__item">
-            {% render 'card-product',
-              card_product: product, 
+          <li class="grid__item lg:pr-[24px] pr-[5px]">
+            {% render 'product-pocket',
+              card_product: product,
               media_aspect_ratio: section.settings.image_ratio,
               image_shape: section.settings.image_shape,
               show_secondary_image: section.settings.show_secondary_image,
@@ -164,7 +172,48 @@
       "unit": "px",
       "label": "Padding bottom",
       "default": 36
-    }
+    },
+    {
+  "type": "range",
+  "id": "margin_top_desktop",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "unit": "px",
+  "label": "Margin top (desktop)",
+  "default": 36
+},
+{
+  "type": "range",
+  "id": "margin_bottom_desktop",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "unit": "px",
+  "label": "Margin bottom (desktop)",
+  "default": 36
+},
+{
+  "type": "range",
+  "id": "margin_top_mobile",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "unit": "px",
+  "label": "Margin top (mobile)",
+  "default": 20
+},
+{
+  "type": "range",
+  "id": "margin_bottom_mobile",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "unit": "px",
+  "label": "Margin bottom (mobile)",
+  "default": 20
+}
+
   ],
   "presets": [
     {

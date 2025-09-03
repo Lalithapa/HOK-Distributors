@@ -30,7 +30,7 @@
   assign money_price_min = price_min | money
   assign money_price_max = price_max | money
   if settings.currency_code_enabled
-    assign money_price = price | money_without_trailing_zeros
+    assign money_price = price | money_without_trailing_zeros | replace: ',', ''
     assign money_price_min = price_min | money_with_currency
     assign money_price_max = price_max | money_with_currency
   endif
@@ -93,17 +93,17 @@
       <div class="price__sale">
         
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>  
-        <span class="text-[18px] text-[#212121] font-bold price-item price-item--sale price-item--last">
+        <span class="!text-[18px] text-[#212121] font-bold price-item price-item--sale price-item--last tracking-[0px]">
           {{ money_price }} 
         </span>
           {%- unless product.price_varies == false and product.compare_at_price_varies %}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
           <span>
-            <s class="text-[14px] text-[#7D7D7D] font-normal price-item price-item--regular">
+            <s class="!text-[14px] text-[#7D7D7D] font-normal price-item price-item--regular tracking-[0px]">
               {% if settings.currency_code_enabled %}
-                {{ compare_at_price | money_without_trailing_zeros }}
+                {{ compare_at_price | money_without_trailing_zeros | replace: ',', ''}}
               {% else %}
-                {{ compare_at_price | money_without_trailing_zeros }}
+                {{ compare_at_price | money_without_trailing_zeros | replace: ',', ''}}
               {% endif %}
             </s>
           </span>

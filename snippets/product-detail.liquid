@@ -1,5 +1,5 @@
 <div class="product-details">
-  <h3 class="text-[#000] text-[14px] font-semibold">Product Details</h3>
+  <h3 class="text-[#000] !text-[14px] font-semibold  not-italic  leading-normal">Product Details</h3>
 
   <p class="text-[#606060] text-[12px]">
     <span class="text-[#171717] font-semibold">Shade</span><br>
@@ -79,18 +79,18 @@
 
   <button id="toggle-details" class="flex items-center gap-1 text-[#4B6E7E] font-semibold text-[12px]">
     View more details
-    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
-      <path d="M9.5 5.25L5.4681 0.980933C5.34972 0.855583 5.15028 0.855583 5.0319 0.980934L1 5.25" stroke="#4B6E7E" stroke-width="1.4" stroke-linecap="round"/>
-    </svg>
+     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none" class="rotate-180">
+          <path d="M9.5 5.25L5.4681 0.980933C5.34972 0.855583 5.15028 0.855583 5.0319 0.980934L1 5.25" stroke="#4B6E7E" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
   </button>
 </div>
 
 <div id="more-details" class="hidden mt-2">
   <p class="text-gray-600 text-sm">
     View less details
-    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none" class="rotate-180">
-      <path d="M9.5 5.25L5.4681 0.980933C5.34972 0.855583 5.15028 0.855583 5.0319 0.980934L1 5.25" stroke="#4B6E7E" stroke-width="1.4" stroke-linecap="round"/>
-    </svg>
+   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none" class="">
+          <path d="M9.5 5.25L5.4681 0.980933C5.34972 0.855583 5.15028 0.855583 5.0319 0.980934L1 5.25" stroke="#4B6E7E" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
   </p>
 </div>
 
@@ -104,7 +104,7 @@
         details.classList.remove('hidden');
         toggleBtn.innerHTML = `
         View less details
-        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none" class="rotate-180">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
           <path d="M9.5 5.25L5.4681 0.980933C5.34972 0.855583 5.15028 0.855583 5.0319 0.980934L1 5.25" stroke="#4B6E7E" stroke-width="1.4" stroke-linecap="round"/>
         </svg>
       `;
@@ -112,7 +112,7 @@
         details.classList.add('hidden');
         toggleBtn.innerHTML = `
         View more details
-        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
+         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none" class="rotate-180">
           <path d="M9.5 5.25L5.4681 0.980933C5.34972 0.855583 5.15028 0.855583 5.0319 0.980934L1 5.25" stroke="#4B6E7E" stroke-width="1.4" stroke-linecap="round"/>
         </svg>
       `;
