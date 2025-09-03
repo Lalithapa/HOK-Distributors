@@ -17,7 +17,7 @@
     <div class="slider-container !py-[44px] {% if section.settings.container != 'page-width' %} page-width{% endif %}">
       <!-- Header -->
       <div class="flex items-center justify-between gap-4 pb-[24px]">
-        <h2 class="text-xl font-semibold text-gray-900 pl-[12px]">{{ section.settings.heading }}</h2>
+        <h2 class="text-xl font-semibold text-gray-900 lg:pl-[12px]">{{ section.settings.heading }}</h2>
 
         {%- if section.settings.collection.products != blank -%}
         <a href="{{ section.settings.collection.url }}"
@@ -30,14 +30,14 @@
       <div class="relative">
         <!-- Swiper -->
         <div class="swiper" id="swiper-{{ section.id }}">
-          <div class="swiper-wrapper px-[12px] pb-[24px]">
+          <div class="swiper-wrapper lg:px-[12px] pb-[24px]">
           {% for product in section.settings.collection.products limit: section.settings.products_to_show %}
-            <div class="swiper-slide">
+            <div class="swiper-slide !h-auto">
               <!-- Slide inner: your product card goes here -->
               {% render 'product-pocket' ,
-                    card_product: product,
-                    lazy_load: true,
-                    section_id: section.id 
+                  card_product: product,
+                  lazy_load: true,
+                  section_id: section.id 
                 %}
             </div>
             {%- endfor -%}
@@ -60,11 +60,10 @@
   (function() {
     const swiperEl = document.querySelector('#swiper-{{ section.id }}');
     if (!swiperEl) return;
-
     /* eslint-disable no-new */
     new Swiper(swiperEl, {
-      slidesPerView: 1.15,
-      spaceBetween: 32,
+      slidesPerView: 1.4,
+      spaceBetween: 12,
       grabCursor: true,
       loop: {{ section.settings.loop | json }},
       navigation: {
@@ -75,9 +74,10 @@
         el:  swiperEl.parentElement.querySelector('.swiper-scrollbar')
       },
       breakpoints: {
-        640: { slidesPerView: 2, spaceBetween: 18 },
-        768: { slidesPerView: 3, spaceBetween: 20 },
-        1024:{ slidesPerView: 4, spaceBetween: 32 }
+        564: { slidesPerView: 1.5, spaceBetween: 12 },
+        768: { slidesPerView: 2.5, spaceBetween: 20 },
+        1024:{ slidesPerView: 3, spaceBetween: 24 },
+        1400:{ slidesPerView: 4, spaceBetween: 32 }
       }
     });
   })();
@@ -94,7 +94,7 @@
         "default": "page-width",
         "options": [
         { "value": "page-width", "label": "Theme Default" },
-        { "value": "w-[calc(100%-40px)]", "label": "Full width (100%-40px)" }
+        { "value": "w-full lg:w-[calc(100%-40px)]", "label": "Full width (100%-40px)" }
         ]
     },
     {

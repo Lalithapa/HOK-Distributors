@@ -13,7 +13,7 @@
       "type": "single-banner",
       "name": "Single Banner",
       "settings": {
-        "container": "w-full px-[20px]",
+        "container": "w-full px-[16px] lg:px-[20px]",
         "margin_top_desktop": 0,
         "margin_bottom_desktop": 4,
         "padding_top_desktop": 0,
@@ -33,7 +33,7 @@
       "type": "statistics",
       "name": "Stats strip",
       "settings": {
-        "container": "w-full px-[20px]"
+        "container": "w-full px-[16px] lg:px-[20px]"
       }
     },
     "collection_collage_VV8CNg": {
@@ -84,7 +84,7 @@
       "type": "single-banner",
       "name": "Single Banner",
       "settings": {
-        "container": "w-full px-[20px]",
+        "container": "w-full px-[16px] lg:px-[20px]",
         "margin_top_desktop": 56,
         "margin_bottom_desktop": 56,
         "padding_top_desktop": 0,

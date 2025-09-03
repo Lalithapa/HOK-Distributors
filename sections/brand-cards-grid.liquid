@@ -8,7 +8,7 @@
     {% endif %}
 
     <!-- Grid -->
-    <div class="!grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-14 mt-[40px] place-items-center">
+    <div class="!grid [grid-template-columns:repeat(4,minmax(calc(50%-20px),1fr))] lg:grid-cols-4 mt-[40px] !mb-[16px] place-items-stretch gap-6 lg:gap-14 overflow-x-auto custom-scrollbar">
       {% for block in section.blocks %}
         {% assign bls = block.settings %}
         <div {{ block.shopify_attributes }}
@@ -17,19 +17,19 @@
           <!-- Top content -->
           <div class="p-6 text-center">
             {% if bls.badge_text != blank %}
-              <span class="inline-block rounded-full px-5 py-2 mt-[12px] mb-[20px]  text-[15px] font-bold text-gray-900 shadow"
+              <span class="inline-block rounded-full px-8 lgpx-5 py-1 lg:py-2 mb-[16px] lg:mbt-[12px] text-[12px] lg:text-[15px] font-bold text-gray-900 shadow"
                     style="background-color: {{ bls.badge_bg | default: '#FDE047' }};">
                 {{ bls.badge_text }}
               </span>
             {% endif %}
 
-            <div class="mt-4 text-center">
+            <div class="lg:mt-4 text-center">
               {% if bls.brand_name_image != blank %}
                  <img src="{{ bls.brand_name_image | image_url: height:24 }}" alt="{{ bls.brand_name_image.alt | escape }}"
-                 class="object-cover mx-auto my-2" width="auto" height="24">
+                 class="object-cover mx-auto my-2 h-[18px] lg:h-[24px]" width="auto" height="24">
               {% endif %}
               {% if bls.subtitle != blank %}
-                <p class="text-left w-[75%] text-[15px] leading-normal mx-auto text-[#8E8A8A] italic">{{ bls.subtitle }}</p>
+                <p class="text-left lg:w-[75%] text-[11px] lg:text-[15px] leading-normal mx-auto text-[#8E8A8A] italic">{{ bls.subtitle }}</p>
               {% endif %}
             </div>
           </div>
@@ -40,7 +40,7 @@
 
             <!-- CTA pill {{ bls.cta_link }}-->
             <a href="#"
-                 class="absolute bottom-7 w-[calc(100%-16px)] inline-flex justify-between items-center rounded-full p-[10px] shadow-lg ring-1 ring-black/5 hover:shadow-xl transition border-2 border-[#E5E4E0]"
+                 class="absolute bottom-[5px] lg:bottom-7 w-[calc(100%-10px)] lg:w-[calc(100%-16px)] inline-flex justify-between items-center rounded-full p-[10px] shadow-lg ring-1 ring-black/5 hover:shadow-xl transition border-1 lg:border-2 border-[#E5E4E0]"
                  style="background-color: {{ bls.cta_bg | default: '#FFFFFF' }};">
                 <span class="text-[16px] font-bold text-gray-900">{{ bls.cta_text | default: 'see brand' }}</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" class="mr-3" viewBox="0 0 16 13" fill="none">
@@ -54,42 +54,42 @@
   </div>
     <!-- Brands Strip (HTML + Tailwind only) -->
   <div class="brands-strip-container mt-[60px] mb-[40px]">
-    <div class="rounded-2xl [background:linear-gradient(90deg,rgba(211,169,0,0.32)_0%,rgba(246,205,82,0.10)_100%)] from-amber-100 to-amber-50 p-[20px]">
-      <div class="flex items-center gap-3 md:gap-5">
+    <div class="rounded-2xl [background:linear-gradient(90deg,rgba(211,169,0,0.32)_0%,rgba(246,205,82,0.10)_100%)] from-amber-100 to-amber-50 p-[16px] lg:p-[20px]">
+      <div class="flex items-center gap-[4px] lg:gap-5 flex-wrap lg:flex-nowrap">
         <!-- Left: Title -->
-        <div class="shrink-0 w-40 md:w-75">
-          <p class="text-sm md:text-[18px] font-semibold text-[#2A2F38]">Other brands that we have</p>
+        <div class="shrink-0 w-[85px] md:w-75">
+          <p class="text-[12px] lg:text-[18px] font-semibold text-[#2A2F38] tracking-normal">Other brands that we have</p>
         </div>
 
         <!-- Middle: Brand images -->
         <div class="flex-1">
-          <ul class="flex items-center gap-3 md:gap-4 overflow-x-auto">
+          <ul class="flex items-center gap-[4px] md:gap-4 overflow-x-auto [&>div]:h-[auto] [&>div]:shadow-sm [&>div]:!grid [&>div]:place-items-center">
             <!-- Brand tile -->
             <li>
-              <div class="w-[68px] h-[68px] md:w-[130px] md:h-auto shadow-sm grid place-items-center">
-                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Koric" width="100%" height="100%" loading="lazy" class="rounded-4xl border border-[#3C5865]">
+              <div class="w-[57px] lg:w-[130px]">
+                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Koric" width="100%" height="100%" loading="lazy" class="rounded-[8px] lg:rounded-4xl border border-[#3C5865]">
               </div>
             </li>
             <li>
-              <div class="w-[68px] h-[68px] md:w-[130px] md:h-auto shadow-sm grid place-items-center">
-                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Nicka K" width="100%" height="100%" loading="lazy" class="rounded-4xl border border-[#3C5865]">
+              <div  class="w-[57px] lg:w-[130px]">
+                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Nicka K" width="100%" height="100%" loading="lazy" class="rounded-[8px] lg:rounded-4xl border border-[#3C5865]">
               </div>
             </li>
             <li>
-              <div class="w-[68px] h-[68px] md:w-[130px] md:h-auto shadow-sm grid place-items-center">
-                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Pinkflash" width="100%" height="100%" loading="lazy" class="rounded-4xl border border-[#3C5865]">
+              <div  class="w-[57px] lg:w-[130px]">
+                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Pinkflash" width="100%" height="100%" loading="lazy" class="rounded-[8px] lg:rounded-4xl border border-[#3C5865]">
               </div>
             </li>
             <li>
-              <div class="w-[68px] h-[68px] md:w-[130px] md:h-auto shadow-sm grid place-items-center">
-                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Nicka K" width="100%" height="100%" loading="lazy" class="rounded-4xl border border-[#3C5865]">
+              <div  class="w-[57px] lg:w-[130px]">
+                <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/main.png?v=1756291577" alt="Nicka K" width="100%" height="100%" loading="lazy" class="rounded-[8px] lg:rounded-4xl border border-[#3C5865]">
               </div>
             </li>
           </ul>
         </div>
 
         <!-- Right: CTA -->
-        <div class="shrink-0">
+        <div class="shrink-0 desktop_screen">
           <a href="#"
              class="inline-flex items-center rounded-full border border-[#3C5865] bg-white/60 hover:bg-white transition px-8 py-2 mr-[20px] text-[11px] md:text-[14px] font-semibold text-[#3C5865]">
             VIEW ALL BRANDS
