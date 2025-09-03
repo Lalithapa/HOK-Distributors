@@ -4,7 +4,7 @@ assign primary_image = card_product.images[0].src
 assign secondary_image = card_product.images[1].src
 %}
 <!-- Product Pocket Card -->
-<div class="max-w-[360px] bg-white rounded-2xl shadow-md overflow-hidden box-shadow-pocket">
+<div class="max-w-[360px] h-full bg-white rounded-2xl shadow-md overflow-hidden box-shadow-pocket">
   <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}">
     <!-- Top: bundle visuals -->
     <div class="image-container">
@@ -32,22 +32,22 @@ assign secondary_image = card_product.images[1].src
     </div>
   </a>
   <div class="flex gap-3 flex-col px-[12px] py-[14px]">
-    <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}">
+    <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}" class="flex flex-col gap-3">
       <!-- Text content -->
       <div class="text-content">
-        <h4 class="text-[16px] font-semibold text-gray-900">{{ card_product.vendor }}</h4>
+        <h4 class="text-[13px] lg:text-[16px] font-semibold text-gray-900">{{ card_product.vendor }}</h4>
         <p class="text-[12px] leading-snug text-gray-500 mt-1 line-clamp-2">
           {{ card_product.title | escape }}
         </p>
       </div>
       <!-- Price row -->
-      <div class="flex items-center gap-2 align-center">
+      <div class="flex items-center gap-2 align-center tracking-normal">
         {%- assign product_price = card_product.selected_or_first_available_variant -%}
-        <div class="text-[16px] font-extrabold text-gray-900">{{ product_price.price | money_with_currency }}</div>
-        <div class="text-[14px] text-[#585858] line-through">{{ product_price.compare_at_price | money_with_currency }}
+        <div class="text-[14px] lg:text-[16px] font-extrabold text-gray-900">{{ product_price.price | money_with_currency }}</div>
+        <div class="text-[12px] lg:text-[14px] text-[#585858] line-through">{{ product_price.compare_at_price | money_with_currency }}
         </div>
         <span
-          class="ml-2 inline-flex items-center rounded-xl bg-[#09980E] text-white  text-[12px] font-semibold px-2.5 py-1 leading-normal">
+          class="ml-2 inline-flex items-center rounded-xl lg:bg-[#09980E]  text-[#6D930C] lg:text-white text-[12px] font-semibold px-2.5 py-1 leading-normal">
           20% Off
         </span>
       </div>

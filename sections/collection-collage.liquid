@@ -27,7 +27,7 @@
     </div>
 
     <!-- Cards -->
-    <ul class="mt-6 !grid grid-cols-3 gap-[24px]">
+    <ul class="mt-6 !grid grid-flow-col auto-cols-[66.666%] gap-6 overflow-x-auto lg:grid-flow-row lg:auto-cols-auto lg:grid-cols-3 lg:overflow-visible snap-x snap-mandatory [&>*]:snap-start custom-scrollbar">
       {% for block in section.blocks %}
         <li {{ block.shopify_attributes }}>
           {% assign alt = block.settings.alt | default: section.settings.title %}
