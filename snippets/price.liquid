@@ -111,7 +111,7 @@
         {% if template.name == 'product' %}
   {% if product.compare_at_price > product.price %}
     {% assign discount = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price %}
-    <span class="bg-green-600 text-[12px] font-semibold px-6 py-1  text-[#f2f7d3] rounded-[7px]">
+    <span class="bg-green-600 text-[12px] font-semibold px-3 py-1  text-[#f2f7d3] rounded-[7px]">
       {{ discount | round }}% Off
     </span>
   {% endif %}

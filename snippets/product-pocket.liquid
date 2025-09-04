@@ -43,8 +43,8 @@ assign secondary_image = card_product.images[1].src
       <!-- Price row -->
       <div class="flex items-center gap-2 align-center tracking-normal">
         {%- assign product_price = card_product.selected_or_first_available_variant -%}
-        <div class="text-[14px] lg:text-[16px] font-extrabold text-gray-900">{{ product_price.price | money_with_currency }}</div>
-        <div class="text-[12px] lg:text-[14px] text-[#585858] line-through">{{ product_price.compare_at_price | money_with_currency }}
+        <div class="text-[14px] lg:text-[16px] font-extrabold text-gray-900">{{ product_price.price | money_without_trailing_zeros }}</div>
+        <div class="text-[12px] lg:text-[14px] text-[#585858] line-through">{{ product_price.compare_at_price | money_without_trailing_zeros }}
         </div>
         <span
           class="ml-2 inline-flex items-center rounded-xl lg:bg-[#09980E]  text-[#6D930C] lg:text-white text-[12px] font-semibold px-2.5 py-1 leading-normal">

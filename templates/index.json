@@ -290,6 +290,19 @@
         "cols_lg": 4
       }
     },
+    "two_images_notice_CJWUme": {
+      "type": "two-images-notice",
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.img-first {display: none; }}"
+      ],
+      "name": "Two images with notice",
+      "settings": {
+        "image_left": "shopify://shop_images/Rectangle_34625213.jpg",
+        "alt_left": "Eye Shadow",
+        "alt_right": "",
+        "notice": ""
+      }
+    },
     "single_banner_y8eF4L": {
       "type": "single-banner",
       "name": "Single Banner",
@@ -604,6 +617,9 @@
     },
     "two_images_notice_NWPAec": {
       "type": "two-images-notice",
+      "custom_css": [
+        "@media screen and (max-width: 768px) {.img-first {display: none; }}"
+      ],
       "name": "Two images with notice",
       "settings": {
         "image_left": "shopify://shop_images/Rectangle_34625213.jpg",
@@ -623,6 +639,7 @@
     "single_banner_qrfgNN",
     "product_slider_rMpNYi",
     "brand_cards_grid_ctnUHm",
+    "two_images_notice_CJWUme",
     "single_banner_y8eF4L",
     "collection_category_WQY69b",
     "collection_category_zDCktc",
