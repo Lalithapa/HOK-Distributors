@@ -1,0 +1,209 @@
+{% comment %}
+New Footer (Tailwind)
+File: sections/new-footer.liquid
+- Left: "Let's get in touch" + contact form + socials
+- Right: email, short copy, 2 menus, address, hours, phones, payment badges
+{% endcomment %}
+
+<section class="w-full bg-[#242932] px-4 lg:px-4" role="contentinfo" aria-label="Footer">
+    <div class="page-width mx-auto">
+        <div class="!grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 py-16 lg:py-30">
+            {%- comment -%} LEFT: Heading + Contact Form {%- endcomment -%}
+            <div class="flex flex-col">
+                {%- comment -%} Heading {%- endcomment -%}
+                {% if section.settings.heading != blank %}
+                <p class="text-[24px] lg:text-[60px] font-semibold text-white tracking-tight">{{
+                    section.settings.heading }}</p>
+                {% endif %}
+
+                {%- form 'contact', class: 'mt-8 w-full lg:w-3/4' -%}
+                {% if form.posted_successfully? %}
+                <p class="mb-4 rounded-md bg-emerald-600/10 text-emerald-300 px-3 py-2">Thanks! We’ll be in touch.</p>
+                {% elsif form.errors %}
+                <p class="mb-4 rounded-md bg-rose-600/10 text-rose-300 px-3 py-2">Please fix the errors and try again.
+                </p>
+                {% endif %}
+
+                <div class="!grid grid-cols-1 sm:grid-cols-2 gap-6 text-[12px] lg:text-[16px]">
+                    <div>
+                        <label for="ContactFormName" class="sr-only">Name</label>
+                        <input id="ContactFormName" type="text" name="contact[name]" placeholder="What is your name?"
+                            class="w-full bg-transparent border-b border-white/20 text-white placeholder-white/60 py-2 focus:!shadow-none focus:!outline-0"
+                            required>
+                    </div>
+                    <div>
+                        <label for="ContactFormPhone" class="sr-only">Phone</label>
+                        <input id="ContactFormPhone" type="tel" name="contact[phone]" placeholder="Your phone?" inputmode="numeric"
+                            minlength="10"
+                            maxlength="10"
+                            pattern="^\d{10}$"
+                            title="Enter a 10-digit number"
+                            oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)"
+                            class="w-full bg-transparent text-white border-b border-white/20 focus:border-white/60 focus:outline-none placeholder-white/60 py-2 focus:!shadow-none focus:!outline-0" required>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="ContactFormEmail" class="sr-only">Email</label>
+                        <input id="ContactFormEmail" type="email" name="contact[email]" placeholder="Your email?" minlength="10"
+                            class="w-full bg-transparent text-white border-b border-white/20 focus:border-white/60 focus:outline-none placeholder-white/60 py-2 focus:!shadow-none focus:!outline-0"
+                            required>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="ContactFormMessage" class="sr-only">Message</label>
+                        <textarea id="ContactFormMessage" name="contact[body]" rows="3"
+                            placeholder="How can we help you?"
+                            class="w-full bg-transparent text-white border-b border-white/20 focus:border-white/60 focus:outline-none placeholder-white/60 py-2 focus:!shadow-none focus:!outline-0 resize-none" required></textarea>
+                    </div>
+                </div>
+
+                <div class="pt-6 text-center lg:text-start">
+                    <button type="submit"
+                        class="inline-flex items-center gap-2 rounded-full bg-[#FFD23F] hover:bg-yellow-500 text-[#1A1A1A] px-7 py-2 font-semibold hover:brightness-95 active:translate-y-px transition">
+                        <span>{{ section.settings.button_label | default: 'Submit' }}</span>
+                    </button>
+                </div>
+                {%- endform -%}
+
+                {%- comment -%} Socials {%- endcomment -%}
+                <div class="flex items-center gap-6 lg:gap-10 justify-center lg:justify-start my-8 lg:my-auto">
+                    {% if section.settings.facebook_url != blank %}
+                    <a href="{{ section.settings.facebook_url }}" target="_blank" rel="noopener"
+                        class="w-[24px] lg:w-[49px] h-[auto] rounded-full bg-white/10 hover:bg-white/15 flex items-center justify-center">
+                        <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/facebook.png" alt="Facebook Icon" width="49" height="auto" loading="lazy"
+                            class="object-contain" />
+                    </a>
+                    {% endif %}
+                    {% if section.settings.instagram_url != blank %}
+                    <a href="{{ section.settings.instagram_url }}" target="_blank" rel="noopener"
+                        class="w-[24px] lg:w-[49px] h-[auto] rounded-full bg-white/10 hover:bg-white/15 flex items-center justify-center">
+                        <!-- IG -->
+                        <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/social.png" alt="Instagram Icon" width="49" height="auto" loading="lazy"
+                            class="object-contain" />
+                    </a>
+                    {% endif %}
+                    {% if section.settings.whatsapp_url != blank %}
+                    <a href="{{ section.settings.whatsapp_url }}" target="_blank" rel="noopener"
+                        class="w-[24px] lg:w-[49px] h-[auto] rounded-full bg-white/10 hover:bg-white/15 flex items-center justify-center">
+                        <!-- FB -->
+                        <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/whatsapp.png" alt="Whatsapp Icon" width="49" height="auto" loading="lazy"
+                            class="object-contain" />
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div>
+                <div class="text-[12px] lg:text-[14px] sm:col-span-2 lg:col-span-3">
+                    {% if section.settings.support_email != blank %}
+                    <p class="text-[#93A3BE]">{{ section.settings.support_email }}</p>
+                    {% endif %}
+                    {% if section.settings.blurb != blank %}
+                    <p class="mt-3 max-w-[450px] text-[#AEAEAE] font-semibold">{{ section.settings.blurb }}</p>
+                    {% endif %}
+                </div>
+                {%- comment -%} RIGHT: Info, Menus, Address/Hours/Phones, Payments {%- endcomment -%}
+                <div class="flex flex-wrap flex-col justify-between gap-6 text-[12px] text-[#AEAEAE] mt-4 lg:flex-row lg:gap-10 lg:text-[14px] lg:mt-10">
+                    {%- comment -%} Menus, Address/Hours/Phones {%- endcomment -%}
+                    <!-- Menu 1 -->
+                    <div class="grow-0 shrink-0 basis-[45%]">
+                        {% if section.settings.menu_1 != blank %}
+                        <ul class="space-y-2">
+                            {%- for link in section.settings.menu_1.links -%}
+                            <li>
+                                <a href="{{ link.url }}">{{ link.title }}</a>
+                            </li>
+                            {%- endfor -%}
+                        </ul>
+                        {% endif %}
+                    </div>
+
+                    <!-- Menu 2 -->
+                    <div class="grow-0 shrink-0 basis-[45%]">
+                        {% if section.settings.menu_2 != blank %}
+                        <ul class="space-y-2">
+                            {%- for link in section.settings.menu_2.links -%}
+                            <li>
+                                <a href="{{ link.url }}">{{ link.title
+                                    }}</a>
+                            </li>
+                            {%- endfor -%}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <!-- Address / Hours / Phones -->
+                    <div class="grow-0 shrink-0 basis-[45%] space-y-4">
+                        {% if section.settings.address_heading != blank %}
+                        <p class="text-[#93A3BE] font-semibold">{{ section.settings.address_heading }}</p>
+                        {% endif %}
+                        {% if section.settings.address != blank %}
+                        <div class="whitespace-pre-line">{{ section.settings.address }}</div>
+                        {% endif %}
+
+                        {% if section.settings.hours != blank %}
+                        <div>{{ section.settings.hours }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="grow-0 shrink-0 basis-[45%] space-y-4">
+                        {% if section.settings.call_heading != blank %}
+                        <p class="text-[#93A3BE] font-semibold">{{ section.settings.call_heading }}</p>
+                        {% endif %}
+                        <ul class="space-y-1">
+                            {% if section.settings.phone_1 != blank %}<li class="text-white/80">{{
+                                section.settings.phone_1 }}</li>{% endif %}
+                            {% if section.settings.phone_2 != blank %}<li class="text-white/80">{{
+                                section.settings.phone_2 }}</li>{% endif %}
+                            {% if section.settings.phone_3 != blank %}<li class="text-white/80">{{
+                                section.settings.phone_3 }}</li>{% endif %}
+                        </ul>
+                    </div>
+
+                    <!-- Payment strip (full width on large) -->
+                    <div class="sm:col-span-2 lg:col-span-3 mt-10 lg:mt-auto w-[200px] lg:w-full">
+                        {% if section.settings.payment_image != blank %}
+                        <img src="{{ section.settings.payment_image | image_url: width: 600 }}"
+                            width="{{ section.settings.payment_image.width }}"
+                            height="{{ section.settings.payment_image.height }}"
+                            alt="{{ section.settings.payment_image.alt | escape }}"
+                            class="inline-block" loading="lazy">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "New Footer",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Let’s get in touch" },
+
+    { "type": "text", "id": "button_label", "label": "Submit button label", "default": "Submit" },
+
+    { "type": "text", "id": "support_email", "label": "Support email", "default": "help@hokmakeup.com" },
+    { "type": "textarea", "id": "blurb", "label": "Short description", "default": "Looking to buy makeup products? Wants to get in touch? We are excited to talk to you." },
+
+    { "type": "link_list", "id": "menu_1", "label": "Menu 1 (e.g., policies)" },
+    { "type": "link_list", "id": "menu_2", "label": "Menu 2 (e.g., categories)" },
+
+    { "type": "text", "id": "address_heading", "label": "Address heading", "default": "Locate us at :" },
+    { "type": "textarea", "id": "address", "label": "Address", "default": "A-26, Ground Floor,\nNaraina Industrial area\nPhase-2 New\nDelhi-110028" },
+    { "type": "text", "id": "hours", "label": "Working hours", "default": "Mon–Fri   |   10 AM to 7 PM" },
+
+    { "type": "text", "id": "call_heading", "label": "Call us heading", "default": "Call us :" },
+    { "type": "text", "id": "phone_1", "label": "Phone 1", "default": "+918130267067" },
+    { "type": "text", "id": "phone_2", "label": "Phone 2", "default": "+918013067067" },
+    { "type": "text", "id": "phone_3", "label": "Phone 3", "default": "+919717738294" },
+
+    { "type": "image_picker", "id": "payment_image", "label": "Payment badges image" },
+
+    { "type": "url", "id": "facebook_url", "label": "Facebook URL" },
+    { "type": "url", "id": "instagram_url", "label": "Instagram URL" },
+    { "type": "url", "id": "whatsapp_url", "label": "Whatsapp URL" }
+  ],
+  "presets": [
+    { "name": "New Footer",
+    "category": "Footer"
+ }
+  ]
+}
+{% endschema %}
