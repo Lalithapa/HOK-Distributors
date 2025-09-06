@@ -2,6 +2,29 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "new_footer_DwcQbz": {
+      "type": "new-footer",
+      "name": "New Footer",
+      "settings": {
+        "heading": "Let’s get in touch",
+        "button_label": "Submit",
+        "support_email": "help@hokmakeup.com",
+        "blurb": "Looking to buy makeup products? Wants to get in touch? We are excited to talk to you.",
+        "menu_1": "info",
+        "menu_2": "categories",
+        "address_heading": "Locate us at :",
+        "address": "A-26, Ground Floor,\nNaraina Industrial area\nPhase-2 New\nDelhi-110028",
+        "hours": "Mon–Fri   |   10 AM to 7 PM",
+        "call_heading": "Call us :",
+        "phone_1": "+918130267067",
+        "phone_2": "+919810367067",
+        "phone_3": "+919717738294",
+        "payment_image": "shopify:\/\/shop_images\/hok-distributors-payment-method.png",
+        "facebook_url": "https:\/\/www.facebook.com\/hokdistributors\/",
+        "instagram_url": "https:\/\/www.instagram.com\/hokdistributors\/",
+        "whatsapp_url": "https:\/\/wa.me\/919810245261"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -24,8 +47,11 @@
         "text_FyQry9",
         "link_list_jTPfby"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
+        "heading": "Contact form",
+        "heading_size": "h1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
@@ -41,6 +67,7 @@
     }
   },
   "order": [
+    "new_footer_DwcQbz",
     "footer"
   ]
 }
