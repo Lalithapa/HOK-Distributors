@@ -85,7 +85,7 @@
       "type": "single-banner",
       "name": "Single Banner",
       "settings": {
-        "container": "w-full px-[16px] lg:px-[20px]",
+        "container": "page-width",
         "margin_top_desktop": 56,
         "margin_bottom_desktop": 56,
         "padding_top_desktop": 0,
@@ -120,6 +120,26 @@
       }
     },
     "single_banner_qrfgNN": {
+      "type": "single-banner",
+      "name": "Single Banner",
+      "settings": {
+        "container": "page-width",
+        "margin_top_desktop": 56,
+        "margin_bottom_desktop": 56,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "background_color": "#ffffff",
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "heading_text": "",
+        "link": "#",
+        "image": "shopify://shop_images/clearence_deal.jpg",
+        "image_mobile": "shopify://shop_images/Clearence_dEAL_1c8d856d-95e8-4f0e-8b3e-5b82cd57f8df.jpg"
+      }
+    },
+    "single_banner_dNjKjT": {
       "type": "single-banner",
       "name": "Single Banner",
       "settings": {
@@ -638,6 +658,7 @@
     "product_slider_kPdfPy",
     "single_banner_qrfgNN",
     "product_slider_rMpNYi",
+    "single_banner_dNjKjT",
     "brand_cards_grid_ctnUHm",
     "two_images_notice_CJWUme",
     "single_banner_y8eF4L",
