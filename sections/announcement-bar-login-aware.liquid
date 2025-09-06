@@ -1,0 +1,181 @@
+<section class="w-full !tracking-normal">
+    {% if customer %}
+      {%- assign is_logged_in = true -%}
+    {% else %}
+      {%- assign is_logged_in = true -%}
+    {% endif %}
+  <!-- Top line (messages) -->
+  <div id="ann-bar" class="bg-[#E6E6E6] text-[#0A0A0A] text-[14px] md:text-[13px] lg:text-[16px]">
+  <ul class="flex justify-center items-center gap-4 md:gap-5 overflow-x-auto py-2 lg:py-2.5 flex-wrap">
+    {% assign first_rendered = false %}
+
+    {% for block in section.blocks %}
+      {% assign audience = block.settings.audience %}
+      {% assign show_block = false %}
+      {% if audience == 'all' %}
+        {% assign show_block = true %}
+      {% elsif audience == 'in' and is_logged_in %}
+        {% assign show_block = true %}
+      {% elsif audience == 'out' and is_logged_in == false %}
+        {% assign show_block = true %}
+      {% endif %}
+
+      {% if show_block %}
+        {% if first_rendered %}
+          <li class="hidden md:!block h-[20px] w-[2px] bg-[#B2B2B2]"></li>
+        {% endif %}
+
+        <!-- NOTE: default hidden on mobile; md+ always block -->
+        <li {{ block.shopify_attributes }} class="whitespace-nowrap hidden md:block">
+          {% if block.settings.link != blank %}
+            <a href="{{ block.settings.link }}" class="hover:cursor-pointer">
+              {{ block.settings.text }}
+            </a>
+          {% else %}
+            <span>{{ block.settings.text }}</span>
+          {% endif %}
+        </li>
+
+        {% assign first_rendered = true %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+  <!-- Bottom line (CTA) -->
+  <div class="bg-[#080808] text-[#F3F3F3]">
+    <div class="mx-auto">
+      {% if is_logged_in %}
+        {% if section.settings.cta_in_label != blank %}
+          <a href="{{ section.settings.cta_in_link | default: '#' }}"
+             class="block text-center text-[12px] lg:text-[16px] py-2 md:py-2.5 hover:opacity-90 transition hover:cursor-pointer hover:underline underline-offset-2"
+             aria-label="{{ section.settings.cta_in_label | escape }}">
+            {{ section.settings.cta_in_label }}
+          </a>
+        {% endif %}
+      {% else %}
+        {% if section.settings.cta_out_label != blank %}
+          <a href="{{ section.settings.cta_out_link | default: routes.account_login_url }}"
+             class="block text-center text-[12px] lg:text-[16px] py-2 md:py-2.5 hover:opacity-90 transition hover:cursor-pointer hover:underline underline-offset-2"
+             aria-label="{{ section.settings.cta_out_label | escape }}">
+            {{ section.settings.cta_out_label }}
+          </a>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</section> 
+<script>
+/* Mobile-only rotate: show one <li.whitespace-nowrap> at a time */
+(function () {
+  var root = document.getElementById('ann-bar');
+  if (!root) return;
+
+  var items = root.querySelectorAll('li.whitespace-nowrap');
+  if (!items.length) return;
+
+  var i = 0, timer = null;
+  var INTERVAL = 4000; // 4s per message
+
+  function showOnly(idx) {
+    items.forEach(function (el, n) {
+      if (n === idx) {
+        el.classList.remove('hidden');
+        el.classList.add('block');
+      } else {
+        el.classList.remove('block');
+        el.classList.add('hidden');
+      }
+      // ensure desktop always shows everything
+      el.classList.add('md:block');
+    });
+  }
+
+  function start() {
+    if (timer) return;
+    showOnly(i);
+    timer = setInterval(function () {
+      i = (i + 1) % items.length;
+      showOnly(i);
+    }, INTERVAL);
+  }
+
+  function stop() {
+    if (timer) { clearInterval(timer); timer = null; }
+    // Desktop: show all
+    items.forEach(function (el) {
+      el.classList.remove('hidden');
+      el.classList.add('block');
+    });
+  }
+
+  var mql = window.matchMedia('(min-width: 768px)'); // md
+  function handle(e) { e.matches ? stop() : start(); }
+
+  handle(mql); // initial
+  if (mql.addEventListener) mql.addEventListener('change', handle);
+  else mql.addListener(handle); // Safari <14 fallback
+})();
+</script>
+{% schema %}
+{
+  "name": "Announcement login bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "cta_out_label",
+      "label": "Logged-out CTA label",
+      "default": "Unlock discounted price — Sign in 30 seconds →"
+    },
+    {
+      "type": "url",
+      "id": "cta_out_link",
+      "label": "Logged-out CTA link"
+    },
+    {
+      "type": "text",
+      "id": "cta_in_label",
+      "label": "Logged-in CTA label",
+      "default": "Welcome back — Distributor pricing unlocked. Shop now →"
+    },
+    {
+      "type": "url",
+      "id": "cta_in_link",
+      "label": "Logged-in CTA link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "msg",
+      "name": "Message",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "We focus on growing your profits" },
+        { "type": "url", "id": "link", "label": "Optional link" },
+        {
+          "type": "select",
+          "id": "audience",
+          "label": "Show for",
+          "default": "all",
+          "options": [
+            { "value": "all", "label": "Everyone" },
+            { "value": "out", "label": "Logged-out only" },
+            { "value": "in", "label": "Logged-in only" }
+          ]
+        },
+        { "type": "checkbox", "id": "italic", "label": "Italic style", "default": false }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Announcement login bar",
+      "blocks": [
+        { "type": "msg", "settings": { "text": "We focus on growing your profits" } },
+        { "type": "msg", "settings": { "text": "4+1 Free on Every Order" } },
+        { "type": "msg", "settings": { "text": "Get Distributor offers on WhatsApp — Join channel", "italic": true } },
+        { "type": "msg", "settings": { "text": "Free delivery – Pan India" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

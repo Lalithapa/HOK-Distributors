@@ -14,18 +14,16 @@
 <section class="page-width section-{{ section.id }}-margin">
   <div class="mx-auto">
     <!-- Header -->
-    <div class="flex items-start justify-between gap-4">
+    <div class="flex items-center justify-between gap-4">
       <h2 class="text-xl md:text-2xl font-semibold text-gray-900">
         {{ section.settings.title }}
       </h2>
-
       {% if section.settings.button_label != blank and section.settings.button_link != blank %}
         <a href="{{ section.settings.button_link }}" class="inline-flex items-center rounded-full border border-[#3C5865] px-[3rem] py-2 text-[14px] font-semibold tracking-wide text-gray-800 hover:bg-gray-100 transition">
            {{ section.settings.button_label }}
         </a>
       {% endif %}
     </div>
-
     <!-- Cards -->
     <ul class="mt-6 !grid grid-flow-col auto-cols-[66.666%] gap-6 overflow-x-auto lg:grid-flow-row lg:auto-cols-auto lg:grid-cols-3 lg:overflow-visible snap-x snap-mandatory [&>*]:snap-start custom-scrollbar">
       {% for block in section.blocks %}
