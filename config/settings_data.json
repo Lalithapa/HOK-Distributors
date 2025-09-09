@@ -149,6 +149,11 @@
         "type": "shopify:\/\/apps\/simplify-my-login\/blocks\/simplify_my_login\/d8cea981-d551-4842-a6a1-d02bd1530222",
         "disabled": false,
         "settings": {}
+      },
+      "15623156175785154009": {
+        "type": "shopify:\/\/apps\/qikify-smart-menu\/blocks\/app-embed\/19d2f1cd-1836-4a32-8937-03df3c601dc8",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
@@ -400,5 +405,14 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".tmenu_submenu_mega_position_fullwidth {padding: 10px 40px !important;}",
+      ".tmenu_item--root > .tmenu_submenu {border-top: 1px solid #eaeaea !important; box-shadow: unset !important;}",
+      ".tmenu_submenu_type_mega {justify-content: center;}",
+      ".tmenu_item--root .tmenu_item_display_header>.tmenu_item_link {width: max-content !important; padding-bottom: 0 !important;}",
+      ".tmenu_image--above .tmenu_item_text {display: flex !important; align-items: center; gap: 8px; color: #6c96a9 !important; font-weight: 600 !important;}"
+    ]
   }
 }

@@ -2658,13 +2658,11 @@
   ]
 }
 {% endschema %}
-
 <script>
-  document.querySelectorAll('.cstm-btn').forEach(function (btn) {
+    document.querySelectorAll('.cstm-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       // Current clicked button ko hide kar do
       this.classList.add('hidden');
-
       // Apne parent ke andar sibling .cstm_btn_qnty ko show karo
       let qntyBtn = this.parentElement.querySelector('.cstm_btn_qnty');
       if (qntyBtn) {
