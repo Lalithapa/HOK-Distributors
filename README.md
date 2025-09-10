@@ -62,7 +62,16 @@ npm i
 npm run dev
 
 # Shopify build (dev)
-theme watch --allow-live
+npm run theme
 
 # Shopify preview (login once via CLI)
 shopify theme dev
+
+// package.json (excerpt)
+{
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./assets/theme.css --watch",
+    "build": "NODE_ENV=production tailwindcss -i ./src/input.css -o ./assets/theme.css --minify"
+    "theme": "theme watch --allow-live"
+  }
+}
