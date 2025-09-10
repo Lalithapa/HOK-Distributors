@@ -4,9 +4,13 @@
   <input type="checkbox" class="admin-toggle" aria-label="Toggle admin actions" />
   <!-- Main FAB -->
   <a href="#!" class="admin-btn box-shadow-pocket bg-white text-white w-[50px] lg:w-[60px] h-[50px] lg:h-[60px] grid place-items-center rounded-full">
-    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" class="transition-transform duration-200 ease-out rotate-0 group-hover:rotate-90 origin-center">
+    {% comment %} <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" class="transition-transform duration-200 ease-out rotate-0 group-hover:rotate-90 origin-center">
         <path d="M1 11L11 0.999999" stroke="black" stroke-width="2" stroke-linecap="round"/>
         <path d="M11 11L0.999999 0.999999" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    </svg> {% endcomment %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none"  class="transition-transform duration-200 ease-out rotate-0 group-hover:rotate-90 origin-center" >
+      <path d="M13.5005 24.0001V2.99968" stroke="#FEFEFE" stroke-width="5" stroke-linecap="round"/>
+      <path d="M3 13.5L24.0004 13.5" stroke="#FEFEFE" stroke-width="5" stroke-linecap="round"/>
     </svg>
   </a>
   <!-- Mini buttons stack -->
@@ -30,7 +34,11 @@
   /* Main button */
   .admin-btn{
     position:relative;
-    border-radius:50px; display:grid; place-items:center; color:#fff;
+    /* border-radius:50px;  */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px 0 rgba(15, 23, 26, 0.41);
+    display:grid; place-items:center; color:#fff;
+    background: #EDCC31;
   }
   /* Toggle overlay on top of FAB */
   .admin-toggle{
@@ -54,4 +62,9 @@
   .admin-buttons .admin-mini:nth-child(1){ transition-delay:.30s; }
   .admin-buttons .admin-mini:nth-child(2){ transition-delay:.25s; }
   .admin-buttons .admin-mini:nth-child(3){ transition-delay:.20s; }
+  @media (max-width: 768px) {
+    .admin-btn{
+      border-radius:50px; 
+    }
+  }
 </style>

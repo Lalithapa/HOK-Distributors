@@ -5,7 +5,9 @@ assign secondary_image = card_product.images[1].src
 %}
 <!-- Product Pocket Card -->
 <div class="max-w-[360px] h-full bg-white rounded-2xl shadow-md overflow-hidden box-shadow-pocket">
-  <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}">
+    {% if customer %}
+      <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}">
+    {% endif %}
     <!-- Top: bundle visuals -->
     <div class="image-container">
       <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
@@ -30,29 +32,54 @@ assign secondary_image = card_product.images[1].src
         </div>
       </div>
     </div>
-  </a>
+    {% if customer %}
+    </a>
+    {% endif %}
   <div class="flex gap-3 flex-col px-[12px] py-[14px]">
+    {% if customer %}
     <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}" class="flex flex-col gap-3">
+    {% endif %}
       <!-- Text content -->
       <div class="text-content">
-        <h4 class="text-[13px] lg:text-[16px] font-semibold text-gray-900">{{ card_product.vendor }}</h4>
+        <h4 class="text-[13px] lg:text-[16px] font-semibold text-gray-900 capitalize">{{ card_product.vendor | capitalize }}</h4>
         <p class="text-[12px] leading-snug text-gray-500 mt-1 line-clamp-2">
           {{ card_product.title | escape }}
         </p>
       </div>
       <!-- Price row -->
-      <div class="flex items-center gap-2 align-center tracking-normal">
         {%- assign product_price = card_product.selected_or_first_available_variant -%}
+      {% if customer %}
+        <div class="flex items-center gap-2 align-center tracking-normal">
         <div class="text-[14px] lg:text-[16px] font-extrabold text-gray-900">{{ product_price.price | money_without_trailing_zeros }}</div>
         <div class="text-[12px] lg:text-[14px] text-[#585858] line-through">{{ product_price.compare_at_price | money_without_trailing_zeros }}
         </div>
+         {% if product_price.compare_at_price > product_price.price %}
         <span
           class="ml-2 inline-flex items-center rounded-xl lg:bg-[#09980E]  text-[#6D930C] lg:text-white text-[12px] font-semibold px-2.5 py-1 leading-normal">
-          20% Off
+          {{
+            product_price.compare_at_price
+            | minus: product_price.price
+            | times: 100.0
+            | divided_by: product_price.compare_at_price
+            | money_without_currency
+            | times: 100
+            | remove: '.0'
+          -}}
+          % Off
         </span>
+         {% endif %}
       </div>
+      {% else %}
+      <div class="flex items-center gap-8 align-center tracking-normal text-[14px]">
+        <div class="font-extrabold text-gray-900"><span class="text-[16px] text-[#707070] font-medium">MRP: </span> {{ product_price.compare_at_price | money_without_trailing_zeros }}</div>
+        <div class="text-[#707070] font-extrabold"><span class="font-medium">SKU: </span>{{ product_price.sku }}</div>
+      </div>
+      {% endif %}
+    {% if customer %}
     </a>
+    {% endif %}
     {% unless template.name contains 'product' %}
+    {% if customer %}
       <!-- CTA row -->
       <div class="flex items-center gap-3 mt-2">
         <!-- Phone button -->
@@ -78,7 +105,7 @@ assign secondary_image = card_product.images[1].src
             {% endif %}>
           <button id="{{ product_form_id }}-submit" type="submit" name="add"
             class="quick-add__submit flex-1 py-[8px] rounded-full
-                      {% if card_product.selected_or_first_available_variant.available == false %} bg-[#e5e3e3] text-[#9d9d9d] cursor-not-allowed hover:bg-[#e5e3e3]{% else %} bg-[#edcc31] text-gray-900 hover:bg-yellow-300 cursor-pointer {% endif %} font-bold text-[12px] tracking-wide shadow  transition w-full uppercase"
+                      {% if card_product.selected_or_first_available_variant.available == false %} bg-[#e5e3e3] text-[#9d9d9d] cursor-not-allowed hover:bg-[#e5e3e3]{% else %} bg-[#EDCC31] text-gray-900 hover:bg-yellow-300 cursor-pointer {% endif %} font-bold text-[12px] tracking-wide shadow  transition w-full uppercase"
             aria-haspopup="dialog"
             aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}" aria-live="polite"
             data-sold-out-message="true" {% if card_product.selected_or_first_available_variant.available==false %}
@@ -102,11 +129,33 @@ assign secondary_image = card_product.images[1].src
           </button>
           {%- endform -%}
         </product-form>
-        {% comment %} <button type="button"
-          class="flex-1 p-[8px] rounded-full bg-yellow-400 text-gray-900 font-bold text-[12px] tracking-wide shadow hover:bg-yellow-300 transition">
-          ADD TO CART
-        </button> {% endcomment %}
       </div>
+      {% else %}
+      <div class="flex items-center gap-3 mt-2">
+        <!-- Phone button -->
+        <button type="button"
+         onclick="window.location.href='https://api.whatsapp.com/send/?phone=919810245261&text=Hi, I would like to know about: %0A `SKU-{{ card_product.selected_or_first_available_variant.sku }}`%0A %0A• *{{ card_product.title | capitalize }}*'"
+        class="cursor-pointer shrink-0 h-15 w-12 rounded-full border border-gray-200 bg-white shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" class="m-auto" width="14" height="15"
+            viewBox="0 0 805 752">
+            <!-- Generator: Adobe Illustrator 29.7.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 8)  -->
+            <path
+              d="M206.7,58.31c1.12,1.73,2.33,3.68,3.5,5.5,20.31,31.49,40.88,63.72,60.78,95.57,11.96,19.14,31.86,41.54,12.51,63.36-2.42,2.73-5.49,4.53-8.1,6.77-12.4,10.63-25.06,20.79-37.57,31.31-16.17,13.6-28.93,19.39-20.33,43.95,6.35,18.13,20.63,40.36,31.53,56.36,33.04,48.51,77.39,93.94,122.61,131.37,23.61,19.54,52.13,41.3,80.26,53.87s35.65-4.78,51.11-23.99c5.08-6.32,10.36-12.42,15.42-18.69,9.48-11.74,19.69-29.92,36.32-31.21,10.81-.83,15.73,2.36,24.43,7.61,33.14,19.96,65.76,42.16,98.25,62.86,12.79,8.15,29.76,16.81,41.33,26.06,4.48,3.58,8.95,9.29,10.74,14.76,5.63,17.23-5.38,29.06-13.44,42.63-13.74,23.12-35.29,65.1-56.81,80.09-32.51,22.64-77.66,15.43-113.64,6.17-145.36-37.41-284.38-156.86-376-272.47-52.51-66.26-101.85-146.26-118.72-230.3-8.53-42.47-13.73-89.32,22.38-120.39,20.55-17.68,52.66-35.25,76.36-49.04,11.08-6.45,17.14-11.9,31.32-8.14s18.69,15.08,25.77,25.98Z" />
+          </svg>
+        </button>
+          <button type="button" onclick="window.location.href='/account'"
+            class="flex-1 p-[8px] rounded-full bg-[#EDCC31] text-gray-900 font-bold text-[14px] tracking-wide shadow hover:bg-yellow-300 transition uppercase">
+            View Trade Price
+          </button>
+      </div>
+      {% comment %} Register for a trade account to view trade prices {% endcomment %}
+      <div class="registration-button flex">
+         <button type="button" onclick="window.location.href='/account'"
+            class="w-full block p-[8px] rounded-full border border-[#707070] text-[#212121] font-bold text-[14px] tracking-wide shadow uppercase">
+            Register
+          </button>
+      </div>
+    {% endif %}
     {% endunless %}
   </div>
 </div>
