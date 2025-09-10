@@ -78,7 +78,7 @@
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div
-        class="grid__item product__media-wrapper lg:mt-[0]"
+        class="grid__item product__media-wrapper lg:mt-[0] lg:sticky lg:top-[90px] lg:bottom-0"
       >
         {% render 'breadcrumb-new' %}
         {% comment %} {% render 'product-media-gallery', variant_images: variant_images %} {% endcomment %}
@@ -87,7 +87,7 @@
       </div>
       <div
         class="
-          lg:!pl-[44px] lg:border-l border-[#ECECEC] lg:h-[670px] lg:overflow-auto !scrollbar-hide relative
+          lg:!pl-[44px] lg:border-l border-[#ECECEC]  lg:overflow-auto !scrollbar-hide lg:max-w-[55%] lg:!h-full lg:!overflow-y-scroll relative
           product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
         "
         style="scrollbar-width: none !important"
@@ -118,7 +118,7 @@
                     <img
                       src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/share_1.png?v=1756881750"
                       alt="call icon"
-                      class="w-[21px] h-[21px] object-contain mx-auto"
+                      class="w-[25px] h-[25px] object-contain mx-auto"
                       width="21"
                       height="21"
                     >
@@ -140,10 +140,10 @@
                 {% render 'brand-info' %}
               {%- when 'product-shade' -%}
                 {% if product.metafields.custom.product_shade %}
-                  <div class="flex items-center gap-5">
+                  <div class="flex items-center gap-5 lg:pt-[5px]">
                     <div
                       class="w-15 h-15 p-3 rounded-[7px]  outline-[0.6px] outline-[#848484] outline-offset-[2px]"
-                      style="background-color: {{ product.metafields.custom.product_shade }}; display: block !important;"
+                      style="background-color: {{ product.metafields.custom.product_shade_color }}; display: block !important;"
                     ></div>
                     <span class="font-semibold text-[12px] text-[#212121] capitalize">
                       {{ product.metafields.custom.product_shade }}
@@ -245,8 +245,9 @@
                 {%- endif -%}
               {%- when 'sku' -%}
                 <div class="flex gap-4 justify-start items-center lg:pt-[56px] mt-[16px] md:mt-0">
+
                   <p
-                    class="font-semibold text-[14px] rounded-lg bg-[#F1F1F3] text-[#1D1F27]  py-[2px] px-[5px] lg:py-[4px] lg:px-[6px] leading-normal whitespace-nowrap product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
+                    class="font-semibold text-[14px] rounded-[8px] bg-[#F1F1F3] text-[#1D1F27]  py-[4px] px-[6px] lg:py-[4px] lg:px-[6px] leading-normal whitespace-nowrap product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
                     id="Sku-{{ section.id }}"
                     role="status"
                     {{ block.shopify_attributes }}
@@ -256,7 +257,7 @@
                     {{- product.selected_or_first_available_variant.sku -}}
                   </p>
 
-                  <div class="inline-flex items-center gap-[2px] lg:gap-[10px]  bg-[#FFEAF2] text-[#7B676F] text-[12px] rounded-full whitespace-nowrap px-[10px] py-[4px]">
+                  <div class="inline-flex items-center gap-[2px] lg:gap-[10px]  bg-[#FFEAF2] text-[#7B676F] text-[12px] rounded-[8px] whitespace-nowrap px-[10px] py-[4px]">
                     {% render 'share-icon', icon: 'sku-icon' %}
                     <span class="font-medium text-[12px]  text-[#7B676F] tracking-[-0.55px] md:tracking-normal"
                       >Top-performing in stores</span
@@ -265,7 +266,7 @@
 
                   <button
                     type="button"
-                    class=" float-right block md:hidden p-2 ml-[13px] cursor-pointer"
+                    class=" float-right block md:hidden p-2 ml-[59px] cursor-pointer"
                     onclick="navigator.share ? navigator.share({title: '{{ product.title }}', url: '{{ shop.url }}{{ product.url }}'}) : alert('Copy this link: {{ shop.url }}{{ product.url }}')"
                   >
                     {% render 'share-icon', icon: 'share' %}
@@ -545,12 +546,12 @@
                 <div class="lg:!block  hidden my-[18px]">
                   <div
                     class="flex items-center gap-3 md:gap-4  bottom-0 z-10 bg-white  buttons-add-to-bag"
-                    id="scroll-addbar"
+                    id=""
                   >
                     <!-- Call to Order -->
                     <a
                       href="tel:+91XXXXXXXXXX"
-                      class="inline-flex  items-center gap-6 rounded-full border border-[#D9D9D9] cursor-pointer bg-[#fff] px-[16px] py-[10px] text-[14px] font-bold uppercase tracking-wide text-[#212121] shadow-sm hover:shadow transition"
+                      class="inline-flex  items-center gap-[6px] rounded-full border border-[#D9D9D9] cursor-pointer bg-[#fff] px-[16px] py-[10px] text-[14px] font-bold uppercase tracking-wide text-[#212121] transition"
                     >
                       <!-- Phone icon -->
                       {% render 'share-icon', icon: 'add-call' %}
@@ -831,7 +832,7 @@
                       <h3 class="text-[14px] font-semibold  text-[#000]">{{ 'Available Offers' }}</h3>
                     </div>
 
-                    <div class="text-[12px] text-[#606060] font-normal  pdp-brand">
+                    <div class="text-[12px] text-[#606060] font-normal  pdp-brand ml-[12px]">
                       {{ block.settings.custom_rich_text_offer }}
                     </div>
                   </div>
@@ -1090,7 +1091,7 @@
       {{ product | structured_data }}
     </script>
   </div>
-  <hr class="!m-[unset]">
+  <hr class="!m-[20px]">
 </product-info>
 <div class="block md:hidden fixed bottom-0 left-0 w-full z-50 bg-white shadow-md">
   {% render 'add-bag-with-qnty' %}
