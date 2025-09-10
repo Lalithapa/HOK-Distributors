@@ -262,8 +262,8 @@
                                       {%- endif -%}
                                     </div>
                                   {%- else -%}
-                                    {{- 'square.svg' | inline_asset_content -}}
-
+                                    {% comment %} {{- 'square.svg' | inline_asset_content -}} {% endcomment %}
+                                      {{- 'filter-square.svg' | inline_asset_content -}}
                                     <div class="svg-wrapper">
                                       {{- 'icon-checkmark.svg' | inline_asset_content -}}
                                     </div>

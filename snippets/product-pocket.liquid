@@ -20,14 +20,14 @@ endif
             {% comment %} <div class="absolute -left-3 -bottom-3 w-20 h-20 rounded-full bg-pink-200/70 blur-[2px]">
             </div> {% endcomment %}
             {% if card_product.images.size > 1 %}
-            <img src="{{ primary_image | image_url }}" width="100%" height="100%"
+            <img src="{{ primary_image | image_url }}" width="400" height="400"
               alt="{{ card_product.title | escape }}"
               class="relative z-[1] h-full w-full object-contain mix-blend-multiply opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-            <img src="{{ secondary_image | image_url }}" width="100%" height="100%"
+            <img src="{{ secondary_image | image_url }}" width="400" height="400"
               alt="{{ card_product.title | escape }}"
               class="absolute inset-0 z-[1] h-full w-full object-contain mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {% else %}
-            <img src="{{ card_product.featured_image | image_url }}" width="100%" height="100%"
+            <img src="{{ card_product.featured_image | image_url }}" width="400" height="400"
               alt="{{ card_product.title | escape }}"
               class="relative z-[1] h-full w-full object-contain mix-blend-multiply">
             {% endif %}

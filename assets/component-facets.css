@@ -522,6 +522,9 @@
   margin-right: 1.2rem;
   flex-shrink: 0;
 }
+label.facets__label.facet-checkbox.active svg{
+  fill: #4B6E7E !important;
+}
 
 .facet-checkbox .svg-wrapper {
   visibility: hidden;
@@ -535,6 +538,8 @@
 
 .facet-checkbox > input[type='checkbox']:checked ~ .svg-wrapper > .icon-checkmark {
   visibility: visible;
+  color: #fff;
+  font-weight: 700;
 }
 
 @media screen and (forced-colors: active) {
