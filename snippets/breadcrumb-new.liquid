@@ -1,6 +1,6 @@
 <div class=" hidden lg:!block max-w-[160rem] m-auto -translate-x-[20px]">
   <nav class="" aria-label="Breadcrumb">
-    <ol class="flex flex-wrap items-center space-x-2 text-[#B1B1B1] pt-[40px]">
+    <ol class="flex flex-wrap items-center space-x-2 text-[#B1B1B1]{% if template.name contains "product" %} pt-[40px]{% endif %}">
       <!-- Home -->
       <li class="text-[12px] font-medium text-[#B1B1B1] leading-normal not-italic">
         <a href="{{ routes.root_url }}" class="text-[12px] font-medium text-[#B1B1B1] leading-normal not-italic">Home</a>

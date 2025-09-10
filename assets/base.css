@@ -156,7 +156,182 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
     padding: 0 5rem;
   }
 }
+/* Login page css here */
+.customer.login{
+  box-shadow: 0px 0px 3px #00000030 !important;
+  margin: 100px auto !important;
+}
+.content-register {
+    display: none;
+}
 
+.form-group textarea, .form-group input {
+        border-radius: 15px !important;
+            font-family: 'Montserrat-Medium';
+    font-size: 14px;
+        color: #000 !important;
+}
+#smlEmailOTPDivError, #loginError {
+    text-align: center !important;
+    color: #ec4747 !important;
+    margin-top: 10px !important;
+}
+p.success {
+    border: none;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+div#recover input.btn-primary {
+border-radius: 12px !important;
+    background: #01296b !important;
+    color: #fff !important;
+    border: none !important;
+    font-size: 14px !important;
+    font-family: Montserrat-Medium !important;
+}
+
+form#customer_login input.btn-primary {
+        border-radius: 12px !important;
+    background: #01296b !important;
+    color: #fff !important;
+    border: none !important;
+    font-size: 14px !important;
+    font-family: Montserrat-Medium !important;
+}
+button#loginWithPhoneNumberButton {
+    width: 100%;
+    border-radius: 12px !important;
+    background: transparent;
+    font-family: 'Montserrat-Medium';
+    font-size: 13px;
+}
+.customer-form.register-form h3.title-customer {
+    display: block;
+}
+.customer-form.register-form p {
+    display: none;
+}
+.customer-form.register-form .submit input.btn-primary {
+    border-radius: 12px !important;
+    background: #01296b !important;
+    color: #fff !important;
+    border: none !important;
+    font-size: 14px !important;
+    font-family: Montserrat-Medium !important;
+}
+a.btn.login-her {
+    border: none;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    font-size: 13px;
+    text-transform: none;
+    font-family: 'Montserrat-Medium';
+}
+a.forget-password span {
+    display: block !important;
+}
+a.btn.login-her.btn-secondary.w-full.text-center.mt-15:hover {
+    background: transparent;
+    background-position: revert;
+    background-color: transparent !important;
+    color: #000 !important;
+}
+.customer-form.register-form {
+        width: 35% !important;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 60px 60px 50px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+h3.title-customer {
+    display: none;
+}
+.socialLogin_buttons div {
+    height: 46px!important;
+    margin: 0!important;
+    background: #fff!important;
+    border-color: #B8B8B8!important;
+    border-radius: 12px!important;
+    size: .5px!important;
+}
+.socialLogin_buttons {
+    max-width: calc(47% - 0px)!important;
+    display: inline-flex!important;
+    margin: 0 5px!important;
+}
+.login-form.customer-form {
+    width: 35% !important;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 60px 60px 20px;
+        border-radius: 20px;
+}
+button#loginWithEmailButton {
+    background: transparent;
+        width: 100%;
+    border-radius: 12px !important;
+        margin-top: 25px !important;
+            font-family: 'Montserrat-Medium';
+    color: #000 !important;
+    font-size: 0px !important;
+}
+button#loginWithEmailButton:before {
+        content: "Login with Email";
+            font-family: 'Montserrat-Medium';
+    color: #000 !important;
+    font-size: 13px !important;
+}
+p#smlContinueText {
+    margin: 35px 0px;
+    font-family: 'Montserrat-Medium';
+}
+
+#simplify-login-sign-up-text {
+    font-size: 28px !important;
+    font-weight: 600;
+}
+.selectbox-wrapper{
+margin-top: 16px;
+}
+.selectbox-wrapper #smlPhoneNumberInput {
+  border: 1px solid #EFEFEF !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+}
+/* Chrome, Safari, Edge, Opera */
+#smlPhoneNumberInput[type=number]::-webkit-inner-spin-button,
+#smlPhoneNumberInput[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#smlPhoneNumberInput[type=number] {
+  -moz-appearance: textfield;
+}
+select#mobileCountryCodeDropdown {
+  border: 1px solid #EFEFEF !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  opacity: 1 !important;
+}
+#getOTPButton {
+  border-radius: 12px !important;
+  background: #edcc31 !important;
+  color: #212529 !important;
+  border: none !important;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+#mobileOTPLoginSection button:after{
+  box-shadow:unset !important;
+}
+#smlEmailOTPDivResendOTPButton, #resendEmailOTPButton, #resendOTPButton{
+  color: #212529 !important;
+}
+/* login page css here */
 .isolate {
   position: relative;
   z-index: 0;
@@ -1092,6 +1267,18 @@ summary::-webkit-details-marker {
   }
 }
 
+@media screen and (min-width: 1150px) and (max-width: 1400px) {
+  .grid-3-col-tablet-view .grid__item {
+      width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+      max-width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+  } 
+}
+@media screen and (min-width: 990px) and (max-width: 1149px) {
+  .grid-3-col-tablet-view .grid__item {
+      width: calc(50% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+      max-width: calc(50% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+  } 
+}
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .slider--tablet.grid--peek .grid__item {
     width: calc(25% - var(--grid-desktop-horizontal-spacing) - 3rem);
@@ -2679,6 +2866,7 @@ details[open] .modal-overlay::after {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
   min-height: calc(100% + var(--inputs-margin-offset) + (2 * var(--inputs-border-width)));
   height: 100%;
+  z-index: 999;
 }
 
 .search-modal__content {

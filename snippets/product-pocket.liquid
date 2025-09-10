@@ -2,9 +2,12 @@
 assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
 assign primary_image = card_product.images[0].src
 assign secondary_image = card_product.images[1].src
+if template.name contains 'collection' or  template.name contains 'search'
+  assign collection_card = true
+endif
 %}
 <!-- Product Pocket Card -->
-<div class="max-w-[360px] h-full bg-white rounded-2xl shadow-md overflow-hidden box-shadow-pocket">
+<div class="h-full bg-white rounded-2xl shadow-md overflow-hidden{% unless collection_card %} max-w-[360px] box-shadow-pocket{% endunless %}">
     {% if customer %}
       <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}">
     {% endif %}
@@ -13,7 +16,7 @@ assign secondary_image = card_product.images[1].src
       <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
         <!-- Plus sign -->
         <div class="relative">
-          <div class="aspect-[1] rounded-xl bg-[#F9F9F9] overflow-hidden group">
+          <div class="aspect-[1] bg-[#F9F9F9] overflow-hidden group{% unless collection_card %} rounded-xl{% endunless %}">
             {% comment %} <div class="absolute -left-3 -bottom-3 w-20 h-20 rounded-full bg-pink-200/70 blur-[2px]">
             </div> {% endcomment %}
             {% if card_product.images.size > 1 %}
@@ -70,7 +73,7 @@ assign secondary_image = card_product.images[1].src
          {% endif %}
       </div>
       {% else %}
-      <div class="flex items-center gap-8 align-center tracking-normal text-[14px]">
+      <div class="flex items-center gap-4 align-center tracking-normal text-[14px] whitespace-nowrap lg:gap-8">
         <div class="font-extrabold text-gray-900"><span class="text-[16px] text-[#707070] font-medium">MRP: </span> {{ product_price.compare_at_price | money_without_trailing_zeros }}</div>
         <div class="text-[#707070] font-extrabold"><span class="font-medium">SKU: </span>{{ product_price.sku }}</div>
       </div>
@@ -83,7 +86,7 @@ assign secondary_image = card_product.images[1].src
       <!-- CTA row -->
       <div class="flex items-center gap-3 mt-2">
         <!-- Phone button -->
-        <button type="button" class="shrink-0 h-15 w-12 rounded-full border border-gray-200 bg-white shadow-sm">
+        <button type="button" class="shrink-0 h-15 w-12 rounded-full border border-gray-200 bg-white">
           <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" class="m-auto" width="14" height="15"
             viewBox="0 0 805 752">
             <!-- Generator: Adobe Illustrator 29.7.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 8)  -->
@@ -135,7 +138,7 @@ assign secondary_image = card_product.images[1].src
         <!-- Phone button -->
         <button type="button"
          onclick="window.location.href='https://api.whatsapp.com/send/?phone=919810245261&text=Hi, I would like to know about: %0A `SKU-{{ card_product.selected_or_first_available_variant.sku }}`%0A %0A• *{{ card_product.title | capitalize }}*'"
-        class="cursor-pointer shrink-0 h-15 w-12 rounded-full border border-gray-200 bg-white shadow-sm">
+        class="cursor-pointer shrink-0 h-15 w-12 rounded-full border border-gray-200 bg-white">
           <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" class="m-auto" width="14" height="15"
             viewBox="0 0 805 752">
             <!-- Generator: Adobe Illustrator 29.7.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 8)  -->
