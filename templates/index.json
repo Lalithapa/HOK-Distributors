@@ -228,10 +228,10 @@
             "badge_text": "New stock",
             "badge_bg": "#fde047",
             "brand_name_image": "shopify://shop_images/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify://shop_images/Brand_image.png",
+            "subtitle": "Tint your way to bigger sales",
+            "image": "shopify://shop_images/Focallure.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/focallure",
+            "cta_link": "https://hokmakeup.com/products/glisten-opal-hydrating-lip-balm?variant=49736328118551",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
