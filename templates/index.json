@@ -200,10 +200,10 @@
             "badge_text": "New stock",
             "badge_bg": "#fde047",
             "brand_name_image": "shopify://shop_images/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify://shop_images/Brand_image.png",
+            "subtitle": "Every shade, every style, always in demand",
+            "image": "shopify://shop_images/LA_Girl_8aa613b1-44b2-4c0a-a30d-a42e1aaf27ed.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/focallure",
+            "cta_link": "https://hokmakeup.com/products/l-a-girl-shimmer-spray-rose-gold?variant=49736143896855",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
