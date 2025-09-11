@@ -242,10 +242,10 @@
             "badge_text": "New stock",
             "badge_bg": "#fde047",
             "brand_name_image": "shopify://shop_images/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify://shop_images/Brand_image.png",
+            "subtitle": "Pro brushes trusted worldwide",
+            "image": "shopify://shop_images/Jessup_Beauty.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/focallure",
+            "cta_link": "https://hokmakeup.com/products/jessup-beauty14-in-10-duo-end-brush-versatility-collection",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
