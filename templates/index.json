@@ -642,9 +642,9 @@
       ],
       "name": "Two images with notice",
       "settings": {
-        "image_left": "shopify://shop_images/Rectangle_34625213.jpg",
+        "image_left": "shopify://shop_images/LAST_IMAGE_DESKTOP.jpg",
         "alt_left": "Eye Shadow",
-        "image_right": "shopify://shop_images/Rectangle_34625241_3x_a6f8156c-cbf5-4eaa-9e4e-2e1e3949421c.jpg",
+        "image_right": "shopify://shop_images/2_LAST_IMAGE_DESKTOP.jpg",
         "alt_right": "Lips",
         "notice": "All sales are final. In case of damaged items or disperancies, please reach out within 48 hours of delivery for resolution"
       }
