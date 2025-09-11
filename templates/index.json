@@ -270,10 +270,10 @@
             "badge_text": "New stock",
             "badge_bg": "#fde047",
             "brand_name_image": "shopify://shop_images/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify://shop_images/Brand_image.png",
+            "subtitle": "Lip oils that keep selling out",
+            "image": "shopify://shop_images/Lamel.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/focallure",
+            "cta_link": "https://hokmakeup.com/products/lamel-lip-stain-hydrating-lip-tint?_pos=1&_sid=332990d33&_ss=r",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
