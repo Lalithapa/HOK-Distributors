@@ -285,7 +285,7 @@
                             type="button"
                           >
                             <span class="label-show-more label-text"
-                              ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t -}}
+                              ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t -}}{{values.size}}
                             </span>
                             <span class="label-show-less label-text hidden"
                               ><span aria-hidden="true">- </span>{{ 'products.facets.show_less' | t -}}
@@ -386,7 +386,7 @@
         {%- if filter_type == 'horizontal' -%}
           {% comment %} Sorting and product count are the last elements when filter type is horizontal {% endcomment %}
           {%- if enable_sorting -%}
-            <div class="facet-filters sorting caption">
+            <div class="facet-filters sorting caption ">
               <div class="facet-filters__field">
                 <h2 class="facet-filters__label caption-large text-body">
                   <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>

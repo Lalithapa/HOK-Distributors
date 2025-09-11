@@ -1,4 +1,6 @@
-<div class=" hidden lg:!block max-w-[160rem] m-auto -translate-x-[20px]">
+<div class=" hidden lg:!block max-w-[160rem]{% unless template contains 'collection' %}
+  m-auto
+{% endunless %} -translate-x-[20px]">
   <nav class="" aria-label="Breadcrumb">
     <ol class="flex flex-wrap items-center space-x-2 text-[#B1B1B1] pt-[40px]">
       <!-- Home -->
@@ -7,12 +9,12 @@
       </li>
 
       {% if template contains 'collection' %}
-        <li><span class="text-[#B1B1B1]  text-[12px]">/</span></li>
+        <li><span class="text-[#4A4A4A]  text-[12px]">/</span></li>
         <li class="text-[12px] font-medium text-[#B1B1B1] leading-normal not-italic">
-          <a href="{{ routes.collections_url }}" class=" text-[12px] font-medium text-[#B1B1B1] leading-normal not-italic">Collections</a>
+          <a href="{{ routes.collections_url }}" class=" text-[12px] font-medium text-[#4A4A4A] leading-normal not-italic">Collections</a>
         </li>
-        <li><span class="text-gray-400 text-[12px]">/</span></li>
-        <li class="text-gray-900 text-[12px]">{{ collection.title }}</li>
+        {% comment %} <li><span class="text-gray-400 text-[12px]"></span></li>
+        <li class="text-gray-900 text-[12px]">{{ collection.title }}</li> {% endcomment %}
 
       {% elsif template contains 'product' %}
         {% if collection %}
