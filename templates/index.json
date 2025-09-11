@@ -245,7 +245,7 @@
             "subtitle": "Pro brushes trusted worldwide",
             "image": "shopify://shop_images/Jessup_Beauty.jpg",
             "cta_text": "see brand",
-            "cta_link": "https://hokmakeup.com/products/jessup-beauty14-in-10-duo-end-brush-versatility-collection",
+            "cta_link": "shopify://collections/jessup",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
