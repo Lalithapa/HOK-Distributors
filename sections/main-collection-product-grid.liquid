@@ -148,16 +148,16 @@
           >
           {% comment %} Collection banner {% endcomment %}
            <div class="collection_banner my-[20px] lg:my-[32px]">
-            {% if collection.metafields.custom.desktop_banner or collection.metafields.custom.mobile_banner %}
+            {% if section.settings.desktop_banner or section.settings.mobile_banner %}
             <picture>
-              {% if collection.metafields.custom.mobile_banner %}
+              {% if section.settings.mobile_banner %}
                 <source 
-                  srcset="{{ collection.metafields.custom.mobile_banner | image_url }}" 
+                  srcset="{{ section.settings.mobile_banner | image_url }}" 
                   media="(max-width: 767px)">
               {% endif %}
-              {% if collection.metafields.custom.desktop_banner %}
+              {% if section.settings.desktop_banner %}
                 <source 
-                  srcset="{{ collection.metafields.custom.desktop_banner | image_url }}" 
+                  srcset="{{ section.settings.desktop_banner | image_url }}" 
                   media="(min-width: 768px)">
               {% endif %}
               
@@ -234,6 +234,16 @@
   "name": "t:sections.main-collection-product-grid.name",
   "class": "section",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_banner",
+      "label": "Desktop Collection Banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_banner",
+      "label": "Mobile Collection Banner"
+    },
     {
       "type": "range",
       "id": "products_per_page",
