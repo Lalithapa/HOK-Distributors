@@ -186,10 +186,10 @@
             "badge_text": "New stock",
             "badge_bg": "#fde047",
             "brand_name_image": "shopify://shop_images/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify://shop_images/Ardell.jpg",
+            "subtitle": "Trend-led bestsellers your customers love",
+            "image": "shopify://shop_images/Makeup_Revolution.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/ardell",
+            "cta_link": "https://hokmakeup.com/products/makeup-revolution-skin-silk-serum-foundation",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
