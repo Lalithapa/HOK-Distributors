@@ -17,9 +17,9 @@
     <div class="flex justify-between items-center gap-4">
       <div>
         {% if section.settings.title != blank %}
-          <h2 class="text-[14px] lg:text-2xl font-semibold text-gray-900">
+          <p class="text-[14px] lg:text-4xl font-semibold text-gray-900">
             {{ section.settings.title }}
-          </h2>
+          </p>
         {% endif %}
         {% if section.settings.subtext != blank %}
           <p class="mt-1 text-[11px] lg:text-[14px] text-[#2F2F2F]">
@@ -29,7 +29,7 @@
       </div>
       {% if section.settings.button_label != blank and section.settings.button_link != blank %}
         <a href="{{ section.settings.button_link }}"
-           class="shrink-0 inline-flex items-center lg:rounded-full lg:bg-yellow-400 lg:hover:bg-yellow-500 text-[#222529] lg:text-[#3F3F3F] font-semibold text-[12px] lg:text-[14px] lg:px-[20px] lg:py-[8px] shadow-sm transition">
+           class="shrink-0 inline-flex items-center lg:rounded-full lg:bg-yellow-400 lg:hover:bg-yellow-500 text-[#222529] lg:text-[#3F3F3F] font-semibold text-[12px] lg:text-[14px] lg:px-[20px] lg:py-[8px] transition capitalize">
           {{ section.settings.button_label }}
         </a>
       {% endif %}
@@ -47,7 +47,7 @@
               </div>
               <div class="px-3 pb-3 text-center">
                 {% if block.settings.title != blank %}
-                  <span class="block text-[14px] font-semibold text-[#242527]">
+                  <span class="block text-[12px] lg:text-[14px] font-semibold text-[#242527] truncate line-clamp-1">
                     {{ block.settings.title }}
                   </span>
                 {% endif %}
@@ -166,7 +166,7 @@
       ]
     }
   ],
-  "max_blocks": 11,
+  "max_blocks": 12,
   "presets": [
     {
       "name": "Collection Category",

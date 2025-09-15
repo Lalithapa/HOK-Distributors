@@ -244,7 +244,7 @@
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}
-                <div class="flex gap-4 justify-start items-center lg:pt-[56px] mt-[16px] md:mt-0">
+                <div class="flex gap-4 justify-start items-center lg:pt-[56px] mt-[16px] md:mt-0 flex-wrap">
                   <p
                     class="font-semibold text-[14px] rounded-lg bg-[#F1F1F3] text-[#1D1F27]  py-[2px] px-[5px] lg:py-[4px] lg:px-[6px] leading-normal whitespace-nowrap product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
                     id="Sku-{{ section.id }}"
@@ -549,7 +549,7 @@
                   >
                     <!-- Call to Order -->
                     <a
-                      href="tel:+91XXXXXXXXXX"
+                      href="tel:+918130267067"
                       class="inline-flex  items-center gap-6 rounded-full border border-[#D9D9D9] cursor-pointer bg-[#fff] px-[16px] py-[10px] text-[14px] font-bold uppercase tracking-wide text-[#212121] shadow-sm hover:shadow transition"
                     >
                       <!-- Phone icon -->

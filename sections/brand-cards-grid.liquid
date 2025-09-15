@@ -8,16 +8,16 @@
     {% endif %}
 
     <!-- Grid -->
-    <div class="!grid [grid-template-columns:repeat(4,minmax(calc(50%-20px),1fr))] lg:grid-cols-4 mt-[40px] !mb-[16px] place-items-stretch gap-6 lg:gap-14 overflow-x-auto custom-scrollbar">
+    <div class="!grid [grid-template-columns:repeat(4,minmax(calc(50%-20px),1fr))] lg:grid-cols-4 mt-[24px] lg:mt-[40px] !mb-[16px] place-items-stretch gap-6 lg:gap-14 overflow-x-auto custom-scrollbar">
       {% for block in section.blocks %}
         {% assign bls = block.settings %}
         <div {{ block.shopify_attributes }}
 
-          class="relative rounded-3xl bg-[#FBFAF5] shadow-xl ring-1 ring-black/5 overflow-hidden">
+          class="relative rounded-3xl lg:rounded-[24px] bg-[#FBFAF5] box-shadow-pocket border border-[#EDEDED] overflow-hidden">
           <!-- Top content -->
-          <div class="p-6 text-center">
+          <div class="p-6 lg:!pt-10 text-center">
             {% if bls.badge_text != blank %}
-              <span class="inline-block rounded-full px-8 lgpx-5 py-1 lg:py-2 mb-[16px] lg:mbt-[12px] text-[12px] lg:text-[15px] font-bold text-gray-900 shadow"
+              <span class="inline-block rounded-full px-[10px] lg:px-[24px] py-1 lg:py-2 mb-[16px] lg:mbt-[12px] text-[12px] lg:text-[15px] font-semibold text-black leading-normal"
                     style="background-color: {{ bls.badge_bg | default: '#FDE047' }};">
                 {{ bls.badge_text }}
               </span>
@@ -29,23 +29,26 @@
                  class="object-cover mx-auto my-2 h-[18px] lg:h-[24px]" width="auto" height="24">
               {% endif %}
               {% if bls.subtitle != blank %}
-                <p class="text-left lg:w-[75%] text-[11px] lg:text-[15px] leading-normal mx-auto text-[#8E8A8A] italic">{{ bls.subtitle }}</p>
+                <p class="flex items-center text-left lg:w-[75%] text-[11px] lg:text-[15px] leading-normal mx-auto text-[#8E8A8A] lg:min-h-[44px] font-light italic lowercase">{{ bls.subtitle }}</p>
               {% endif %}
             </div>
           </div>
 
           <!-- Image area -->
           <div class="relative flex items-end justify-center">
-            <img src="{{ bls.image | image_url }}" alt="{{ bls.image.alt | escape }}" class="object-cover" width="100%" height="264">
+            <img src="{{ bls.image | image_url }}" alt="{{ bls.image.alt | escape }}" class="object-cover rounded-3xl lg:rounded-[24px]" width="100%" height="264">
 
             <!-- CTA pill {{ bls.cta_link }}-->
             <a href="{{ bls.cta_link }}"
-                 class="absolute bottom-[5px] lg:bottom-7 w-[calc(100%-10px)] lg:w-[calc(100%-16px)] inline-flex justify-center gap-2 lg:justify-between items-center rounded-full p-[10px] shadow-lg ring-1 ring-black/5 hover:shadow-xl transition border-1 lg:border-2 border-[#E5E4E0]"
-                 style="background-color: {{ bls.cta_bg | default: '#FFFFFF' }};">
-                <span class="text-[16px] font-semibold lg:font-bold text-gray-900 leading-none lg:leading-normal">{{ bls.cta_text | default: 'see brand' }}</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" class="mr-3" viewBox="0 0 16 13" fill="none">
+                 class="absolute bottom-[5px] lg:bottom-[8px] w-[calc(100%-10px)] lg:w-[calc(100%-16px)] inline-flex justify-center gap-2 lg:justify-between items-center rounded-full bg-[#FBFAF5] p-[10px] shadow-lg ring-1 ring-black/5 hover:shadow-xl transition border-1 lg:border-2 border-[#E5E4E0]">
+                <span class="text-[16px] font-semibold lg:font-bold text-gray-900 tracking-[-0.8px] leading-none lg:leading-normal">{{ bls.cta_text | default: 'see brand' }}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" class="desktop_screen mr-3" viewBox="0 0 16 13" fill="none">
                     <path d="M1 5.75C0.585786 5.75 0.25 6.08579 0.25 6.5C0.25 6.91421 0.585786 7.25 1 7.25V6.5V5.75ZM15.5303 7.03033C15.8232 6.73744 15.8232 6.26256 15.5303 5.96967L10.7574 1.1967C10.4645 0.903806 9.98959 0.903806 9.6967 1.1967C9.40381 1.48959 9.40381 1.96447 9.6967 2.25736L13.9393 6.5L9.6967 10.7426C9.40381 11.0355 9.40381 11.5104 9.6967 11.8033C9.98959 12.0962 10.4645 12.0962 10.7574 11.8033L15.5303 7.03033ZM1 6.5V7.25H15V6.5V5.75H1V6.5Z" fill="black"/>
                   </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none" class="mobile_screen">
+                  <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
+                  <path d="M21.8536 15.8536C22.0488 15.6583 22.0488 15.3417 21.8536 15.1464L18.6716 11.9645C18.4763 11.7692 18.1597 11.7692 17.9645 11.9645C17.7692 12.1597 17.7692 12.4763 17.9645 12.6716L20.7929 15.5L17.9645 18.3284C17.7692 18.5237 17.7692 18.8403 17.9645 19.0355C18.1597 19.2308 18.4763 19.2308 18.6716 19.0355L21.8536 15.8536ZM7.5 15.5V16H21.5V15.5V15H7.5V15.5Z" fill="black"/>
+                </svg>
               </a>
           </div>
         </div>
@@ -53,21 +56,21 @@
     </div>
   </div>
     <!-- Brands Strip (HTML + Tailwind only) -->
-  <div class="brands-strip-container mt-[60px] mb-[40px]">
+  <div class="brands-strip-container mt-[20px] mb-[50px] lg:my-[40px]">
     <div class="rounded-2xl [background:linear-gradient(90deg,rgba(211,169,0,0.32)_0%,rgba(246,205,82,0.10)_100%)] from-amber-100 to-amber-50 p-[16px] lg:p-[20px]">
       <div class="flex items-center gap-[4px] lg:gap-5 flex-wrap lg:flex-nowrap">
         <!-- Left: Title -->
-        <div class="shrink-0 w-[85px] md:w-75">
-          <p class="text-[12px] lg:text-[18px] font-semibold text-[#2A2F38] tracking-normal">Other brands that we have</p>
+        <div class="shrink-0 w-full lg:w-75">
+          <p class="text-[14px] lg:text-[18px] font-semibold text-[#2A2F38] tracking-normal leading-normal">Other brands that we have</p>
         </div>
 
         <!-- Middle: Brand images -->
         <div class="flex-1">
-          <ul class="flex items-center gap-[4px] md:gap-4 overflow-x-auto [&>div]:h-[auto] [&>div]:shadow-sm [&>div]:!grid [&>div]:place-items-center">
+          <ul class="flex items-center flex-wrap gap-[4px] md:gap-4 overflow-x-auto [&>div]:h-[auto] [&>div]:shadow-sm [&>div]:!grid [&>div]:place-items-center">
             <!-- Brand tile -->
             {% if section.settings.additional_image_1 and section.settings.additional_cta_link_1 %}
               <li>
-                <div class="w-[57px] lg:w-[130px]">
+                <div class="w-[100px] lg:w-[130px]">
                   <a href="{{ section.settings.additional_cta_link_1 }}" alt="Brand">
                   <img src="{{ section.settings.additional_image_1 |  image_url  }}" alt="Koric" width="100%" height="100%" loading="lazy" class="rounded-[8px] lg:rounded-4xl border border-[#3C5865]">
                   </a>
@@ -76,7 +79,7 @@
             {% endif %}
             {% if section.settings.additional_image_2 and section.settings.additional_cta_link_2 %}
               <li>
-                <div class="w-[57px] lg:w-[130px]">
+                <div class="w-[100px] lg:w-[130px]">
                   <a href="{{ section.settings.additional_cta_link_2 }}" alt="Brand">
                   <img src="{{ section.settings.additional_image_2 |  image_url  }}" alt="Koric" width="100%" height="100%" loading="lazy" class="rounded-[8px] lg:rounded-4xl border border-[#3C5865]">
                   </a>
@@ -85,7 +88,7 @@
             {% endif %}
             {% if section.settings.additional_image_3 and section.settings.additional_cta_link_3 %}
               <li>
-                <div class="w-[57px] lg:w-[130px]">
+                <div class="w-[100px] lg:w-[130px]">
                   <a href="{{ section.settings.additional_cta_link_3 }}" alt="Brand">
                   <img src="{{ section.settings.additional_image_3 |  image_url  }}" alt="Koric" width="100%" height="100%" loading="lazy" class="rounded-[8px] lg:rounded-4xl border border-[#3C5865]">
                   </a>
@@ -94,7 +97,7 @@
             {% endif %}
             {% if section.settings.additional_image_4 and section.settings.additional_cta_link_4 %}
               <li>
-                <div class="w-[57px] lg:w-[130px]">
+                <div class="w-[100px] lg:w-[130px]">
                   <a href="{{ section.settings.additional_cta_link_4 }}" alt="Brand">
                   <img src="{{ section.settings.additional_image_4 |  image_url  }}" alt="Koric" width="100%" height="100%" loading="lazy" class="rounded-[8px] lg:rounded-4xl border border-[#3C5865]">
                   </a>
