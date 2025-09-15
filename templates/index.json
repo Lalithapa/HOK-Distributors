@@ -561,9 +561,9 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-1.png",
-            "title": "Lip Gloss",
-            "alt": "",
-            "link": ""
+            "title": "Eyebrow Enhancer",
+            "alt": "Eyebrow Enhancer",
+            "link": "#"
           }
         },
         "item_Xr8kRa": {
