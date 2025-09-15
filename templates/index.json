@@ -363,7 +363,7 @@
         "item_HrWeRH": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image.png",
+            "image": "shopify://shop_images/Blush.png",
             "title": "Blush",
             "alt": "Blush",
             "link": "shopify://collections/blush"
