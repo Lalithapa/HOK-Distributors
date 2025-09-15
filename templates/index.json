@@ -563,52 +563,52 @@
             "image": "shopify://shop_images/image-1.png",
             "title": "Eyebrow Enhancer",
             "alt": "Eyebrow Enhancer",
-            "link": "#"
+            "link": ""
           }
         },
         "item_Xr8kRa": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-1.png",
-            "title": "Lip Gloss",
-            "alt": "",
-            "link": ""
+            "title": "Eyeshadow",
+            "alt": "Eyeshadow",
+            "link": "shopify://collections/eyeshadow"
           }
         },
         "item_Q97rbV": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-1.png",
-            "title": "Lip Gloss",
-            "alt": "",
-            "link": ""
+            "title": "Eyeliner",
+            "alt": "Eyeliner",
+            "link": "shopify://collections/eyeliner"
           }
         },
         "item_Wzw4na": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-1.png",
-            "title": "Lip Gloss",
-            "alt": "",
-            "link": ""
+            "title": "Eyelashes",
+            "alt": "Eyelashes",
+            "link": "#"
           }
         },
         "item_tUykpr": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-1.png",
-            "title": "Lip Gloss",
-            "alt": "",
-            "link": ""
+            "title": "Kajal",
+            "alt": "Kajal",
+            "link": "shopify://collections/kajal"
           }
         },
         "item_eCreqK": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-1.png",
-            "title": "Lip Gloss",
-            "alt": "",
-            "link": ""
+            "title": "Mascara",
+            "alt": "Mascara",
+            "link": "shopify://collections/mascara"
           }
         },
         "item_CnAYWk": {
