@@ -557,15 +557,6 @@
     "collection_category_FMVrx9": {
       "type": "collection-category",
       "blocks": {
-        "item_6HqWQn": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/image-1.png",
-            "title": "Eyebrow Enhancer",
-            "alt": "Eyebrow Enhancer",
-            "link": ""
-          }
-        },
         "item_Xr8kRa": {
           "type": "item",
           "settings": {
@@ -611,34 +602,33 @@
             "link": "shopify://collections/mascara"
           }
         },
+        "item_6HqWQn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/image-1.png",
+            "title": "Eyebrow Enhancer",
+            "alt": "Eyebrow Enhancer",
+            "link": ""
+          }
+        },
         "item_CnAYWk": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-1.png",
-            "title": "Lip Gloss",
-            "alt": "",
-            "link": ""
-          }
-        },
-        "item_zz8BCL": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/image-1.png",
-            "title": "Lip Gloss",
-            "alt": "",
-            "link": ""
+            "title": "Eyeprimer",
+            "alt": "Eyeprimer",
+            "link": "shopify://collections/eyeprimer"
           }
         }
       },
       "block_order": [
-        "item_6HqWQn",
         "item_Xr8kRa",
         "item_Q97rbV",
         "item_Wzw4na",
         "item_tUykpr",
         "item_eCreqK",
-        "item_CnAYWk",
-        "item_zz8BCL"
+        "item_6HqWQn",
+        "item_CnAYWk"
       ],
       "name": "Collection Category",
       "settings": {
