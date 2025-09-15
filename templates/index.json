@@ -440,6 +440,15 @@
             "alt": "Compact",
             "link": "shopify://collections/compact"
           }
+        },
+        "item_p6TLcN": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/image-4.png",
+            "title": "Highlighter",
+            "alt": "Highlighter",
+            "link": "shopify://collections/highlighter"
+          }
         }
       },
       "block_order": [
@@ -452,7 +461,8 @@
         "item_ci9fbN",
         "item_KTMdeM",
         "item_HqfdqB",
-        "item_ChnTXk"
+        "item_ChnTXk",
+        "item_p6TLcN"
       ],
       "name": "Collection Category",
       "settings": {
