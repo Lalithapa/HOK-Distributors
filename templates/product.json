@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -49,8 +58,8 @@
         "offers_zQQPAw": {
           "type": "offers",
           "settings": {
-            "custom_rich_text_offer": "<ul><li>Free Eyeliner on orders over ₹799<\/li><li>Free Eyeliner and Liquid Lipstick on orders over ₹1499<\/li><\/ul>",
-            "custom_image": "shopify:\/\/shop_images\/call_1.png"
+            "custom_rich_text_offer": "<ul><li>Free Eyeliner on orders over ₹799</li><li>Free Eyeliner and Liquid Lipstick on orders over ₹1499</li></ul>",
+            "custom_image": "shopify://shop_images/call_1.png"
           }
         },
         "product_detail_BeDLAW": {
@@ -87,7 +96,7 @@
       "custom_css": [
         "button.shopify-payment-button__button.shopify-payment-button__button--unbranded,.quantity__label.form__label,.product-form__error-message-wrapper {display: none;}",
         ".product__info-container .product-form,.product-form__input,.product-form__submit {margin: 0 !important;}",
-        ".button--secondary:after,.product-form__buttons .button:after{display: none;}",
+        ".button--secondary:after,.product-form__buttons .button:after {display: none;}",
         ".product-form__submit.button {background-color: #edcc31; border-radius: 0 100px 100px 0; text-transform: uppercase;}",
         ".quantity:after {box-shadow: unset;}",
         "ul {list-style: inside;}"
@@ -111,7 +120,7 @@
     "related-products": {
       "type": "related-products",
       "custom_css": [
-        ".hide_cta {display: none;}",
+        ".related-products .flex.items-center.gap-3.mt-2 {display: none;}",
         ".box-shadow-pocket {box-shadow: unset;}",
         ".pdp_price-row {gap: 8px !important; margin-top: 8px;}",
         "@media screen and (max-width: 768px) {.pdp_price-row > :first-child {font-size: 14px; } .pdp_price-row .discont-tag {font-size: 11px; font-weight: 500; line-height: normal; letter-spacing: -0.55px; } .pdp_price-row {gap: 2px !important; }}"
