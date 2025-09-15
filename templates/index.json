@@ -483,18 +483,18 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-5.png",
-            "title": "Lipstick",
-            "alt": "",
-            "link": ""
+            "title": "Lip Balm",
+            "alt": "Lip Balm",
+            "link": "shopify://collections/lip-balm"
           }
         },
         "item_xarqQz": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-5.png",
-            "title": "Lipstick",
-            "alt": "",
-            "link": ""
+            "title": "Lip Liner",
+            "alt": "Lip Liner",
+            "link": "shopify://collections/lip-liner"
           }
         },
         "item_CgNUxn": {
@@ -502,35 +502,35 @@
           "settings": {
             "image": "shopify://shop_images/image-5.png",
             "title": "Lipstick",
-            "alt": "",
-            "link": ""
+            "alt": "Lipstick",
+            "link": "shopify://collections/lipsticks"
           }
         },
         "item_jhzETd": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-5.png",
-            "title": "Lipstick",
-            "alt": "",
-            "link": ""
+            "title": "Liquid Lipstick",
+            "alt": "Liquid Lipstick",
+            "link": "shopify://collections/liquid-lipstick"
           }
         },
         "item_jjQgEQ": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-5.png",
-            "title": "Lipstick",
-            "alt": "",
-            "link": ""
+            "title": "Lip Gloss",
+            "alt": "Lip Gloss",
+            "link": "shopify://collections/lip-gloss"
           }
         },
         "item_UxKdiM": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-5.png",
-            "title": "Lipstick",
-            "alt": "",
-            "link": ""
+            "title": "Lip Scrub",
+            "alt": "Lip Scrub",
+            "link": "https://hokmakeup.com/products/rose-sugar-lip-scrub-02-lip-scrub"
           }
         }
       },
