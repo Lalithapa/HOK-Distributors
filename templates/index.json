@@ -560,7 +560,7 @@
         "item_Xr8kRa": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-1.png",
+            "image": "shopify://shop_images/Eyeshadow.png",
             "title": "Eyeshadow",
             "alt": "Eyeshadow",
             "link": "shopify://collections/eyeshadow"
@@ -569,7 +569,7 @@
         "item_Q97rbV": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-1.png",
+            "image": "shopify://shop_images/Eyeliner.png",
             "title": "Eyeliner",
             "alt": "Eyeliner",
             "link": "shopify://collections/eyeliner"
@@ -578,7 +578,7 @@
         "item_Wzw4na": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-1.png",
+            "image": "shopify://shop_images/Eyelashes.png",
             "title": "Eyelashes",
             "alt": "Eyelashes",
             "link": "#"
@@ -587,7 +587,7 @@
         "item_tUykpr": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-1.png",
+            "image": "shopify://shop_images/Kajal.png",
             "title": "Kajal",
             "alt": "Kajal",
             "link": "shopify://collections/kajal"
@@ -596,7 +596,7 @@
         "item_eCreqK": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-1.png",
+            "image": "shopify://shop_images/Mascara.png",
             "title": "Mascara",
             "alt": "Mascara",
             "link": "shopify://collections/mascara"
@@ -605,7 +605,7 @@
         "item_6HqWQn": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-1.png",
+            "image": "shopify://shop_images/Eyebrow_Enhancer.png",
             "title": "Eyebrow Enhancer",
             "alt": "Eyebrow Enhancer",
             "link": ""
