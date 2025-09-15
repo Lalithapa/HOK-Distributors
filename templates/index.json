@@ -404,6 +404,42 @@
             "alt": "Loose Powder",
             "link": "shopify://collections/loose-powder"
           }
+        },
+        "item_ci9fbN": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/image-4.png",
+            "title": "Setting Spray",
+            "alt": "Setting Spray",
+            "link": "https://hokmakeup.com/products/milani-make-it-last-natural-finish-setting-spray-prime-correct-set?_pos=1&_sid=457a045bb&_ss=r&variant=49736157167895"
+          }
+        },
+        "item_KTMdeM": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/image-4.png",
+            "title": "Primer",
+            "alt": "Primer",
+            "link": "shopify://collections/face-primer"
+          }
+        },
+        "item_HqfdqB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/image-4.png",
+            "title": "Contour & Highlight",
+            "alt": "Contour & Highlight",
+            "link": "shopify://collections/contour-highlighter"
+          }
+        },
+        "item_ChnTXk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/image-4.png",
+            "title": "Compact",
+            "alt": "Compact",
+            "link": "shopify://collections/compact"
+          }
         }
       },
       "block_order": [
@@ -412,7 +448,11 @@
         "item_JJhdzy",
         "item_MLyAWh",
         "item_JjHLi7",
-        "item_6TaAjW"
+        "item_6TaAjW",
+        "item_ci9fbN",
+        "item_KTMdeM",
+        "item_HqfdqB",
+        "item_ChnTXk"
       ],
       "name": "Collection Category",
       "settings": {
