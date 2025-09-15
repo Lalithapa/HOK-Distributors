@@ -355,18 +355,18 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image.png",
-            "title": "Bronzer",
-            "alt": "",
-            "link": ""
+            "title": "Foundation",
+            "alt": "Foundation",
+            "link": "shopify://collections/foundation"
           }
         },
         "item_HrWeRH": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image.png",
-            "title": "Bronzer",
-            "alt": "",
-            "link": ""
+            "title": "Blush",
+            "alt": "Blush",
+            "link": "shopify://collections/blush"
           }
         },
         "item_JJhdzy": {
@@ -382,7 +382,7 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-4.png",
-            "title": "Bronzer",
+            "title": "Concealer",
             "alt": "",
             "link": ""
           }
