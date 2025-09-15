@@ -354,7 +354,7 @@
         "item_3Fqzje": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Foundation.png",
+            "image": "shopify://shop_images/Foundation_693a1309-2c03-4f34-bdfd-9f4de6b34d34.png",
             "title": "Foundation",
             "alt": "Foundation",
             "link": "shopify://collections/foundation"
@@ -363,7 +363,7 @@
         "item_HrWeRH": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Blush.png",
+            "image": "shopify://shop_images/Blush_1cd004b5-e131-40d6-9889-7b3fc099dace.png",
             "title": "Blush",
             "alt": "Blush",
             "link": "shopify://collections/blush"
@@ -372,7 +372,7 @@
         "item_JJhdzy": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image.png",
+            "image": "shopify://shop_images/Bronzer.png",
             "title": "Bronzer",
             "alt": "",
             "link": ""
@@ -381,7 +381,7 @@
         "item_MLyAWh": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-4.png",
+            "image": "shopify://shop_images/Concealer.png",
             "title": "Concealer",
             "alt": "Concealer",
             "link": "shopify://collections/concealer"
@@ -390,7 +390,7 @@
         "item_JjHLi7": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-4.png",
+            "image": "shopify://shop_images/Contour.png",
             "title": "Contour",
             "alt": "Contour",
             "link": "shopify://collections/contour"
@@ -399,7 +399,7 @@
         "item_6TaAjW": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-4.png",
+            "image": "shopify://shop_images/Loose_Powder.png",
             "title": "Loose Powder",
             "alt": "Loose Powder",
             "link": "shopify://collections/loose-powder"
@@ -408,7 +408,7 @@
         "item_ci9fbN": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-4.png",
+            "image": "shopify://shop_images/Setting_spray_40fbf273-7011-4a6f-80e3-bb71ca393f44.png",
             "title": "Setting Spray",
             "alt": "Setting Spray",
             "link": "https://hokmakeup.com/products/milani-make-it-last-natural-finish-setting-spray-prime-correct-set?_pos=1&_sid=457a045bb&_ss=r&variant=49736157167895"
@@ -417,7 +417,7 @@
         "item_KTMdeM": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-4.png",
+            "image": "shopify://shop_images/Primer_29171552-ece7-493c-9f2d-569d6182df77.png",
             "title": "Primer",
             "alt": "Primer",
             "link": "shopify://collections/face-primer"
@@ -426,7 +426,7 @@
         "item_HqfdqB": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-4.png",
+            "image": "shopify://shop_images/Contour_Highlight.png",
             "title": "Contour & Highlight",
             "alt": "Contour & Highlight",
             "link": "shopify://collections/contour-highlighter"
@@ -435,7 +435,7 @@
         "item_ChnTXk": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-4.png",
+            "image": "shopify://shop_images/Compact.png",
             "title": "Compact",
             "alt": "Compact",
             "link": "shopify://collections/compact"
@@ -444,7 +444,7 @@
         "item_p6TLcN": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-4.png",
+            "image": "shopify://shop_images/Highlighter.png",
             "title": "Highlighter",
             "alt": "Highlighter",
             "link": "shopify://collections/highlighter"
