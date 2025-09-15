@@ -25,8 +25,8 @@
         "padding_bottom_mobile": 0,
         "heading_text": "",
         "link": "#",
-        "image": "shopify:\/\/shop_images\/HOKD_Banner.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/HOKD_Banner_mobile.jpg"
+        "image": "shopify://shop_images/FIRST_BANNER.jpg",
+        "image_mobile": "shopify://shop_images/FIRST_BANNER_MOBILE.jpg"
       }
     },
     "statistics_kwVhVi": {
@@ -43,7 +43,7 @@
         "card_yiXpN3": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1111.jpg",
+            "image": "shopify://shop_images/1img.webp",
             "alt": "1",
             "link": "#"
           }
@@ -51,7 +51,7 @@
         "card_TygwRG": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_38296_3x_235848e1-1880-4a5d-84c4-d9b5c205650a.jpg",
+            "image": "shopify://shop_images/EN-FA-L14-PP02-1_2_3ff2fa79-557e-4d68-9eae-f9be9d9c6ce2.webp",
             "alt": "222",
             "link": "#"
           }
@@ -59,7 +59,7 @@
         "card_UcAzde": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/333.jpg",
+            "image": "shopify://shop_images/717489002745_4_ceb736bf-ddc3-4792-aae2-a870e212f504.webp",
             "alt": "3333",
             "link": "#"
           }
@@ -78,7 +78,7 @@
         "margin_bottom_mobile": 56,
         "title": "What's New & Now",
         "button_label": "VIEW ALL",
-        "button_link": "shopify:\/\/collections"
+        "button_link": "shopify://collections"
       }
     },
     "single_banner_HfVkqL": {
@@ -97,8 +97,8 @@
         "padding_bottom_mobile": 0,
         "heading_text": "",
         "link": "#",
-        "image": "shopify:\/\/shop_images\/HokD_offer.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/HokD_offerMobile.jpg"
+        "image": "shopify://shop_images/HokD_offer.jpg",
+        "image_mobile": "shopify://shop_images/HokD_offerMobile.jpg"
       }
     },
     "product_slider_kPdfPy": {
@@ -135,48 +135,8 @@
         "padding_bottom_mobile": 0,
         "heading_text": "",
         "link": "#",
-        "image": "shopify:\/\/shop_images\/clearence_deal.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Clearence_dEAL_1c8d856d-95e8-4f0e-8b3e-5b82cd57f8df.jpg"
-      }
-    },
-    "single_banner_dNjKjT": {
-      "type": "single-banner",
-      "name": "Single Banner",
-      "settings": {
-        "container": "page-width",
-        "margin_top_desktop": 56,
-        "margin_bottom_desktop": 56,
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0,
-        "background_color": "#ffffff",
-        "margin_top_mobile": 0,
-        "margin_bottom_mobile": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "heading_text": "",
-        "link": "#",
-        "image": "shopify:\/\/shop_images\/clearence_deal.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Clearence_dEAL_1c8d856d-95e8-4f0e-8b3e-5b82cd57f8df.jpg"
-      }
-    },
-    "single_banner_dNjKjT": {
-      "type": "single-banner",
-      "name": "Single Banner",
-      "settings": {
-        "container": "page-width",
-        "margin_top_desktop": 56,
-        "margin_bottom_desktop": 56,
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0,
-        "background_color": "#ffffff",
-        "margin_top_mobile": 0,
-        "margin_bottom_mobile": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "heading_text": "",
-        "link": "#",
-        "image": "shopify://shop_images/clearence_deal.jpg",
-        "image_mobile": "shopify://shop_images/Clearence_dEAL_1c8d856d-95e8-4f0e-8b3e-5b82cd57f8df.jpg"
+        "image": "shopify://shop_images/Special_Savings.jpg",
+        "image_mobile": "shopify://shop_images/Special_Savings_MOBILE.jpg"
       }
     },
     "product_slider_rMpNYi": {
@@ -197,19 +157,39 @@
         "loop": false
       }
     },
+    "single_banner_dNjKjT": {
+      "type": "single-banner",
+      "name": "Single Banner",
+      "settings": {
+        "container": "page-width",
+        "margin_top_desktop": 56,
+        "margin_bottom_desktop": 56,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "background_color": "#ffffff",
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "heading_text": "",
+        "link": "#",
+        "image": "shopify://shop_images/Your_exclusive_savings_start_here.jpg",
+        "image_mobile": "shopify://shop_images/Your_exclusive_savings_start_here_MOBILE.jpg"
+      }
+    },
     "brand_cards_grid_ctnUHm": {
       "type": "brand-cards-grid",
       "blocks": {
         "brand_card_eUhkcn": {
           "type": "brand_card",
           "settings": {
-            "badge_text": "New stock",
+            "badge_text": "Top-Picks",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify:\/\/shop_images\/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify:\/\/shop_images\/Brand_image.png",
+            "brand_name_image": "shopify://shop_images/Makeup_Revolution_1.png",
+            "subtitle": "Trend-led bestsellers your customers love",
+            "image": "shopify://shop_images/Makeup_Revolution.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify:\/\/collections\/focallure",
+            "cta_link": "shopify://collections/makeup-revolution",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -217,13 +197,13 @@
         "brand_card_Yf4aMd": {
           "type": "brand_card",
           "settings": {
-            "badge_text": "New stock",
+            "badge_text": "Best Seller",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify:\/\/shop_images\/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify:\/\/shop_images\/Brand_image.png",
+            "brand_name_image": "shopify://shop_images/LAGirl_1_a78db249-29dd-4969-9ea3-3a37b44e8a58.png",
+            "subtitle": "Every shade, every style, always in demand",
+            "image": "shopify://shop_images/LA_Girl_8aa613b1-44b2-4c0a-a30d-a42e1aaf27ed.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify:\/\/collections\/focallure",
+            "cta_link": "shopify://collections/l-a-girl",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -231,13 +211,13 @@
         "brand_card_EVkWjE": {
           "type": "brand_card",
           "settings": {
-            "badge_text": "New stock",
+            "badge_text": "Big Margins",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify:\/\/shop_images\/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify:\/\/shop_images\/Brand_image.png",
+            "brand_name_image": "shopify://shop_images/Milani_1.png",
+            "subtitle": " High-demand Italian glam collection, set for instant sales",
+            "image": "shopify://shop_images/Milani_cdba26ee-e19b-469c-923b-b4bdbcc6aa65.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify:\/\/collections\/focallure",
+            "cta_link": "shopify://collections/milani",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -245,13 +225,13 @@
         "brand_card_4aMzx4": {
           "type": "brand_card",
           "settings": {
-            "badge_text": "New stock",
+            "badge_text": "Fast Seller",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify:\/\/shop_images\/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify:\/\/shop_images\/Brand_image.png",
+            "brand_name_image": "shopify://shop_images/Focallure_1.png",
+            "subtitle": "Tint your way to bigger sales",
+            "image": "shopify://shop_images/Focallure.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify:\/\/collections\/focallure",
+            "cta_link": "shopify://collections/focallure",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -259,13 +239,13 @@
         "brand_card_fYhqed": {
           "type": "brand_card",
           "settings": {
-            "badge_text": "New stock",
+            "badge_text": "In demand",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify:\/\/shop_images\/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify:\/\/shop_images\/Brand_image.png",
+            "brand_name_image": "shopify://shop_images/JESSUP_1_67202456-d13b-40f4-9284-64cfc5831534.png",
+            "subtitle": "Pro brushes trusted worldwide",
+            "image": "shopify://shop_images/Jessup_Beauty.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify:\/\/collections\/focallure",
+            "cta_link": "shopify://collections/jessup",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -273,13 +253,13 @@
         "brand_card_THaMhT": {
           "type": "brand_card",
           "settings": {
-            "badge_text": "In demand",
+            "badge_text": "Classic",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify:\/\/shop_images\/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify:\/\/shop_images\/Brand_image.png",
+            "brand_name_image": "shopify://shop_images/Ardell_1.png",
+            "subtitle": "Lashes that sell themselves",
+            "image": "shopify://shop_images/Ardell_a8337c74-93fa-4ed3-82f2-a9fa268019dd.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify:\/\/collections\/focallure",
+            "cta_link": "shopify://collections/ardell",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -287,13 +267,13 @@
         "brand_card_fXp8FQ": {
           "type": "brand_card",
           "settings": {
-            "badge_text": "New stock",
+            "badge_text": "Trending",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify:\/\/shop_images\/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify:\/\/shop_images\/Brand_image.png",
+            "brand_name_image": "shopify://shop_images/Lamel.png",
+            "subtitle": "Lip oils that keep selling out",
+            "image": "shopify://shop_images/Lamel.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify:\/\/collections\/focallure",
+            "cta_link": "shopify://collections/lamel-1",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -301,13 +281,13 @@
         "brand_card_Qwh7kt": {
           "type": "brand_card",
           "settings": {
-            "badge_text": "New stock",
+            "badge_text": "Popular",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify:\/\/shop_images\/focallure_logo.png",
-            "subtitle": "for business focusing skincare",
-            "image": "shopify:\/\/shop_images\/Brand_image.png",
+            "brand_name_image": "shopify://shop_images/DrPawPaw_1.png",
+            "subtitle": "The balm everyone asks for",
+            "image": "shopify://shop_images/Dr._Paw_Paw.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify:\/\/collections\/focallure",
+            "cta_link": "#",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -337,7 +317,7 @@
       ],
       "name": "Two images with notice",
       "settings": {
-        "image_left": "shopify:\/\/shop_images\/Rectangle_34625213.jpg",
+        "image_left": "shopify://shop_images/Rectangle_34625213.jpg",
         "alt_left": "Eye Shadow",
         "alt_right": "",
         "notice": ""
@@ -359,8 +339,8 @@
         "padding_bottom_mobile": 0,
         "heading_text": "",
         "link": "#",
-        "image": "shopify:\/\/shop_images\/category_image.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/category_image-mob.jpg"
+        "image": "shopify://shop_images/category_image.jpg",
+        "image_mobile": "shopify://shop_images/category_image-mob.jpg"
       }
     },
     "collection_category_WQY69b": {
@@ -369,7 +349,7 @@
         "item_3Fqzje": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image.png",
+            "image": "shopify://shop_images/image.png",
             "title": "Bronzer",
             "alt": "",
             "link": ""
@@ -378,7 +358,7 @@
         "item_HrWeRH": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image.png",
+            "image": "shopify://shop_images/image.png",
             "title": "Bronzer",
             "alt": "",
             "link": ""
@@ -387,7 +367,7 @@
         "item_JJhdzy": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image.png",
+            "image": "shopify://shop_images/image.png",
             "title": "Bronzer",
             "alt": "",
             "link": ""
@@ -396,7 +376,7 @@
         "item_MLyAWh": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-4.png",
+            "image": "shopify://shop_images/image-4.png",
             "title": "Bronzer",
             "alt": "",
             "link": ""
@@ -405,7 +385,7 @@
         "item_JjHLi7": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-4.png",
+            "image": "shopify://shop_images/image-4.png",
             "title": "Bronzer",
             "alt": "",
             "link": ""
@@ -414,7 +394,7 @@
         "item_6TaAjW": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-4.png",
+            "image": "shopify://shop_images/image-4.png",
             "title": "Bronzer",
             "alt": "",
             "link": ""
@@ -438,7 +418,7 @@
         "title": "Face",
         "subtext": "Foundations, powders & more that sell fast",
         "button_label": "VIEW ALL",
-        "button_link": "shopify:\/\/collections"
+        "button_link": "shopify://collections"
       }
     },
     "collection_category_zDCktc": {
@@ -447,7 +427,7 @@
         "item_4TeDYB": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-5.png",
+            "image": "shopify://shop_images/image-5.png",
             "title": "Lipstick",
             "alt": "",
             "link": ""
@@ -456,7 +436,7 @@
         "item_xarqQz": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-5.png",
+            "image": "shopify://shop_images/image-5.png",
             "title": "Lipstick",
             "alt": "",
             "link": ""
@@ -465,7 +445,7 @@
         "item_CgNUxn": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-5.png",
+            "image": "shopify://shop_images/image-5.png",
             "title": "Lipstick",
             "alt": "",
             "link": ""
@@ -474,7 +454,7 @@
         "item_jhzETd": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-5.png",
+            "image": "shopify://shop_images/image-5.png",
             "title": "Lipstick",
             "alt": "",
             "link": ""
@@ -483,7 +463,7 @@
         "item_jjQgEQ": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-5.png",
+            "image": "shopify://shop_images/image-5.png",
             "title": "Lipstick",
             "alt": "",
             "link": ""
@@ -492,7 +472,7 @@
         "item_UxKdiM": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-5.png",
+            "image": "shopify://shop_images/image-5.png",
             "title": "Lipstick",
             "alt": "",
             "link": ""
@@ -516,7 +496,7 @@
         "title": "Lips",
         "subtext": "Bulk supply of lip shades and care products",
         "button_label": "VIEW ALL",
-        "button_link": "shopify:\/\/collections"
+        "button_link": "shopify://collections"
       }
     },
     "collection_category_FMVrx9": {
@@ -525,7 +505,7 @@
         "item_6HqWQn": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-1.png",
+            "image": "shopify://shop_images/image-1.png",
             "title": "Lip Gloss",
             "alt": "",
             "link": ""
@@ -534,7 +514,7 @@
         "item_Xr8kRa": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-1.png",
+            "image": "shopify://shop_images/image-1.png",
             "title": "Lip Gloss",
             "alt": "",
             "link": ""
@@ -543,7 +523,7 @@
         "item_Q97rbV": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-1.png",
+            "image": "shopify://shop_images/image-1.png",
             "title": "Lip Gloss",
             "alt": "",
             "link": ""
@@ -552,7 +532,7 @@
         "item_Wzw4na": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-1.png",
+            "image": "shopify://shop_images/image-1.png",
             "title": "Lip Gloss",
             "alt": "",
             "link": ""
@@ -561,7 +541,7 @@
         "item_tUykpr": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-1.png",
+            "image": "shopify://shop_images/image-1.png",
             "title": "Lip Gloss",
             "alt": "",
             "link": ""
@@ -570,7 +550,7 @@
         "item_eCreqK": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-1.png",
+            "image": "shopify://shop_images/image-1.png",
             "title": "Lip Gloss",
             "alt": "",
             "link": ""
@@ -579,7 +559,7 @@
         "item_CnAYWk": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-1.png",
+            "image": "shopify://shop_images/image-1.png",
             "title": "Lip Gloss",
             "alt": "",
             "link": ""
@@ -588,7 +568,7 @@
         "item_zz8BCL": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-1.png",
+            "image": "shopify://shop_images/image-1.png",
             "title": "Lip Gloss",
             "alt": "",
             "link": ""
@@ -614,7 +594,7 @@
         "title": "Eyes",
         "subtext": "Wide selection of eye makeup for every demand",
         "button_label": "VIEW ALL",
-        "button_link": "shopify:\/\/collections"
+        "button_link": "shopify://collections"
       }
     },
     "collection_category_8bVNT8": {
@@ -623,7 +603,7 @@
         "item_bGtFFh": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-3.png",
+            "image": "shopify://shop_images/image-3.png",
             "title": "Body",
             "alt": "",
             "link": ""
@@ -632,7 +612,7 @@
         "item_nKcDca": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image-3.png",
+            "image": "shopify://shop_images/image-3.png",
             "title": "Body",
             "alt": "",
             "link": ""
@@ -652,7 +632,7 @@
         "title": "Body",
         "subtext": "The body care your customers want",
         "button_label": "VIEW ALL",
-        "button_link": "shopify:\/\/collections"
+        "button_link": "shopify://collections"
       }
     },
     "two_images_notice_NWPAec": {
@@ -662,9 +642,9 @@
       ],
       "name": "Two images with notice",
       "settings": {
-        "image_left": "shopify:\/\/shop_images\/Rectangle_34625213.jpg",
+        "image_left": "shopify://shop_images/LAST_IMAGE_DESKTOP.jpg",
         "alt_left": "Eye Shadow",
-        "image_right": "shopify:\/\/shop_images\/Rectangle_34625241_3x_a6f8156c-cbf5-4eaa-9e4e-2e1e3949421c.jpg",
+        "image_right": "shopify://shop_images/2_LAST_IMAGE_DESKTOP.jpg",
         "alt_right": "Lips",
         "notice": "All sales are final. In case of damaged items or disperancies, please reach out within 48 hours of delivery for resolution"
       }

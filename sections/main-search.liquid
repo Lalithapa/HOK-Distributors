@@ -150,18 +150,23 @@
         and section.settings.filter_type == 'vertical'
         and search.filters != empty
       -%}
-        <facet-filters-form class="facets facets-vertical-sort page-width small-hide">
+        <facet-filters-form class="facets facets-vertical-sort w-full px-[16px] lg:px-[40px] small-hide">
           <form class="facets-vertical-form" id="FacetSortForm">
             <div class="facet-filters sorting caption">
+<<<<<<< HEAD
               <div class="facet-filters__field rounded-[1px] border border-[#DFDFDF]">
                 <h2 class="facet-filters__label caption-large text-body">
+=======
+              <div class="facet-filters__field rounded-[1px] border border-[#DFDFDF] p-[10px]">
+                <h2 class="facet-filters__label caption-large text-body !text-[12px] !m-[5px]">
+>>>>>>> 390ef03bc3ec3e1e742422bae511ea4b005944e3
                   <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
                 </h2>
                 <div class="select">
                   {%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
                   <select
                     name="sort_by"
-                    class="facet-filters__sort select__select caption-large"
+                    class="facet-filters__sort select__select caption-large !text-[12px] !outline-none focus:!outline-none focus:!ring-0 focus-visible:!shadow-none"
                     id="SortBy"
                     aria-describedby="a11y-refresh-page-message"
                   >
@@ -183,7 +188,7 @@
               </div>
             </div>
 
-            <div class="product-count-vertical light" role="status">
+            <div class="product-count-vertical light hidden" role="status">
               <h2 class="product-count__text text-body">
                 <span id="ProductCountDesktop">
                   {%- if search.results_count -%}
@@ -205,14 +210,14 @@
       {%- endif -%}
       <div
         {% if section.settings.filter_type == 'vertical' %}
-          class="facets-vertical page-width"
+          class="facets-vertical w-full px-[16px] lg:px-[40px]"
         {% endif %}
       >
         {%- if search.filters != empty -%}
           {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
             <aside
               aria-labelledby="verticalTitle"
-              class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+              class="sticky top-[69px] z-[1] pb-[10px] bg-white facets-wrapper tracking-normal border-b border-[#e6e6e6]{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
               id="main-search-filters"
               data-id="{{ section.id }}"
             >
@@ -246,14 +251,15 @@
               </div>
             </div>
           {%- else -%}
-            <div
-              class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+           {% comment %}page-width {% endcomment %}
+            <div 
+              class="template-search__results collection{% if section.settings.filter_type != 'vertical' %} w-full px-[16px] lg:px-[20px]{% endif %}"
               id="product-grid"
               data-id="{{ section.id }}"
             >
               <div class="loading-overlay gradient"></div>
               <ul
-                class="!grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
+                class="grid product-grid mt-4 grid--{{ section.settings.columns_mobile }}-col-tablet-down grid-3-col-tablet-view grid--{{ section.settings.columns_desktop }}-col-desktop"
                 role="list"
               >
                 {%- assign skip_card_product_styles = false -%}

@@ -128,10 +128,8 @@
                   <details
                     id="Details-{{ filter.param_name | escape }}-{{ section.id }}"
                     class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
-                    data-index="{{ forloop.index }}"
-                    {% if filter_type == 'vertical' and forloop.index == 1 %}
-                      open
-                    {% endif %}
+                    data-index="{{ forloop.index }}" open
+                    {% comment %} filter_type == 'vertical' and forloop.index == 1 open endif {% endcomment %}
                   >
                     <summary
                       class="facets__summary caption-large focus-offset"
@@ -151,7 +149,8 @@
                             {{ 'products.facets.filter_and_operator_subtitle' | t }}
                           </span>
                         {%- endif -%}
-                        {{- 'icon-caret.svg' | inline_asset_content -}}
+                        {% comment %} class:'hidden' added {% endcomment %}
+                        {% comment %} {{- 'icon-caret.svg' | inline_asset_content -}} {% endcomment %}
                       </div>
                     </summary>
                     <div
@@ -206,7 +205,7 @@
 
                             {%- capture text_value -%}
                               <span class="facet-checkbox__text" aria-hidden="true">
-                                <span class="facet-checkbox__text-label">{{- value.label | escape }}</span> ({{- value.count -}})
+                                <span class="facet-checkbox__text-label capitalize">{{- value.label | escape }}</span> ({{- value.count -}})
                               </span>
                               <span class="visually-hidden">
                                 {{- value.label | escape }} (
@@ -263,8 +262,8 @@
                                       {%- endif -%}
                                     </div>
                                   {%- else -%}
-                                    {{- 'square.svg' | inline_asset_content -}}
-
+                                    {% comment %} {{- 'square.svg' | inline_asset_content -}} {% endcomment %}
+                                      {{- 'filter-square.svg' | inline_asset_content -}}
                                     <div class="svg-wrapper">
                                       {{- 'icon-checkmark.svg' | inline_asset_content -}}
                                     </div>
@@ -300,14 +299,13 @@
                     id="Details-{{ filter.param_name | escape }}-{{ section.id }}"
                     class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
                     data-index="{{ forloop.index }}"
-                    {% if filter_type == 'vertical' and forloop.index == 1 %}
+                    {% if filter_type == 'vertical' and forloop.index == 1 %}{% endif %}
                       open
-                    {% endif %}
                   >
                     <summary class="facets__summary caption-large focus-offset">
                       <div>
                         <span>{{ filter.label | escape }}</span>
-                        {{- 'icon-caret.svg' | inline_asset_content -}}
+                        {% comment %} {{- 'icon-caret.svg' | inline_asset_content -}} {% endcomment %}
                       </div>
                     </summary>
                     <div
