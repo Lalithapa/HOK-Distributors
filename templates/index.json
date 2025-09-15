@@ -482,7 +482,7 @@
         "item_4TeDYB": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-5.png",
+            "image": "shopify://shop_images/Lip_Balm.png",
             "title": "Lip Balm",
             "alt": "Lip Balm",
             "link": "shopify://collections/lip-balm"
@@ -491,7 +491,7 @@
         "item_xarqQz": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-5.png",
+            "image": "shopify://shop_images/Lip_Liner.png",
             "title": "Lip Liner",
             "alt": "Lip Liner",
             "link": "shopify://collections/lip-liner"
@@ -500,7 +500,7 @@
         "item_CgNUxn": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-5.png",
+            "image": "shopify://shop_images/Lipstick.png",
             "title": "Lipstick",
             "alt": "Lipstick",
             "link": "shopify://collections/lipsticks"
@@ -509,7 +509,7 @@
         "item_jhzETd": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-5.png",
+            "image": "shopify://shop_images/Liquid_Lipstick.png",
             "title": "Liquid Lipstick",
             "alt": "Liquid Lipstick",
             "link": "shopify://collections/liquid-lipstick"
@@ -518,7 +518,7 @@
         "item_jjQgEQ": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-5.png",
+            "image": "shopify://shop_images/Lip_Gloss.png",
             "title": "Lip Gloss",
             "alt": "Lip Gloss",
             "link": "shopify://collections/lip-gloss"
@@ -527,7 +527,7 @@
         "item_UxKdiM": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/image-5.png",
+            "image": "shopify://shop_images/Lip_Scrub.png",
             "title": "Lip Scrub",
             "alt": "Lip Scrub",
             "link": "https://hokmakeup.com/products/rose-sugar-lip-scrub-02-lip-scrub"
