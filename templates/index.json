@@ -658,45 +658,45 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-3.png",
-            "title": "Body",
-            "alt": "",
-            "link": ""
+            "title": "Face Brush",
+            "alt": "Face Brush",
+            "link": "shopify://collections/face-brush"
           }
         },
         "item_wLzWfG": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-3.png",
-            "title": "Body",
-            "alt": "",
-            "link": ""
+            "title": "Eye Brush",
+            "alt": "Eye Brush",
+            "link": "shopify://collections/eye-brush"
           }
         },
         "item_JbdRhx": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-3.png",
-            "title": "Body",
-            "alt": "",
-            "link": ""
+            "title": "Lip Brush",
+            "alt": "Lip Brush",
+            "link": "shopify://collections/lip-brush"
           }
         },
         "item_UBDbX9": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-3.png",
-            "title": "Body",
-            "alt": "",
-            "link": ""
+            "title": "Sponges & Applicators",
+            "alt": "Sponges & Applicators",
+            "link": "shopify://collections/sponges-applicators"
           }
         },
         "item_nKcDca": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-3.png",
-            "title": "Body",
-            "alt": "",
-            "link": ""
+            "title": "Eyelashes",
+            "alt": "Eyelashes",
+            "link": "#"
           }
         }
       },
