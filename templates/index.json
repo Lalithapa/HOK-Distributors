@@ -648,6 +648,42 @@
         "item_bGtFFh": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/Brush_set.png",
+            "title": "Brush Set",
+            "alt": "Brush set",
+            "link": "shopify://collections/brush-set"
+          }
+        },
+        "item_X7wFXQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/image-3.png",
+            "title": "Body",
+            "alt": "",
+            "link": ""
+          }
+        },
+        "item_wLzWfG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/image-3.png",
+            "title": "Body",
+            "alt": "",
+            "link": ""
+          }
+        },
+        "item_JbdRhx": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/image-3.png",
+            "title": "Body",
+            "alt": "",
+            "link": ""
+          }
+        },
+        "item_UBDbX9": {
+          "type": "item",
+          "settings": {
             "image": "shopify://shop_images/image-3.png",
             "title": "Body",
             "alt": "",
@@ -666,6 +702,10 @@
       },
       "block_order": [
         "item_bGtFFh",
+        "item_X7wFXQ",
+        "item_wLzWfG",
+        "item_JbdRhx",
+        "item_UBDbX9",
         "item_nKcDca"
       ],
       "name": "Collection Category",
@@ -674,10 +714,10 @@
         "margin_bottom_desktop": 56,
         "margin_top_mobile": 36,
         "margin_bottom_mobile": 36,
-        "title": "Body",
+        "title": "Tools & Brushes",
         "subtext": "The body care your customers want",
         "button_label": "VIEW ALL",
-        "button_link": "shopify://collections"
+        "button_link": "#"
       }
     },
     "two_images_notice_NWPAec": {
