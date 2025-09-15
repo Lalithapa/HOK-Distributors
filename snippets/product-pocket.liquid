@@ -52,13 +52,13 @@ endif
       <!-- Price row -->
         {%- assign product_price = card_product.selected_or_first_available_variant -%}
       {% if customer %}
-        <div class="flex items-center gap-2 align-center tracking-normal">
+        <div class="flex items-center gap-2 align-center tracking-normal whitespace-nowrap">
         <div class="text-[14px] lg:text-[16px] font-extrabold text-gray-900">{{ product_price.price | money_without_trailing_zeros }}</div>
         <div class="text-[12px] lg:text-[14px] text-[#585858] line-through">{{ product_price.compare_at_price | money_without_trailing_zeros }}
         </div>
          {% if product_price.compare_at_price > product_price.price %}
         <span
-          class="ml-2 inline-flex items-center rounded-xl lg:bg-[#09980E]  text-[#6D930C] lg:text-white text-[12px] font-semibold px-2.5 py-1 leading-normal">
+          class="ml-0 lg:ml-2 inline-flex items-center rounded-xl lg:bg-[#09980E]  text-[#6D930C] lg:text-white text-[12px] font-semibold px-2.5 py-1 leading-normal">
           {{
             product_price.compare_at_price
             | minus: product_price.price
@@ -73,7 +73,7 @@ endif
          {% endif %}
       </div>
       {% else %}
-      <div class="flex items-center gap-4 align-center tracking-normal text-[14px] whitespace-nowrap lg:gap-8">
+      <div class="flex items-center align-center tracking-normal text-[14px] whitespace-nowrap lg:gap-8{% if collection_card %}gap-0 flex-wrap lg:flex-nowrap{% else %} gap-4{% endif %}">
         <div class="font-extrabold text-gray-900"><span class="text-[16px] text-[#707070] font-medium">MRP: </span> {{ product_price.compare_at_price | money_without_trailing_zeros }}</div>
         <div class="text-[#707070] font-extrabold"><span class="font-medium">SKU: </span>{{ product_price.sku }}</div>
       </div>
@@ -148,13 +148,13 @@ endif
         </button>
           <button type="button" onclick="window.location.href='/account'"
             class="flex-1 p-[8px] rounded-full bg-[#EDCC31] text-gray-900 font-bold text-[14px] tracking-wide shadow hover:bg-yellow-300 transition uppercase">
-            View Trade Price
+            {% unless collection_card %}View Trade Price{% else %}Login{% endunless %}
           </button>
       </div>
       {% comment %} Register for a trade account to view trade prices {% endcomment %}
       <div class="registration-button flex">
          <button type="button" onclick="window.location.href='/account'"
-            class="w-full block p-[8px] rounded-full border border-[#707070] text-[#212121] font-bold text-[14px] tracking-wide shadow uppercase">
+            class="w-full block p-[8px] rounded-full border border-[#707070] text-[#212121] font-bold text-[14px] tracking-wide uppercase">
             Register
           </button>
       </div>

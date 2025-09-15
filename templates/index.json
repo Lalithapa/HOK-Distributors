@@ -347,7 +347,7 @@
         "image": "shopify://shop_images/category_image.jpg",
         "image_mobile": "shopify://shop_images/category_image-mob.jpg"
       }
-    },
+    }, 
     "collection_category_WQY69b": {
       "type": "collection-category",
       "blocks": {
