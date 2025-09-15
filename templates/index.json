@@ -383,26 +383,26 @@
           "settings": {
             "image": "shopify://shop_images/image-4.png",
             "title": "Concealer",
-            "alt": "",
-            "link": ""
+            "alt": "Concealer",
+            "link": "shopify://collections/concealer"
           }
         },
         "item_JjHLi7": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-4.png",
-            "title": "Bronzer",
-            "alt": "",
-            "link": ""
+            "title": "Contour",
+            "alt": "Contour",
+            "link": "shopify://collections/contour"
           }
         },
         "item_6TaAjW": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/image-4.png",
-            "title": "Bronzer",
-            "alt": "",
-            "link": ""
+            "title": "Loose Powder",
+            "alt": "Loose Powder",
+            "link": "shopify://collections/loose-powder"
           }
         }
       },
