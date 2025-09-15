@@ -111,7 +111,7 @@
 
                   <button
                     type="button"
-                    class="p-2 float-right lg:!block hidden"
+                    class="p-2 float-right lg:!block"
                     onclick="navigator.share ? navigator.share({title: '{{ product.title }}', url: '{{ shop.url }}{{ product.url }}'}) : alert('Copy this link: {{ shop.url }}{{ product.url }}')"
                   >
                     {% comment %} {% render 'share-icon', icon: 'share' %} {% endcomment %}
@@ -262,14 +262,13 @@
                       >Top-performing in stores</span
                     >
                   </div>
-
-                  <button
+                  {% comment %} <button
                     type="button"
                     class=" float-right block md:hidden p-2 ml-[13px] cursor-pointer"
                     onclick="navigator.share ? navigator.share({title: '{{ product.title }}', url: '{{ shop.url }}{{ product.url }}'}) : alert('Copy this link: {{ shop.url }}{{ product.url }}')"
                   >
                     {% render 'share-icon', icon: 'share' %}
-                  </button>
+                  </button> {% endcomment %}
                 </div>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
