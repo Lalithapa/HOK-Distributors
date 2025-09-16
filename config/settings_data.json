@@ -163,6 +163,16 @@
         "type": "shopify://apps/qikify-smart-menu/blocks/app-embed/19d2f1cd-1836-4a32-8937-03df3c601dc8",
         "disabled": false,
         "settings": {}
+      },
+      "36909921495456953": {
+        "type": "shopify://apps/ai-speed/blocks/ai-speed/f9e4b8d0-6523-47d0-b77a-783072cc6552",
+        "disabled": false,
+        "settings": {
+          "enable_optimization": true,
+          "debug_mode": false,
+          "excluded_scripts": "preview-bar.js,analytics.js,important-script.js",
+          "image_threshold": 30
+        }
       }
     },
     "color_schemes": {
