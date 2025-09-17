@@ -227,9 +227,11 @@
 }
 {% endschema %}
 <script>
+  if (window.innerWidth >= 768)
   document.getElementById("top-banner").addEventListener("click", function() {
     document.getElementById("main-footer").scrollIntoView({
       behavior: "smooth"
     });
   });
+}
 </script> 
