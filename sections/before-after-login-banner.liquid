@@ -18,7 +18,7 @@
     }
 
 {%- endstyle -%}
-<div class="section-{{ section.id }}-margin" id="top-banner">
+<div class="section-{{ section.id }}-margin">
   <div class="{{ section.settings.container }} mx-auto scroll-trigger animate--fade-in">
     {% if template == page.community or section.settings.heading_text != blank %}
       <p class="top_heading_banner">{{ section.settings.heading_text }}</p>
@@ -27,6 +27,7 @@
         <a href="{% if section.settings.after_link == '#' %}javascript:void(0){% else %}{{ section.settings.after_link }}{% endif %}">
       <img
         class="desktop_screen rounded-2xl"
+        id="top-banner"
         src="{{ section.settings.after_image | image_url }}"
         alt="{{ section.settings.after_image.alt | escape }}"
         width="100%"
