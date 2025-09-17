@@ -75,15 +75,15 @@
 <script>
   // Thumbnail Swiper
   var thumbSwiper = new Swiper('.thumb-swiper', {
-    direction: 'vertical',
-    slidesPerView: 5.2,
-    spaceBetween: 12,
-    watchSlidesProgress: true,
-    navigation: {
-      nextEl: '.thumb-next', // bottom arrow
-      prevEl: '.thumb-prev', // top arrow
-    },
-  });
+  direction: 'vertical',
+  slidesPerView: 'auto',   // auto height thumbnails
+  spaceBetween: 7,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: '.thumb-next',
+    prevEl: '.thumb-prev',
+  },
+});
   // Main Swiper
   var mainSwiper = new Swiper('.main-swiper', {
     spaceBetween: 10,
