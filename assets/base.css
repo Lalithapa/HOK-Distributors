@@ -110,13 +110,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   padding-left: 3rem;
   padding-right: 3rem;
 }
-.facet-filters__sort.select__select option[selected] {
-  color: #1E1E1E;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
+
 @media screen and (min-width: 768px) and (max-width: 1660px)  {
   .page-width {
     max-width: 1220px !important;

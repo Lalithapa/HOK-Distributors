@@ -51,7 +51,7 @@
               <h2 class="facet-filters__label caption-large text-body !text-[12px] !m-[5px]">
                 <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
               </h2>
-              <div class="select !text-[12px]">
+              <div class="select">
                 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                 <select
                   name="sort_by"
@@ -69,20 +69,15 @@
                       {{ option.name | escape }}
                     </option>
                   {%- endfor -%}
-                  
                 </select>
-                <span class="svg-wrapper !ml-[25px]">
+                <span class="svg-wrapper">
                   {{- 'icon-caret.svg' | inline_asset_content -}}
                 </span>
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
-           <div class="product-count-vertical light" role="status">
-=======
           <div class="product-count-vertical light hidden" role="status">
->>>>>>> 390ef03bc3ec3e1e742422bae511ea4b005944e3
             <h2 class="product-count__text text-body">
               <span id="ProductCountDesktop">
                 {%- if collection.results_count -%}
@@ -101,7 +96,7 @@
               </span>
             </h2>
             {%- render 'loading-spinner' -%}
-          </div> 
+          </div>
         </form>
       </facet-filters-form>
     {%- endif -%}
@@ -133,10 +128,6 @@
           data-cascade
         {% endif %}
       >
-          <h1 class="collection-hero__title text-center">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
-      </h1>
         {%- if collection.products.size == 0 -%}
           <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
             <div class="loading-overlay gradient"></div>
