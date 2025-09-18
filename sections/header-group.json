@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -9,7 +18,7 @@
           "type": "msg",
           "settings": {
             "text": "We focus on growing your profits",
-            "link": "shopify:\/\/collections\/all-products",
+            "link": "#",
             "audience": "all",
             "italic": false
           }
@@ -26,8 +35,8 @@
         "msg_ygihDB": {
           "type": "msg",
           "settings": {
-            "text": "Get Distributor offers on whatsapp — <i class=\"underline\"> Join channel<\/i>",
-            "link": "\/",
+            "text": "Get Distributor offers on whatsapp —  Join channel",
+            "link": "https://whatsapp.com/channel/0029VbBWEYP4IBhAbhTLss2U",
             "audience": "all",
             "italic": false
           }
@@ -36,7 +45,7 @@
           "type": "msg",
           "settings": {
             "text": "Free delivery-Pan India",
-            "link": "shopify:\/\/products\/1991-by-alycia-marie-false-lashes-flex-4pc-set-1-full-size-product-worth-25-value-free",
+            "link": "#",
             "audience": "all",
             "italic": false
           }
@@ -51,9 +60,9 @@
       "name": "Announcement login bar",
       "settings": {
         "cta_out_label": "Unlock discounted price — Sign in 30 seconds →",
-        "cta_out_link": "\/account",
-        "cta_in_label": "Buy our Newest collection for Makeup Revolution live now! →",
-        "cta_in_link": "shopify:\/\/collections\/revolution-beauty"
+        "cta_out_link": "/account",
+        "cta_in_label": "Buy UAE's best seller | Giverny gifting sets →",
+        "cta_in_link": "shopify://collections/giverny"
       }
     },
     "header": {

@@ -1,9 +1,9 @@
 <!-- Floating Admin Actions (Hybrid: Tailwind + tiny CSS) -->
-<div class="admin-actions fixed bottom-[35px] right-[35px] z-2 group">
+<div class="admin-actions fixed bottom-[24px] lg:bottom-[35px] left-[16px] lg:right-[35px] z-2 group">
   <!-- Clickable overlay to toggle -->
   <input type="checkbox" class="admin-toggle" aria-label="Toggle admin actions" />
   <!-- Main FAB -->
-  <a href="#!" class="admin-btn box-shadow-pocket bg-white text-white w-[50px] lg:w-[60px] h-[50px] lg:h-[60px] grid place-items-center rounded-full">
+  <a href="#!" class="admin-btn box-shadow-pocket bg-white text-white w-[50px] lg:w-[60px] h-[50px] lg:h-[60px] grid place-items-center rounded-full !mb-0">
     {% comment %} <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" class="transition-transform duration-200 ease-out rotate-0 group-hover:rotate-90 origin-center">
         <path d="M1 11L11 0.999999" stroke="black" stroke-width="2" stroke-linecap="round"/>
         <path d="M11 11L0.999999 0.999999" stroke="black" stroke-width="2" stroke-linecap="round"/>
@@ -16,12 +16,12 @@
   <!-- Mini buttons stack -->
   <div class="admin-buttons text-center">
     <a href="https://api.whatsapp.com/send/?phone=919810245261" class="admin-mini w-[50px] lg:w-[60px] h-[50px] lg:h-[60px]" title="Whatsapp"><img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/Frame_38323.png" alt="Whatsapp Icon" width="60" height="auto" loading="lazy" class="object-contain"></a>
-    <a href="/" class="admin-mini w-[50px] lg:w-[60px] h-[50px] lg:h-[60px]" title="FAQ">
+    {% comment %} <a href="/" class="admin-mini w-[50px] lg:w-[60px] h-[50px] lg:h-[60px]" title="FAQ">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 60 60" fill="none">
             <rect width="60" height="60" rx="30" fill="#2A2F38"/>
             <path d="M15.3608 34.5V25.7727H20.9517V27.098H16.9418V29.4673H20.5682V30.7926H16.9418V34.5H15.3608ZM22.4229 34.5H20.7354L23.8079 25.7727H25.7596L28.8363 34.5H27.1488L24.8178 27.5625H24.7496L22.4229 34.5ZM22.4783 31.0781H27.0806V32.348H22.4783V31.0781ZM32.8271 31.5682H34.2589L35.1069 32.6676L35.712 33.3835L37.1651 35.25H35.631L34.6424 33.9972L34.2205 33.4006L32.8271 31.5682ZM37.3739 30.1364C37.3739 31.0767 37.1978 31.8821 36.8455 32.5526C36.4961 33.2202 36.0188 33.7315 35.4137 34.0866C34.8114 34.4418 34.1282 34.6193 33.364 34.6193C32.5998 34.6193 31.9151 34.4418 31.31 34.0866C30.7077 33.7287 30.2305 33.2159 29.8782 32.5483C29.5288 31.8778 29.354 31.0739 29.354 30.1364C29.354 29.196 29.5288 28.392 29.8782 27.7244C30.2305 27.054 30.7077 26.5412 31.31 26.1861C31.9151 25.831 32.5998 25.6534 33.364 25.6534C34.1282 25.6534 34.8114 25.831 35.4137 26.1861C36.0188 26.5412 36.4961 27.054 36.8455 27.7244C37.1978 28.392 37.3739 29.196 37.3739 30.1364ZM35.7844 30.1364C35.7844 29.4744 35.6808 28.9162 35.4734 28.4616C35.2688 28.0043 34.9847 27.6591 34.6211 27.4261C34.2575 27.1903 33.8384 27.0724 33.364 27.0724C32.8896 27.0724 32.4705 27.1903 32.1069 27.4261C31.7433 27.6591 31.4577 28.0043 31.2504 28.4616C31.0458 28.9162 30.9435 29.4744 30.9435 30.1364C30.9435 30.7983 31.0458 31.358 31.2504 31.8153C31.4577 32.2699 31.7433 32.6151 32.1069 32.8509C32.4705 33.0838 32.8896 33.2003 33.364 33.2003C33.8384 33.2003 34.2575 33.0838 34.6211 32.8509C34.9847 32.6151 35.2688 32.2699 35.4734 31.8153C35.6808 31.358 35.7844 30.7983 35.7844 30.1364ZM43.9854 29.6847L42.5792 29.8381C42.5394 29.696 42.4698 29.5625 42.3704 29.4375C42.2738 29.3125 42.1431 29.2116 41.9783 29.1349C41.8136 29.0582 41.6119 29.0199 41.3732 29.0199C41.0522 29.0199 40.7823 29.0895 40.5636 29.2287C40.3477 29.3679 40.2411 29.5483 40.244 29.7699C40.2411 29.9602 40.3107 30.1151 40.4528 30.2344C40.5977 30.3537 40.8363 30.4517 41.1687 30.5284L42.2852 30.767C42.9045 30.9006 43.3647 31.1122 43.6658 31.402C43.9698 31.6918 44.1232 32.071 44.1261 32.5398C44.1232 32.9517 44.0025 33.3153 43.7638 33.6307C43.5281 33.9432 43.1999 34.1875 42.7795 34.3636C42.359 34.5398 41.8761 34.6278 41.3306 34.6278C40.5295 34.6278 39.8846 34.4602 39.396 34.125C38.9073 33.7869 38.6161 33.3168 38.5224 32.7145L40.0266 32.5696C40.0948 32.8651 40.2397 33.0881 40.4613 33.2386C40.6829 33.3892 40.9712 33.4645 41.3263 33.4645C41.6928 33.4645 41.9869 33.3892 42.2085 33.2386C42.4329 33.0881 42.5451 32.902 42.5451 32.6804C42.5451 32.4929 42.4727 32.3381 42.3278 32.2159C42.1857 32.0937 41.9641 32 41.663 31.9347L40.5465 31.7003C39.9187 31.5696 39.4542 31.3494 39.1531 31.0398C38.8519 30.7273 38.7028 30.3324 38.7056 29.8551C38.7028 29.4517 38.8121 29.1023 39.0337 28.8068C39.2582 28.5085 39.5692 28.2784 39.967 28.1165C40.3675 27.9517 40.8292 27.8693 41.3519 27.8693C42.119 27.8693 42.7227 28.0327 43.163 28.3594C43.6062 28.6861 43.8803 29.1278 43.9854 29.6847Z" fill="white"/>
         </svg>
-    </a>
+    </a> {% endcomment %}
     <a href="{{ routes.url }}/pages/terms-and-conditions" class="admin-mini w-[50px] lg:w-[60px] h-[50px] lg:h-[60px]" title="TnC">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 60 60" fill="none">
             <rect width="60" height="60" rx="30" fill="#2A2F38"/>
@@ -34,11 +34,15 @@
   /* Main button */
   .admin-btn{
     position:relative;
+   
     /* border-radius:50px;  */
     border-radius: 10px;
     box-shadow: 0 2px 10px 0 rgba(15, 23, 26, 0.41);
     display:grid; place-items:center; color:#fff;
     background: #EDCC31;
+  }
+  .admin-actions{
+    width:100px !important;
   }
   /* Toggle overlay on top of FAB */
   .admin-toggle{
@@ -48,7 +52,8 @@
   }
 
   /* Stack of mini actions */
-  .admin-buttons{ position:absolute; bottom:120%; left:0; width:100%; }
+  .admin-buttons{ position:absolute; bottom:120%; left:0; right: 78%;
+    width: 4%; }
   .admin-mini{
     border-radius:10px; display:grid; place-items:center; margin:10px auto 0;
     color:#fff; text-decoration:none; line-height:1.15;

@@ -21,8 +21,8 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "desktop_banner": "{{ collection.metafields.custom.desktop_banner.value }}",
-        "mobile_banner": "{{ collection.metafields.custom.mobile_banner.value }}",
+        "desktop_banner": "shopify:\/\/shop_images\/HokD_offer.jpg",
+        "mobile_banner": "shopify:\/\/shop_images\/HokD_offerMobile.jpg",
         "products_per_page": 16,
         "columns_desktop": 4,
         "columns_mobile": "2",

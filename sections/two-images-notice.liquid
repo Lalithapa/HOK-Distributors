@@ -12,7 +12,7 @@
         {{ section.settings.image_left
         | image_url: width: 1400
         | image_tag:
-        class: 'w-full h-full object-cover',
+        class: 'w-full h-full object-cover rounded-2xl lg:rounded-none lg:!rounded-tl-2xl lg:!rounded-bl-2xl',
         alt: section.settings.alt_left,
         loading: 'lazy',
         sizes: '(min-width: 768px) 50vw, 100vw' }}
@@ -24,7 +24,7 @@
         {{ section.settings.image_right
         | image_url: width: 1400
         | image_tag:
-        class: 'w-full h-full object-cover',
+        class: 'w-full h-full object-cover rounded-2xl lg:rounded-none lg:!rounded-tr-2xl lg:!rounded-br-2xl',
         alt: section.settings.alt_right,
         loading: 'lazy',
         sizes: '(min-width: 768px) 50vw, 100vw' }}
