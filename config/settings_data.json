@@ -140,6 +140,24 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "sticky-atc": {
+        "type": "sticky-atc",
+        "settings": {
+          "enable_section": true,
+          "color_scheme": "",
+          "title_size": "h4",
+          "show_img": false,
+          "img_width": "80",
+          "img_height": "80",
+          "show_quantity_input": true,
+          "show_title": false,
+          "show_price": false,
+          "btn_style": "primary",
+          "offset": 0,
+          "pt": 0.5,
+          "pb": 0.5
+        }
       }
     },
     "content_for_index": [],
