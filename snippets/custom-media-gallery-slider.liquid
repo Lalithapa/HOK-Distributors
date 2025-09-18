@@ -1,7 +1,7 @@
-<div class="sticky top-[6px] product-gallery-product lg:mt-[72px] lg:mb-[72px] lg:max-h-[525px] flex gap-[56px] items-start">
+<div class="sticky top-[20%] product-gallery-product md:mt-[72px] md:mb-[72px] md:max-h-[430px] flex gap-[56px] items-start lg:pr-[33px]">
   <!-- Thumbnail Slider -->
   <!-- Up Arrow -->
-  <div class="hidden lg:!block">
+  <div class="hidden md:!block">
     <div class="swiper-button-prev thumb-prev">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +13,7 @@
         <path d="M1 5L5.68 1L10 5" stroke="black" stroke-width="1.2" stroke-linecap="round" />
       </svg>
     </div>
-    <div class="swiper thumb-swiper pr-2.5">
+    <div class="swiper thumb-swiper pr-2.5 w-[80px] max-h-[425px] h-auto relative flex flex-col items-center">
       <div class="swiper-wrapper">
         {% for media in product.media %}
           <div
@@ -46,7 +46,7 @@
     </div>
   </div>
   <!-- Main Slider -->
-  <div class="swiper main-swiper">
+  <div class="swiper main-swiper  flex-1">
     <div class="swiper-wrapper">
       {% for media in product.media %}
         <div class="swiper-slide " data-media-id="{{ media.id }}" data-swiper-slide-index="{{ forloop.index0 }} ">
@@ -75,15 +75,16 @@
 <script>
   // Thumbnail Swiper
   var thumbSwiper = new Swiper('.thumb-swiper', {
-    direction: 'vertical',
-    slidesPerView: 5.2,
-    spaceBetween: 12,
-    watchSlidesProgress: true,
-    navigation: {
-      nextEl: '.thumb-next', // bottom arrow
-      prevEl: '.thumb-prev', // top arrow
-    },
-  });
+  direction: 'vertical',
+  slidesPerView: 'auto',   // auto height thumbnails
+  spaceBetween: 7,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: '.thumb-next',
+    prevEl: '.thumb-prev',
+  },
+});
+
   // Main Swiper
   var mainSwiper = new Swiper('.main-swiper', {
     spaceBetween: 10,
@@ -98,16 +99,13 @@
 </script>
 
 <style>
+  
   .product-gallery-product .swiper-pagination-bullet {
     height: 6px;
     width: 6px;
     margin-bottom: 2px !important;
   }
 
-  .product-gallery-product .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    /* left: 35%; */
-  }
   .swiper-pagination.md\:hidden.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
     line-height: normal;
     text-align: center;
@@ -118,14 +116,7 @@
     background: #fff;
     border-radius: 10px;
   }
-  .product-gallery-product .thumb-swiper {
-    width: 80px;
-    height: 500px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  
 
   .product-gallery-product .swiper-button-prev {
     top: -3%;
@@ -140,7 +131,7 @@
     right: 0;
     left: 2%;
     top: unset;
-    bottom: -8%;
+    bottom: -7%;
     height: 27px !important;
     width: 50px;
     border-radius: 17px;
@@ -191,15 +182,10 @@
 
   .product-gallery-product .thumb-swiper .swiper-button-prev {
     order: -1;
-    /* top arrow */
     margin-bottom: 10px;
   }
 
   .product-gallery-product .thumb-swiper .swiper-button-next {
     margin-top: 10px;
-  }
-
-  .product-gallery-product .main-swiper {
-    flex: 1;
   }
 </style>
