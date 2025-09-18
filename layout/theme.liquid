@@ -261,7 +261,11 @@
         display: none;
       } 
       {% endif %} 
-      
+      {% if template contains 'product' %}
+        .creditsyard-tab-block.align-bottom-right {
+      bottom: 60px !important;
+    }
+      {% endif %}
       .desktop_screen{
         display: none;
       }
