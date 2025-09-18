@@ -1,6 +1,7 @@
 {% assign vendor_name = product.vendor %}
 {% case vendor_name %}
 {% when "Revolution Beauty" %}
+  <a href="#" class="share-link">
 <div class="flex items-center justify-between border-b border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
   <div class="flex items-center gap-[10px]">
     <!-- Logo -->
@@ -22,12 +23,14 @@
     </div>
   </div>
   {% if product.collections.size > 0 %}
-    <a href="#" class="share-link">
+   
       {% render 'share-icon', icon: 'brand-icon' %}
-    </a>
+ 
   {% endif %}
 </div>
+</a>
 {% when "L.A. Girl" %}
+ <a href="#" class="share-link">
 <div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
   <div class="flex items-center gap-[10px]">
     <!-- Logo -->
@@ -49,9 +52,10 @@
     </div>
   </div>
   {% if product.collections.size > 0 %}
-    <a href="#" class="share-link">
+    
       {% render 'share-icon', icon: 'brand-icon' %}
-    </a>
+   
   {% endif %}
 </div>
+ </a>
 {% endcase %}
