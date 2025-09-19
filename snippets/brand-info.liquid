@@ -1,61 +1,300 @@
 {% assign vendor_name = product.vendor %}
 {% case vendor_name %}
-{% when "Revolution Beauty" %}
-  <a href="#" class="share-link">
-<div class="flex items-center justify-between border-b border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
-  <div class="flex items-center gap-[10px]">
-    <!-- Logo -->
-    <img
-      src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
-      alt="{{ block.settings.brand_title }}"
-      width="35"
-      height="35"
-      class="w-[35px] h-[35px] rounded-full object-contain border"
-    >
-    <div>
-      <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
-        {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
-          {{'makeup revolution'}}
-      </h3>
-      <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B] tracking-[-0.55px]">
-        {{ 'Explore all products' }}
-      </p>
-    </div>
-  </div>
-  {% if product.collections.size > 0 %}
-   
-      {% render 'share-icon', icon: 'brand-icon' %}
- 
-  {% endif %}
-</div>
-</a>
-{% when "L.A. Girl" %}
- <a href="#" class="share-link">
-<div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
-  <div class="flex items-center gap-[10px]">
-    <!-- Logo -->
-    <img
-      src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
-      alt="{{ block.settings.brand_title }}"
-      width="35"
-      height="35"
-      class="w-18 h-18 rounded-full object-contain border"
-    >
-    <div>
-      <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
-        {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
-          {{'L.A. Girl'}}
-      </h3>
-      <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B]  tracking-[-0.55px]">
-        {{ 'Explore all products' }}
-      </p>
-    </div>
-  </div>
-  {% if product.collections.size > 0 %}
-    
-      {% render 'share-icon', icon: 'brand-icon' %}
-   
-  {% endif %}
-</div>
- </a>
+  {% when 'Revolution Beauty' %}
+    <a href="https://www.hokdistributors.com/collections/revolution-beauty" class="share-link">
+      <div class="flex items-center justify-between border-b border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
+        <div class="flex items-center gap-[10px]">
+          <!-- Logo -->
+          <img
+            src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
+            alt="{{ block.settings.brand_title }}"
+            width="35"
+            height="35"
+            class="w-[35px] h-[35px] rounded-full object-contain border"
+          >
+          <div>
+            <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
+              {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
+              {{ 'makeup revolution' }}
+            </h3>
+            <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B] tracking-[-0.55px]">
+              {{ 'Explore all products' }}
+            </p>
+          </div>
+        </div>
+        {% if product.collections.size > 0 %}
+          {% render 'share-icon', icon: 'brand-icon' %}
+        {% endif %}
+      </div>
+    </a>
+  {% when 'L.A. Girl' %}
+    <a href="https://www.hokdistributors.com/collections/la-girl" class="share-link">
+      <div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
+        <div class="flex items-center gap-[10px]">
+          <!-- Logo -->
+          <img
+            src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
+            alt="{{ block.settings.brand_title }}"
+            width="35"
+            height="35"
+            class="w-18 h-18 rounded-full object-contain border"
+          >
+          <div>
+            <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
+              {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
+              {{ 'L.A. Girl' }}
+            </h3>
+            <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B]  tracking-[-0.55px]">
+              {{ 'Explore all products' }}
+            </p>
+          </div>
+        </div>
+        {% if product.collections.size > 0 %}
+          {% render 'share-icon', icon: 'brand-icon' %}
+        {% endif %}
+      </div>
+    </a>
+    {% when 'Ardell' %}
+    <a href="https://www.hokdistributors.com/collections/ardell" class="share-link">
+      <div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
+        <div class="flex items-center gap-[10px]">
+          <!-- Logo -->
+          <img
+            src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
+            alt="{{ block.settings.brand_title }}"
+            width="35"
+            height="35"
+            class="w-18 h-18 rounded-full object-contain border"
+          >
+          <div>
+            <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
+              {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
+              {{ 'Ardell' }}
+            </h3>
+            <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B]  tracking-[-0.55px]">
+              {{ 'Explore all products' }}
+            </p>
+          </div>
+        </div>
+        {% if product.collections.size > 0 %}
+          {% render 'share-icon', icon: 'brand-icon' %}
+        {% endif %}
+      </div>
+    </a>
+    {% when 'Focallure' %}
+    <a href="https://www.hokdistributors.com/collections/focallure" class="share-link">
+      <div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
+        <div class="flex items-center gap-[10px]">
+          <!-- Logo -->
+          <img
+            src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
+            alt="{{ block.settings.brand_title }}"
+            width="35"
+            height="35"
+            class="w-18 h-18 rounded-full object-contain border"
+          >
+          <div>
+            <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
+              {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
+              {{ 'Focallure' }}
+            </h3>
+            <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B]  tracking-[-0.55px]">
+              {{ 'Explore all products' }}
+            </p>
+          </div>
+        </div>
+        {% if product.collections.size > 0 %}
+          {% render 'share-icon', icon: 'brand-icon' %}
+        {% endif %}
+      </div>
+    </a>
+    {% when 'Jessup' %}
+    <a href="https://www.hokdistributors.com/collections/jessup" class="share-link">
+      <div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
+        <div class="flex items-center gap-[10px]">
+          <!-- Logo -->
+          <img
+            src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
+            alt="{{ block.settings.brand_title }}"
+            width="35"
+            height="35"
+            class="w-18 h-18 rounded-full object-contain border"
+          >
+          <div>
+            <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
+              {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
+              {{ 'Jessup' }}
+            </h3>
+            <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B]  tracking-[-0.55px]">
+              {{ 'Explore all products' }}
+            </p>
+          </div>
+        </div>
+        {% if product.collections.size > 0 %}
+          {% render 'share-icon', icon: 'brand-icon' %}
+        {% endif %}
+      </div>
+    </a>
+    {% when 'L.a. colors' %}
+    <a href="https://www.hokdistributors.com/collections/la-colors" class="share-link">
+      <div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
+        <div class="flex items-center gap-[10px]">
+          <!-- Logo -->
+          <img
+            src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
+            alt="{{ block.settings.brand_title }}"
+            width="35"
+            height="35"
+            class="w-18 h-18 rounded-full object-contain border"
+          >
+          <div>
+            <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
+              {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
+              {{ 'L.a. colors' }}
+            </h3>
+            <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B]  tracking-[-0.55px]">
+              {{ 'Explore all products' }}
+            </p>
+          </div>
+        </div>
+        {% if product.collections.size > 0 %}
+          {% render 'share-icon', icon: 'brand-icon' %}
+        {% endif %}
+      </div>
+    </a>
+     {% when 'Lamel' %}
+    <a href="https://www.hokdistributors.com/collections/lamel" class="share-link">
+      <div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
+        <div class="flex items-center gap-[10px]">
+          <!-- Logo -->
+          <img
+            src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
+            alt="{{ block.settings.brand_title }}"
+            width="35"
+            height="35"
+            class="w-18 h-18 rounded-full object-contain border"
+          >
+          <div>
+            <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
+              {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
+              {{ 'Lamel' }}
+            </h3>
+            <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B]  tracking-[-0.55px]">
+              {{ 'Explore all products' }}
+            </p>
+          </div>
+        </div>
+        {% if product.collections.size > 0 %}
+          {% render 'share-icon', icon: 'brand-icon' %}
+        {% endif %}
+      </div>
+    </a>
+    {% when 'Ln pro' %}
+    <a href="https://www.hokdistributors.com/collections/ln-pro" class="share-link">
+      <div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
+        <div class="flex items-center gap-[10px]">
+          <!-- Logo -->
+          <img
+            src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
+            alt="{{ block.settings.brand_title }}"
+            width="35"
+            height="35"
+            class="w-18 h-18 rounded-full object-contain border"
+          >
+          <div>
+            <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
+              {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
+              {{ 'Ln pro' }}
+            </h3>
+            <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B]  tracking-[-0.55px]">
+              {{ 'Explore all products' }}
+            </p>
+          </div>
+        </div>
+        {% if product.collections.size > 0 %}
+          {% render 'share-icon', icon: 'brand-icon' %}
+        {% endif %}
+      </div>
+    </a>
+    {% when 'Milani' %}
+    <a href="https://www.hokdistributors.com/collections/milani" class="share-link">
+      <div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
+        <div class="flex items-center gap-[10px]">
+          <!-- Logo -->
+          <img
+            src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
+            alt="{{ block.settings.brand_title }}"
+            width="35"
+            height="35"
+            class="w-18 h-18 rounded-full object-contain border"
+          >
+          <div>
+            <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
+              {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
+              {{ 'Milani' }}
+            </h3>
+            <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B]  tracking-[-0.55px]">
+              {{ 'Explore all products' }}
+            </p>
+          </div>
+        </div>
+        {% if product.collections.size > 0 %}
+          {% render 'share-icon', icon: 'brand-icon' %}
+        {% endif %}
+      </div>
+    </a>
+     {% when 'Pigment play' %}
+    <a href="https://www.hokdistributors.com/collections/pigment-play" class="share-link">
+      <div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
+        <div class="flex items-center gap-[10px]">
+          <!-- Logo -->
+          <img
+            src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
+            alt="{{ block.settings.brand_title }}"
+            width="35"
+            height="35"
+            class="w-18 h-18 rounded-full object-contain border"
+          >
+          <div>
+            <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
+              {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
+              {{ 'Pigment play' }}
+            </h3>
+            <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B]  tracking-[-0.55px]">
+              {{ 'Explore all products' }}
+            </p>
+          </div>
+        </div>
+        {% if product.collections.size > 0 %}
+          {% render 'share-icon', icon: 'brand-icon' %}
+        {% endif %}
+      </div>
+    </a>
+     {% when 'Wet n wild' %}
+    <a href="https://www.hokdistributors.com/collections/wet-n-wild" class="share-link">
+      <div class="flex items-center justify-between border-b  border-t  border-gray-200 pt-[4px] pr-[19px] pb-[4px] pl-[5px] !my-[24px]">
+        <div class="flex items-center gap-[10px]">
+          <!-- Logo -->
+          <img
+            src="https://www.hokdistributors.com/cdn/shop/files/5057566823586_2_ebfccb66-f763-4879-86dc-9558fca684c2.webp?v=1754390726"
+            alt="{{ block.settings.brand_title }}"
+            width="35"
+            height="35"
+            class="w-18 h-18 rounded-full object-contain border"
+          >
+          <div>
+            <h3 class="!text-[12px]  text-[#212121] tracking-[-0.24px] lg:font-medium font-normal lg:uppercase">
+              {% comment %} {{ product.metafields.custom.brand_title.value }} {% endcomment %}
+              {{ 'Wet n wild' }}
+            </h3>
+            <p class="text-[11px] lg:text-[#9C9C9C] text-[#36881B]  tracking-[-0.55px]">
+              {{ 'Explore all products' }}
+            </p>
+          </div>
+        </div>
+        {% if product.collections.size > 0 %}
+          {% render 'share-icon', icon: 'brand-icon' %}
+        {% endif %}
+      </div>
+    </a>
 {% endcase %}
