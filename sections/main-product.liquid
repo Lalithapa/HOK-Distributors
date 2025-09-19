@@ -557,30 +557,17 @@
                       {% render 'share-icon', icon: 'add-call' %}
                       <span class="whitespace-nowrap text-[#212121]">{{ 'Call to Order' }}</span>
                     </a>
-                    {%- assign v = product.selected_or_first_available_variant -%}
-                    {%- assign in_cart = 0 -%}
-                    {%- if cart and cart.item_count > 0 -%}
-                      {%- for item in cart.items -%}
-                        {%- if item.variant_id == v.id -%}
-                          {%- assign in_cart = item.quantity -%}
-                          {%- break -%}
-                        {%- endif -%}
-                      {%- endfor -%}
-                    {%- endif -%}
 
                     <!-- Add to Cart -->
                     <button
                       type="button"
                       class="cstm-btn inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[#EDCC31] py-[12px] px-[30px] lg:px-[70px]  text-[14px] font-bold uppercase tracking-wide text-[#262933] cursor-pointer"
-                    {% if in_cart > 0 %}
-                        style="display:none"
-                      {% endif %}
                     >
                       {{ 'Add to Cart' }}
                     </button>
 
                     {% comment %} quentity button with ATC start flex {% endcomment %}
-                    <div class="{% if in_cart == 0 %}hidden {% endif %} cstm_btn_qnty">
+                    <div class="hidden cstm_btn_qnty">
                       <div
                         id="Quantity-Form-{{ section.id }}"
                         class="flex items-center product-form__input product-form__quantity {% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}  "
@@ -628,41 +615,21 @@
                                 {{- 'icon-minus.svg' | inline_asset_content -}}
                               </span>
                             </button>
-                            {%- assign v = product.selected_or_first_available_variant -%}
-                            {%- assign min_q = v.quantity_rule.min | default: 1 -%}
-                            {%- assign max_q = v.quantity_rule.max -%}
-                            {%- assign step_q = v.quantity_rule.increment | default: 1 -%}
-
-                            {%- assign in_cart = 0 -%}
-                            {%- if cart and cart.item_count > 0 -%}
-                              {%- for item in cart.items -%}
-                                {%- if item.variant_id == v.id -%}
-                                  {%- assign in_cart = item.quantity -%}
-                                  {%- break -%}
-                                {%- endif -%}
-                              {%- endfor -%}
-                            {%- endif -%}
-
-                            {%- assign value_q = in_cart | default: 0 -%}
-                            {%- if value_q == 0 -%}{%- assign value_q = min_q -%}{%- endif -%}
-                            {%- if max_q and value_q > max_q -%}{%- assign value_q = max_q -%}{%- endif -%}
-                            {%- if value_q < min_q -%}{%- assign value_q = min_q -%}{%- endif -%}
-
                             <input
                               style="outline:none !important; outline-offset:0 !important; box-shadow:none !important ;"
                               class="!focus-visible:outline-none !focus-visible:outline-offset-0  !focus-visible:shadow-none quantity__input flex-1 !px-0 text-[#212121] text-center font-[Poppins] text-[13px] font-medium leading-[20px] !opacity-100 "
                               type="number"
                               name="quantity"
                               id="Quantity-{{ section.id }}"
-                              data-cart-quantity="{{ in_cart }}"
+                              data-cart-quantity="{{ cart_qty }}"
                               data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                              min="{{  }}"
+                              min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                               {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
                                 data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
                                 max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
                               {% endif %}
                               step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
-                              value="{{ value_q }}"
+                              value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                               form="{{ product_form_id }}"
                             >
                             <button class="flex-1 !w-10 quantity__button " name="plus" type="button">
