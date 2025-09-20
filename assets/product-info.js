@@ -322,7 +322,7 @@ if (!customElements.get('product-info')) {
         const max = data.max === null ? data.max : data.max - data.cartQuantity;
         if (max !== null) min = Math.min(min, max);
         if (data.cartQuantity >= data.min) min = Math.min(min, data.step);
-        // console.log(data.min;,"data.min;data.min;")
+        console.log(data.min;,"data.min;data.min;")
         this.quantityInput.min = min;
 
         if (max) {
