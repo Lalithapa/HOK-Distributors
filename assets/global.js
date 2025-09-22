@@ -1332,6 +1332,7 @@ class CartPerformance {
 }
 
 document.querySelectorAll('.tmenu-watermark').forEach(el => {
+  console.log("none")
   el.style.display = 'none !important';
 });
 
