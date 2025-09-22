@@ -1332,6 +1332,6 @@ class CartPerformance {
 }
 
 document.querySelectorAll('.tmenu-watermark').forEach(el => {
-  el.style.removeProperty('display');
+  el.style.display = 'none !important';
 });
 
