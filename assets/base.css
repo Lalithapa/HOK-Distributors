@@ -115,7 +115,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
    }
   .tmenu-watermark.tmenu_item_link{
     display:none !important;
-    color:!important;
+    color:#fff !important;
   }
 @media screen and (min-width: 768px) and (max-width: 1660px)  {
   .page-width {
