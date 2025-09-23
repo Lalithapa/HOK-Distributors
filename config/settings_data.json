@@ -445,7 +445,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "@media screen and (max-width: 990px) {.tmenu_nav, .creditsyard-floating-widget {display: none !important; }}",
+      "@media screen and (max-width: 990px) {.tmenu_nav, .creditsyard-floating-widget,.tmenu-watermark{display: none !important; }}",
       ".tmenu_submenu_mega_position_fullwidth {padding: 10px 40px !important;}",
       ".tmenu_item--root > .tmenu_submenu {border-top: 1px solid #eaeaea !important; box-shadow: unset !important;}",
       ".tmenu_submenu_type_mega {justify-content: center;}",
