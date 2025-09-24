@@ -8,9 +8,7 @@ endif
 %}
 <!-- Product Pocket Card -->
 <div class="h-full bg-white rounded-2xl shadow-md overflow-hidden{% unless collection_card %} max-w-[360px] box-shadow-pocket{% endunless %}">
-    {% if customer %}{% endif %}
-      <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}">
-    
+  <a href="{% if customer %}{{ card_product.url }}{% else %}/account{% endif %}" aria-label="{{ card_product.title | escape }}">
     <!-- Top: bundle visuals -->
     <div class="image-container">
       <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
@@ -36,8 +34,7 @@ endif
       </div>
     </div>
     {% if customer %}{% endif %}
-    </a>
-    
+  </a> 
   <div class="flex gap-3 flex-col px-[12px] py-[14px]">
     {% if customer %}
     <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}" class="flex flex-col gap-3">
