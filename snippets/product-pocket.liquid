@@ -33,12 +33,9 @@ endif
         </div>
       </div>
     </div>
-    {% if customer %}{% endif %}
   </a> 
   <div class="flex gap-3 flex-col px-[12px] py-[14px]">
-    {% if customer %}
-    <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}" class="flex flex-col gap-3">
-    {% endif %}
+    <a href="{% if customer %}{{ card_product.url }}{% else %}/account{% endif %}" aria-label="{{ card_product.title | escape }}" class="flex flex-col gap-3">
       <!-- Text content -->
       <div class="text-content">
         <h4 class="text-[13px] lg:text-[16px] font-semibold text-gray-900 capitalize">{{ card_product.vendor | capitalize }}</h4>
@@ -75,9 +72,7 @@ endif
         <div class="text-[#707070] font-extrabold"><span class="font-medium">SKU: </span>{{ product_price.sku }}</div>
       </div>
       {% endif %}
-    {% if customer %}
     </a>
-    {% endif %}
     {% unless template.name contains 'product' %}
     {% if customer %}
       <!-- CTA row -->
