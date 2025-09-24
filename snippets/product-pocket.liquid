@@ -8,9 +8,9 @@ endif
 %}
 <!-- Product Pocket Card -->
 <div class="h-full bg-white rounded-2xl shadow-md overflow-hidden{% unless collection_card %} max-w-[360px] box-shadow-pocket{% endunless %}">
-    {% if customer %}
+    {% if customer %}{% endif %}
       <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}">
-    {% endif %}
+    
     <!-- Top: bundle visuals -->
     <div class="image-container">
       <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
@@ -35,9 +35,9 @@ endif
         </div>
       </div>
     </div>
-    {% if customer %}
+    {% if customer %}{% endif %}
     </a>
-    {% endif %}
+    
   <div class="flex gap-3 flex-col px-[12px] py-[14px]">
     {% if customer %}
     <a href="{{ card_product.url }}" aria-label="{{ card_product.title | escape }}" class="flex flex-col gap-3">
