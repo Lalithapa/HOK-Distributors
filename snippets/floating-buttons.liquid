@@ -1,6 +1,6 @@
 <!-- Floating Admin Actions (Hybrid: Tailwind + tiny CSS) -->
 {% unless template.name contains 'product' %}
-<div class="admin-actions fixed bottom-[24px] lg:bottom-[35px] left-[16px] lg:right-[35px] z-2 group">
+<div class="admin-actions fixed bottom-[24px] lg:bottom-[35px] left-[90%] lg:right-[35px] z-2 group">
   <!-- Clickable overlay to toggle -->
   <input type="checkbox" class="admin-toggle" aria-label="Toggle admin actions" />
   <!-- Main FAB -->
@@ -45,7 +45,6 @@
   }
   .admin-actions{
     width:100px !important;
-    {% comment %} left:90% !important; {% endcomment %}
   }
   /* Toggle overlay on top of FAB */
   .admin-toggle{
