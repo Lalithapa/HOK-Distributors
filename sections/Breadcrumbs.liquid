@@ -8,10 +8,7 @@
 
       {% if template contains 'collection' %}
         <li><span class="text-gray-400 text-[12px]">/</span></li>
-        {% comment %} <li>
-          <a href="{{ routes.collections_url }}" class="hover:text-gray-900 text-[12px]">Collections</a>
-        </li>
-        <li><span class="text-gray-400 text-[12px]">/</span></li> {% endcomment %}
+       
         <li class="text-gray-900 text-[12px]">{{ collection.title }}</li>
 
       {% elsif template contains 'product' %}
