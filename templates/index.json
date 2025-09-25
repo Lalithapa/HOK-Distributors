@@ -329,6 +329,7 @@
       "name": "Two images with notice",
       "settings": {
         "image_left": "shopify://shop_images/LAST_IMAGE_DESKTOP_cdfb91b9-1d62-45f6-b389-879f4a3bac14.jpg",
+        "image-link": "",
         "alt_left": "Brush Set",
         "alt_right": "",
         "notice": ""
@@ -735,6 +736,7 @@
       "name": "Two images with notice",
       "settings": {
         "image_left": "shopify://shop_images/LAST_IMAGE_DESKTOP_cdfb91b9-1d62-45f6-b389-879f4a3bac14.jpg",
+        "image-link": "https://hokmakeup.com/products/jessup-beauty-14pcs-light-gray-comprehensive-collection",
         "alt_left": "Brush Set",
         "image_right": "shopify://shop_images/2_LAST_IMAGE_DESKTOP_96ca2e57-0abc-41a6-87fc-f1c5c60dfea9.jpg",
         "alt_right": "Foundation+Concealer",
