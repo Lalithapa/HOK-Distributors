@@ -8,10 +8,7 @@
 
       {% if template contains 'collection' %}
         <li><span class="text-[#B1B1B1]  text-[12px]">/</span></li>
-        <li class="text-[12px] font-medium text-[#B1B1B1] leading-normal not-italic">
-          <a href="{{ routes.collections_url }}" class=" text-[12px] font-medium text-[#B1B1B1] leading-normal not-italic">Collections</a>
-        </li>
-        <li><span class="text-gray-400 text-[12px]">/</span></li>
+        
         <li class="text-gray-900 text-[12px]">{{ collection.title }}</li>
 
       {% elsif template contains 'product' %}
