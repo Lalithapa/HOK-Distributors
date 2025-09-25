@@ -23,6 +23,7 @@
 
       {% if section.settings.image_right != blank %}
       <div class="overflow-hidden bg-gray-50 img-second">
+         <a href="{{ section.settings.image-link-second }}">
         {{ section.settings.image_right
         | image_url: width: 1400
         | image_tag:
@@ -30,7 +31,7 @@
         alt: section.settings.alt_right,
         loading: 'lazy',
         sizes: '(min-width: 768px) 50vw, 100vw' }}
-
+        </a>
       </div>
       {% endif %}
     </div>
@@ -58,7 +59,13 @@
       "label": "image link"
     },
     { "type": "text", "id": "alt_left", "label": "Left image alt (optional)" },
+    {
+      "type": "url",
+      "id": "image-link-second",
+      "label": "image link"
+    },
     { "type": "image_picker", "id": "image_right", "label": "Right image" },
+
     { "type": "text", "id": "alt_right", "label": "Right image alt (optional)" },
     {
       "type": "text",
