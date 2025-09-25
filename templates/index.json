@@ -538,7 +538,7 @@
             "image": "shopify://shop_images/Lip_Scrub.png",
             "title": "Lip Scrub",
             "alt": "Lip Scrub",
-            "link": "https://hokmakeup.com/products/rose-sugar-lip-scrub-02-lip-scrub"
+            "link": "shopify://collections/lip-scrub"
           }
         }
       },
