@@ -43,6 +43,14 @@
     "collection_collage_VV8CNg": {
       "type": "collection-collage",
       "blocks": {
+        "card_UcAzde": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Gloss-Stick-Benefits-1x1_7cd755f4-32ef-48de-90e0-280510c1450b.webp",
+            "alt": "Conceal perfect",
+            "link": "shopify://collections/milani"
+          }
+        },
         "card_yiXpN3": {
           "type": "card",
           "settings": {
@@ -58,20 +66,12 @@
             "alt": "Color Lasting",
             "link": "shopify://collections/focallure"
           }
-        },
-        "card_UcAzde": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/717489002745_4_ceb736bf-ddc3-4792-aae2-a870e212f504.webp",
-            "alt": "Conceal perfect",
-            "link": "shopify://collections/milani"
-          }
         }
       },
       "block_order": [
+        "card_UcAzde",
         "card_yiXpN3",
-        "card_TygwRG",
-        "card_UcAzde"
+        "card_TygwRG"
       ],
       "name": "Collection Collage",
       "settings": {
