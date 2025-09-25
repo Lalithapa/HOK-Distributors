@@ -9,6 +9,7 @@
     <div class="grid !flex-nowrap !gap-0">
       {% if section.settings.image_left != blank %}
       <div class="overflow-hidden bg-gray-50 img-first">
+        <a href="{{ section.settings.image-link }}">
         {{ section.settings.image_left
         | image_url: width: 1400
         | image_tag:
@@ -16,6 +17,7 @@
         alt: section.settings.alt_left,
         loading: 'lazy',
         sizes: '(min-width: 768px) 50vw, 100vw' }}
+        </a>
       </div>
       {% endif %}
 
@@ -50,6 +52,11 @@
   "class": "grid-section-two-images-notice",
   "settings": [
     { "type": "image_picker", "id": "image_left", "label": "Left image" },
+     {
+      "type": "url",
+      "id": "image-link",
+      "label": "image link"
+    },
     { "type": "text", "id": "alt_left", "label": "Left image alt (optional)" },
     { "type": "image_picker", "id": "image_right", "label": "Right image" },
     { "type": "text", "id": "alt_right", "label": "Right image alt (optional)" },
