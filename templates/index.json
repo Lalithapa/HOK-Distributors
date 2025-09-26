@@ -32,6 +32,11 @@
         "after_image_mobile": "shopify://shop_images/FIRST_BANNER_MOBILE_45426523-65e5-4b18-b13b-36cd371be204.jpg"
       }
     },
+    "cart_and_last_order_RxjfVk": {
+      "type": "cart-and-last-order",
+      "name": "Cart and Last order",
+      "settings": {}
+    },
     "statistics_kwVhVi": {
       "type": "statistics",
       "name": "Stats strip",
@@ -748,6 +753,7 @@
   },
   "order": [
     "before_after_login_banner_jBwQmU",
+    "cart_and_last_order_RxjfVk",
     "statistics_kwVhVi",
     "collection_collage_VV8CNg",
     "single_banner_HfVkqL",
