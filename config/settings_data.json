@@ -1,17 +1,8 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "current": {
-    "logo": "shopify://shop_images/distributor-logo_49ca9217-ac7d-4dd7-8915-2cadb1e7ef28.png",
+    "logo": "shopify:\/\/shop_images\/distributor-logo_49ca9217-ac7d-4dd7-8915-2cadb1e7ef28.png",
     "logo_width": 140,
-    "favicon": "shopify://shop_images/HOK_Fav_Icon_1.2_-_512x512_1.png",
+    "favicon": "shopify:\/\/shop_images\/HOK_Fav_Icon_1.2_-_512x512_1.png",
     "type_header_font": "poppins_n6",
     "heading_scale": 100,
     "type_body_font": "poppins_n4",
@@ -108,7 +99,7 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p></p>",
+    "brand_description": "<p><\/p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -163,33 +154,41 @@
     "content_for_index": [],
     "blocks": {
       "12691944026889484271": {
-        "type": "shopify://apps/snapb2b/blocks/snap-b2b/4873aea5-77bc-44a0-badb-f9cfb804db54",
+        "type": "shopify:\/\/apps\/snapb2b\/blocks\/snap-b2b\/4873aea5-77bc-44a0-badb-f9cfb804db54",
         "disabled": false,
         "settings": {}
       },
       "16179990893605260579": {
-        "type": "shopify://apps/simplify-my-login/blocks/sml_account/d8cea981-d551-4842-a6a1-d02bd1530222",
+        "type": "shopify:\/\/apps\/simplify-my-login\/blocks\/sml_account\/d8cea981-d551-4842-a6a1-d02bd1530222",
         "disabled": false,
         "settings": {}
       },
       "460015673350295975": {
-        "type": "shopify://apps/simplify-my-login/blocks/simplify_my_login/d8cea981-d551-4842-a6a1-d02bd1530222",
+        "type": "shopify:\/\/apps\/simplify-my-login\/blocks\/simplify_my_login\/d8cea981-d551-4842-a6a1-d02bd1530222",
         "disabled": false,
         "settings": {}
       },
       "15623156175785154009": {
-        "type": "shopify://apps/qikify-smart-menu/blocks/app-embed/19d2f1cd-1836-4a32-8937-03df3c601dc8",
+        "type": "shopify:\/\/apps\/qikify-smart-menu\/blocks\/app-embed\/19d2f1cd-1836-4a32-8937-03df3c601dc8",
         "disabled": false,
         "settings": {}
       },
       "36909921495456953": {
-        "type": "shopify://apps/ai-speed/blocks/ai-speed/f9e4b8d0-6523-47d0-b77a-783072cc6552",
+        "type": "shopify:\/\/apps\/ai-speed\/blocks\/ai-speed\/f9e4b8d0-6523-47d0-b77a-783072cc6552",
         "disabled": false,
         "settings": {
           "enable_optimization": true,
           "debug_mode": false,
           "excluded_scripts": "preview-bar.js,analytics.js,important-script.js",
           "image_threshold": 30
+        }
+      },
+      "14198427981142892921": {
+        "type": "shopify:\/\/apps\/se-wishlist-engine\/blocks\/app-embed\/8f7c0857-8e71-463d-a168-8e133094753b",
+        "disabled": false,
+        "settings": {
+          "wishlist_unfill_icon": "",
+          "wishlist_fill_icon": ""
         }
       }
     },
@@ -407,7 +406,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p></p>",
+      "brand_description": "<p><\/p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
