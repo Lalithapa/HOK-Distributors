@@ -257,12 +257,12 @@
                     {{- product.selected_or_first_available_variant.sku -}}
                   </p>
 
-                  <div class="inline-flex items-center gap-[2px] lg:gap-[10px]  bg-[#FFEAF2] text-[#7B676F] text-[12px] rounded-[8px] whitespace-nowrap px-[10px] py-[4px]">
+                  {% comment %} <div class="inline-flex items-center gap-[2px] lg:gap-[10px]  bg-[#FFEAF2] text-[#7B676F] text-[12px] rounded-[8px] whitespace-nowrap px-[10px] py-[4px]">
                     {% render 'share-icon', icon: 'sku-icon' %}
                     <span class="font-medium text-[12px]  text-[#7B676F] tracking-[-0.55px] md:tracking-normal"
                       >Top-performing in stores</span
                     >
-                  </div>
+                  </div> {% endcomment %}
 
                   {% comment %} <button
                     type="button"
