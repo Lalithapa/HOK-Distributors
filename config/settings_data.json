@@ -191,6 +191,14 @@
           "excluded_scripts": "preview-bar.js,analytics.js,important-script.js",
           "image_threshold": 30
         }
+      },
+      "14198427981142892921": {
+        "type": "shopify://apps/se-wishlist-engine/blocks/app-embed/8f7c0857-8e71-463d-a168-8e133094753b",
+        "disabled": false,
+        "settings": {
+          "wishlist_unfill_icon": "",
+          "wishlist_fill_icon": ""
+        }
       }
     },
     "color_schemes": {
