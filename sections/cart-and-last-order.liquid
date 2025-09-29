@@ -4,7 +4,7 @@ Cart (left) + Last order (right)
 - Reorder button builds /cart/VARIANT:QTY,... permalink
 {% endcomment %}
 {% if cart.item_count > 0 or customer.orders_count > 0 %}
-<section class="w-full px-[16px] lg:px-[20px] scroll-trigger animate--fade-in">
+<section class="w-full px-[16px] lg:px-[20px] mb-[4px] lg:mb-[8px] scroll-trigger animate--fade-in">
     <div class="mx-auto rounded-2xl border border-gray-200 bg-[#FBFBF8] ">
         <div class="page-width">
             <div class="py-[30px] lg:grid lg:grid-cols-2">
@@ -13,8 +13,8 @@ Cart (left) + Last order (right)
                 <div class="pr-0 lg:pr-6">
                     <div class="flex items-start justify-between border-b border-[#ECECEC] pb-2 mb-8">
                         <div>
-                            <h3 class="text-[16px] font-semibold text-[#2A2F38]">You have these in your cart</h3>
-                            <p class="text-[14px] text-[#959595]">Confirm now to save more</p>
+                            <p class="text-[14px] lg:text-[16px] font-semibold text-[#2A2F38]">You have these in your cart</p>
+                            <p class="text-[14px] text-[#959595] desktop_screen">Confirm now to save more</p>
                         </div>
                         <button type="button"
                             class="ml-3 inline-flex h-7 w-7 items-center justify-center rounded-full hover:bg-gray-100 text-gray-500">
@@ -78,7 +78,7 @@ Cart (left) + Last order (right)
                 <div class="pt-6 lg:pt-0 lg:pl-6">
                     <div class="flex items-start justify-between border-b border-[#ECECEC]  pb-2 mb-8">
                         <div>
-                            <h3 class="text-[16px] font-semibold text-[#2A2F38]">Your last order</h3>
+                            <p class="text-[14px] lg:text-[16px] font-semibold text-[#2A2F38]">Your last order</p>
                             {% if customer.orders_count > 0 %}
                             {% assign last_order = customer.orders.first %}
                             {% assign status = last_order.fulfillment_status | default: '—' %}
