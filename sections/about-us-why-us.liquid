@@ -1,0 +1,132 @@
+<section id="why-us-{{ section.id }}" class="section-{{ section.id }} max-m-[95%] flex w-[90%] m-auto "
+  style="padding-top: {{ section.settings.pt }}px; padding-bottom: {{ section.settings.pb }}px;">
+  <div class=" mx-auto lg:px-4 lg:w-[50%] w-[1%] !block"></div>
+  <div class=" mx-auto lg:px-4 lg:w-[50%] w-full">
+    {% if section.settings.heading != blank %}
+    <h2
+      class="!text-[#2A2F38] !text-[28px] lg:!text-[36px] not-italic font-bold leading-normal tracking-[-1.8px] pb-6">
+      {{ section.settings.heading }}
+    </h2>
+    {% endif %}
+    <div class="rounded-2xl shadow-sm ring-1 ring-black/5" style="background-color: {{ section.settings.card_bg }};">
+      <div class="p-5 md:p-8 lg:p-10">
+        <div class="lg:py-[46px] lg:px-[58px] ">
+          {% for block in section.blocks %}
+          {% if block.type == 'point' %}
+          <div class="flex items-start gap-10 mb-[20px]">
+            <span
+              class="mt-0.5 inline-flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full bg-[#BAE9BA] text-[#227C33] ring-1 ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none">
+                <path d="M1 4.31034L3.43487 6.85716C3.51055 6.93632 3.63583 6.93989 3.7159 6.86516L10 1"
+                  stroke="#227C33" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </span>
+            <div>
+              <span class="!text-black  !text-[14px] not-italic font-medium leading-normal"> {{ block.settings.title }}
+              {{ block.settings.subtext}}
+              </span>
+              
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+ {%- style -%}
+      .section-{{ section.id }} {
+      margin-top: {{ section.settings.margin_top_mobile }}px;
+      margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+    }
+    @media screen and (min-width: 750px) {
+     .section-{{ section.id }} {
+    margin-top: {{ section.settings.margin_top_desktop }}px;
+    margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+  }
+ {%- endstyle -%}
+{% schema %}
+{
+  "name": "Why us",
+  "class": "section-why-us",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Why us?" },
+    { "type": "color", "id": "card_bg", "label": "Card background", "default": "#F3FBF6" },
+    { "type": "range", "id": "pt", "label": "Padding top (px)", "min": 0, "max": 160, "step": 4, "default": 40 },
+    { "type": "range", "id": "pb", "label": "Padding bottom (px)", "min": 0, "max": 160, "step": 4, "default": 40 },
+    {
+      "type": "range",
+      "id": "margin_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top (desktop)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom (desktop)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top (mobile)",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom (mobile)",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Point",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Associating with HOK Makeup Distributor makes you authorized retail partner."
+        },
+        { "type": "html", "id": "subtext", "label": "Subtext (optional)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why us",
+      "category": "Text",
+      "blocks": [
+        { "type": "point", "settings": { "title": "Associating with HOK Makeup Distributor makes you authorized retail partner." } },
+        { "type": "point", "settings": { "title": "Shop directly from the authorized and exclusive importer and distributor in India." } },
+        { "type": "point", "settings": { "title": "Easy access to international brands." } },
+        { "type": "point", "settings": { "title": "Dedicated Support Manager for best services." } },
+        { "type": "point", "settings": { "title": "Free full-size product and brand displays for shops/salons." } },
+        { "type": "point", "settings": { "title": "Helps you claim GST tax back." } },
+        { "type": "point", "settings": { "title": "20,000 sq. ft warehouse capacity with ~100 employees." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

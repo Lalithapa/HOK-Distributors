@@ -1,0 +1,279 @@
+<section id="meet-our-team-{{ section.id }}" class="w-full bg-white section-{{ section.id }}"
+  style="padding-top: {{ section.settings.pt }}px; padding-bottom: {{ section.settings.pb }}px;">
+  <div class="w-[90%] mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+
+      <div class="flex flex-col md:flex-row gap-[44px] justify-center items-center">
+        <div class="w-full lg:w-[40%] order-1">
+          {% if section.settings.heading != blank %}
+          <h2 class="text-[#2A2F38] !text-[28px] lg:!text-[36px] not-italic font-bold leading-normal tracking-[-1.8px]">
+            {{ section.settings.heading }}
+          </h2>
+          {% endif %}
+          {% if section.settings.body != blank %}
+          <div class="mt-4 !text-black lg:!text-[22px] font-normal tracking-[-1.1px]">
+            {{ section.settings.body }}
+          </div>
+          {% endif %}
+
+        </div>
+        <div class=" w-full lg:w-[60%] order-2">
+          <div class="flex gap-[12px] flex-col lg:flex-row w-full">
+            <div class="relative rounded-2xl overflow-hidden shadow  w-full lg:w-[50%]">
+              {% if section.settings.top_image_1 != blank %}
+              <img class="w-full h-full object-cover" src="{{ section.settings.top_image_1 | image_url: width: 405 }}"
+                alt="{{ section.settings.top_image_1_alt | escape }}" loading="lazy" width="100%" height="auto">
+              {% else %}
+              <div class="aspect-[4/3] bg-gray-100"></div>
+              {% endif %}
+            </div>
+            <div class="relative rounded-2xl overflow-hidden shadow">
+              {% if section.settings.top_image_2 != blank %}
+              <img class="w-full h-full object-cover" src="{{ section.settings.top_image_2 | image_url: width: 405 }}"
+                alt="{{ section.settings.top_image_2_alt | escape }}" loading="lazy" width="100%" height="auto">
+              {% else %}
+              <div class="aspect-[4/3] bg-gray-100"></div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row gap-[44px] ">
+        <div class="lg:w-[70%] w-full order-3">
+          <div class="relative rounded-[10px] overflow-hidden">
+            {% if section.settings.desktop_image != blank %}
+            
+            <img class="hidden md:!block w-full h-auto object-cover"
+              src="{{ section.settings.desktop_image | image_url: width: 816 }}"
+              alt="{{ section.settings.desktop_image_alt | escape }}" loading="lazy" width="100%" height="aut0">
+            {% endif %}
+
+            {% if section.settings.mobile_image != blank %}
+            <!-- Mobile Image -->
+            <img class="!block  md:!hidden lg:!hidden w-full h-auto object-cover"
+              src="{{ section.settings.mobile_image | image_url: width: 480 }}"
+              alt="{{ section.settings.mobile_image_alt | escape }}" loading="lazy" width="100%" height="aut0">
+            {% else %}
+            <div class="aspect-[16/7] bg-gray-100"></div>
+            {% endif %}
+          </div>
+
+        </div>
+
+        <div class="lg:w-[30%] w-full order-4  m-auto">
+          {% if section.settings.pills_heading != blank %}
+          <p class="text-black !text-[14px] not-italic font-medium leading-normal">
+            {{ section.settings.pills_heading }}
+          </p>
+          {% endif %}
+
+          <div class="mt-3 flex flex-wrap gap-3">
+            {% for block in section.blocks %}
+            {% if block.type == 'pill' %}
+            <span
+              class="inline-block rounded-[4px] bg-[#CDEBF9] text-black text-center font-[Poppins] text-[14px] not-italic font-medium leading-normal lg:text-[13px]  px-[10px] py-[3px] shadow-sm whitespace-nowrap">
+              {{ block.settings.text }}
+            </span>
+            {% endif %}
+            {% endfor %}
+          </div>
+
+          {% if section.settings.note != blank %}
+          <div class="mt-5 mb:5 text-black  !text-[14px] not-italic font-medium leading-normal">
+            {{ section.settings.note }}
+          </div>
+          
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <!-- Notice -->
+    {% if section.settings.notice != blank %}
+    <div
+      class="mt-[16px] mb-[50px] lg:mt-[50px] lg:mb-[130px] rounded-2xl border border-[#E6E6E6] bg-white p-[30px] lg:py-30">
+      <p class="w-full lg:w-2/3 text-center text-[13px] lg:text-[22px] leading-relaxed text-black m-auto">
+        {{ section.settings.notice }}
+      </p>
+    </div>
+    {% endif %}
+  </div>
+</section> 
+{%- style -%}
+.section-{{ section.id }} {
+margin-top: {{ section.settings.margin_top_mobile }}px;
+margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+}
+@media screen and (min-width: 750px) {
+.section-{{ section.id }} {
+margin-top: {{ section.settings.margin_top_desktop }}px;
+margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+}
+}
+{%- endstyle -%}
+{% schema %}
+{
+  "name": "Meet our team",
+  "class": "section-meet-our-team",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top (desktop)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom (desktop)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top (mobile)",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom (mobile)",
+      "default": 20
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Meet our team"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Intro text",
+      "default": "<p>We believe beauty is personal, powerful, and playful. And we make sure to bring you the latest trends and must-have products. Every shade, every product, every trend is chosen to help you shine.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "top_image_1",
+      "label": "Top image #1"
+    },
+    {
+      "type": "text",
+      "id": "top_image_1_alt",
+      "label": "Alt for top image #1",
+      "default": "Team photo 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "top_image_2",
+      "label": "Top image #2"
+    },
+    {
+      "type": "text",
+      "id": "top_image_2_alt",
+      "label": "Alt for top image #2",
+      "default": "Team photo 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image"
+    },
+    {
+      "type": "text",
+      "id": "bottom_image_alt",
+      "label": "Alt for bottom image",
+      "default": "Group photo"
+    },
+    {
+      "type": "text",
+      "id": "pills_heading",
+      "label": "Pills heading",
+      "default": "We bring together"
+    },
+    {
+      "type": "richtext",
+      "id": "note",
+      "label": "Note (under pills)",
+      "default": "<p>Dedicated to ensuring seamless service for our partners.</p>"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Padding top (px)",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Padding bottom (px)",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "text",
+      "id": "notice",
+      "label": "Notice text",
+      "default": "<p>All sales are final. In case of damaged items or discrepancies, please reach out within 48 hours of delivery for resolution.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pill",
+      "name": "Pill",
+      "limit": 16,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "marketing"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Meet our team",
+      "category": "Team",
+      "blocks": [
+        { "type": "pill", "settings": { "text": "marketing" } },
+        { "type": "pill", "settings": { "text": "sales" } },
+        { "type": "pill", "settings": { "text": "logistics" } },
+        { "type": "pill", "settings": { "text": "operations" } },
+        { "type": "pill", "settings": { "text": "brand management" } },
+        { "type": "pill", "settings": { "text": "tech" } },
+        { "type": "pill", "settings": { "text": "support" } },
+        { "type": "pill", "settings": { "text": "product design" } },
+        { "type": "pill", "settings": { "text": "graphic design" } },
+        { "type": "pill", "settings": { "text": "finance" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
