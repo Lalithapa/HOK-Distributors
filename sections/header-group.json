@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -36,7 +27,7 @@
           "type": "msg",
           "settings": {
             "text": "Get Distributor offers on whatsapp —  Join channel",
-            "link": "https://whatsapp.com/channel/0029VbBWEYP4IBhAbhTLss2U",
+            "link": "https:\/\/whatsapp.com\/channel\/0029VbBWEYP4IBhAbhTLss2U",
             "audience": "all",
             "italic": false
           }
@@ -60,9 +51,9 @@
       "name": "Announcement login bar",
       "settings": {
         "cta_out_label": "Unlock discounted price — Sign in 30 seconds →",
-        "cta_out_link": "/account",
+        "cta_out_link": "\/account",
         "cta_in_label": "Buy UAE's best seller | Giverny gifting sets →",
-        "cta_in_link": "shopify://collections/giverny"
+        "cta_in_link": "shopify:\/\/collections\/giverny"
       }
     },
     "header": {

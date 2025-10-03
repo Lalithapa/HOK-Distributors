@@ -1,0 +1,193 @@
+<section
+  id="who-we-are-{{ section.id }}"
+  class="section-{{ section.id }} w-full bg-white"
+  style="padding-top: {{ section.settings.pt }}px; padding-bottom: {{ section.settings.pb }}px;"
+>
+  <div class="w-[90%] mx-auto px-4 ">
+    {% if section.settings.heading != blank %}
+      <h2
+        class="!text-[#2A2F38]  !text-[28px]  lg:!text-[36px] not-italic font-bold leading-normal tracking-[-1.8px] mb-[24px]"
+      >
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+    <div class="flex gap-[40px] lg:gap-12 items-start flex-col lg:flex-row w-full">
+      {%- comment -%} LEFT: Heading, paragraphs, pills {%- endcomment -%}
+      <div class="w-full lg:max-w-[35%] ">
+        <div class="space-y-4  leading-relaxed">
+          {% if section.settings.intro != blank %}
+            <p
+              class="!text-[#000] lg:!text-[22px]  !text-[16px] not-italic font-normal leading-normal tracking-[-1.1px]"
+            >
+              {{ section.settings.intro }}
+            </p>
+          {% endif %}
+          {% if section.settings.subtext != blank %}
+            <p class="!text-[#7E7E7E] !text-[14px] lg:text-[16px] not-italic lg:font-medium font-light leading-normal">
+              {{ section.settings.subtext }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if section.settings.pills_heading != blank or section.blocks.size > 0 %}
+        <div class="w-full lg:max-w-[30%] my-auto mx-0">
+          {% if section.settings.pills_heading != blank %}
+            <p class="text-[#000] text-[14px] mb-[20px] not-italic font-medium leading-normal">
+              {{ section.settings.pills_heading }}
+            </p>
+          {% endif %}
+
+          <div class="flex flex-wrap gap-3">
+            {% for block in section.blocks %}
+              {% if block.type == 'pill' %}
+                <span
+                  class="
+                    inline-block rounded-[4px] bg-[#CDEBF9]  text-[#000] text-center text-[14px] not-italic font-medium leading-normal   px-[10px] py-[3px]
+                    whitespace-nowrap
+                  "
+                >
+                  {{ block.settings.text }}
+                </span>
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% if section.settings.pills_note != blank %}
+            <p
+              class="lg:text-[#000] text-[#8E8E8E] lg:text-[14px] text-[12px] not-italic font-medium leading-normal mt-[20px]"
+            >
+              {{ section.settings.pills_note }}
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+      {%- comment -%} RIGHT: Image {%- endcomment -%}
+      <div class=" order-2 w-full lg:max-w-[35%]">
+        {% if section.settings.image != blank %}
+          <img
+            class="rounded-[20px] m-auto"
+            src="{{ section.settings.image | image_url: width: 426 }}"
+            alt="{{ section.settings.alt | escape }}"
+            loading="lazy"
+            width="100%"
+            height="auto"
+          >
+        {% else %}
+          <div class="aspect-[16/9] rounded-xl bg-gray-100"></div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{%- style -%}
+      .section-{{ section.id }} {
+      margin-top: {{ section.settings.margin_top_mobile }}px;
+      margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+    }
+    @media screen and (min-width: 750px) {
+     .section-{{ section.id }} {
+    margin-top: {{ section.settings.margin_top_desktop }}px;
+    margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+  }
+{%- endstyle -%}
+{% schema %}
+{
+  "name": "Who we are",
+  "class": "section-who-we-are",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Who we are?" },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro paragraph",
+      "default": "We are authorized importer & distributor of Revolution Beauty, Wet n Wild, LA Girl, LA Colors, Nicka K and Superdrug and we have exclusive rights to manage their Indian social media handles."
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Secondary paragraph",
+      "default": "Subsidiary of Kanvar Group, HOK Distributor is serving both the professional and retail customers. We provide the ultimate shopping experience with unrivalled range, choice, value, convenience, service and expertise. We are proud to supply you with the world's top brands and always keep you in the know-how of latest trends."
+    },
+    {
+      "type": "text",
+      "id": "pills_heading",
+      "label": "Pills heading",
+      "default": "We have a variety of essentials for :"
+    },
+    {
+      "type": "text",
+      "id": "pills_note",
+      "label": "Note under pills",
+      "default": "offering you a one-stop solution for fast-moving cosmetics"
+    },
+    { "type": "image_picker", "id": "image", "label": "Right image" },
+    { "type": "text", "id": "alt", "label": "Image alt text", "default": "Face perfecting palette and blending brush" },
+    { "type": "range", "id": "pt", "label": "Padding top (px)", "min": 0, "max": 160, "step": 4, "default": 48 },
+    { "type": "range", "id": "pb", "label": "Padding bottom (px)", "min": 0, "max": 160, "step": 4, "default": 48 },
+    {
+      "type": "range",
+      "id": "margin_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top (desktop)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom (desktop)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top (mobile)",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom (mobile)",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pill",
+      "name": "Pill",
+      "limit": 10,
+      "settings": [{ "type": "text", "id": "text", "label": "Text", "default": "color cosmetics & accessories" }]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Who we are",
+      "category": "Text",
+      "blocks": [
+        { "type": "pill", "settings": { "text": "color cosmetics & accessories" } },
+        { "type": "pill", "settings": { "text": "skin care" } },
+        { "type": "pill", "settings": { "text": "oral care" } },
+        { "type": "pill", "settings": { "text": "baby care" } },
+        { "type": "pill", "settings": { "text": "hair care" } },
+        { "type": "pill", "settings": { "text": "body care" } },
+        { "type": "pill", "settings": { "text": "feminine hygiene" } },
+        { "type": "pill", "settings": { "text": "men's care" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

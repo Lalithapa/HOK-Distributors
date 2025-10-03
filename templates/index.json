@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "before_after_login_banner_jBwQmU": {
@@ -25,11 +16,11 @@
         "padding_bottom_mobile": 0,
         "heading_text": "",
         "before_link": "#shopify-section-sections--19975032307929__new_footer_DwcQbz",
-        "before_image": "shopify://shop_images/Banner_d5afb752-c229-4d86-972c-010f3c8823cc.jpg",
-        "before_image_mobile": "shopify://shop_images/Banner_mobile_1.jpg",
-        "after_link": "shopify://collections/la-girl",
-        "after_image": "shopify://shop_images/FIRST_BANNER_338cafc3-c503-440b-bc0a-22806bcc59f3.jpg",
-        "after_image_mobile": "shopify://shop_images/FIRST_BANNER_MOBILE_45426523-65e5-4b18-b13b-36cd371be204.jpg"
+        "before_image": "shopify:\/\/shop_images\/Banner_d5afb752-c229-4d86-972c-010f3c8823cc.jpg",
+        "before_image_mobile": "shopify:\/\/shop_images\/Banner_mobile_1.jpg",
+        "after_link": "shopify:\/\/collections\/la-girl",
+        "after_image": "shopify:\/\/shop_images\/FIRST_BANNER_338cafc3-c503-440b-bc0a-22806bcc59f3.jpg",
+        "after_image_mobile": "shopify:\/\/shop_images\/FIRST_BANNER_MOBILE_45426523-65e5-4b18-b13b-36cd371be204.jpg"
       }
     },
     "cart_and_last_order_RxjfVk": {
@@ -51,25 +42,25 @@
         "card_UcAzde": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Gloss-Stick-Benefits-1x1_7cd755f4-32ef-48de-90e0-280510c1450b.webp",
+            "image": "shopify:\/\/shop_images\/Gloss-Stick-Benefits-1x1_7cd755f4-32ef-48de-90e0-280510c1450b.webp",
             "alt": "Conceal perfect",
-            "link": "https://www.hokdistributors.com/search?q=GLOSS+STICK&options%5Bprefix%5D=last"
+            "link": "https:\/\/www.hokdistributors.com\/search?q=GLOSS+STICK&options%5Bprefix%5D=last"
           }
         },
         "card_yiXpN3": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/1img.webp",
+            "image": "shopify:\/\/shop_images\/1img.webp",
             "alt": "Blush Icon",
-            "link": "https://www.hokdistributors.com/search?q=blush+icon+&options%5Bprefix%5D=last"
+            "link": "https:\/\/www.hokdistributors.com\/search?q=blush+icon+&options%5Bprefix%5D=last"
           }
         },
         "card_TygwRG": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/EN-FA-L14-PP02-1_2_3ff2fa79-557e-4d68-9eae-f9be9d9c6ce2.webp",
+            "image": "shopify:\/\/shop_images\/EN-FA-L14-PP02-1_2_3ff2fa79-557e-4d68-9eae-f9be9d9c6ce2.webp",
             "alt": "Color Lasting",
-            "link": "shopify://collections/focallure"
+            "link": "shopify:\/\/collections\/focallure"
           }
         }
       },
@@ -86,7 +77,7 @@
         "margin_bottom_mobile": 56,
         "title": "What's New & Now",
         "button_label": "VIEW ALL",
-        "button_link": "shopify://collections"
+        "button_link": "shopify:\/\/collections"
       }
     },
     "single_banner_HfVkqL": {
@@ -104,9 +95,9 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "heading_text": "",
-        "link": "shopify://collections/all",
-        "image": "shopify://shop_images/HokD_offer.jpg",
-        "image_mobile": "shopify://shop_images/HokD_offerMobile.jpg"
+        "link": "shopify:\/\/collections\/all",
+        "image": "shopify:\/\/shop_images\/HokD_offer.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/HokD_offerMobile.jpg"
       }
     },
     "product_slider_kPdfPy": {
@@ -143,8 +134,8 @@
         "padding_bottom_mobile": 0,
         "heading_text": "",
         "link": "#",
-        "image": "shopify://shop_images/Special_Savings_1209be80-4acc-411f-b58d-dbaadd4682d2.jpg",
-        "image_mobile": "shopify://shop_images/Special_Savings_MOBILE_99d420a8-3c28-4380-8235-0a224cde8701.jpg"
+        "image": "shopify:\/\/shop_images\/Special_Savings_1209be80-4acc-411f-b58d-dbaadd4682d2.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Special_Savings_MOBILE_99d420a8-3c28-4380-8235-0a224cde8701.jpg"
       }
     },
     "product_slider_rMpNYi": {
@@ -181,8 +172,8 @@
         "padding_bottom_mobile": 0,
         "heading_text": "",
         "link": "#",
-        "image": "shopify://shop_images/Your_exclusive_savings_start_here.jpg",
-        "image_mobile": "shopify://shop_images/Your_exclusive_savings_start_here_MOBILE.jpg"
+        "image": "shopify:\/\/shop_images\/Your_exclusive_savings_start_here.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Your_exclusive_savings_start_here_MOBILE.jpg"
       }
     },
     "brand_cards_grid_ctnUHm": {
@@ -193,11 +184,11 @@
           "settings": {
             "badge_text": "Top-Picks",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify://shop_images/Makeup_Revolution_1.png",
+            "brand_name_image": "shopify:\/\/shop_images\/Makeup_Revolution_1.png",
             "subtitle": "Trend-led bestsellers your customers love",
-            "image": "shopify://shop_images/Makeup_Revolution.jpg",
+            "image": "shopify:\/\/shop_images\/Makeup_Revolution.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/makeup-revolution",
+            "cta_link": "shopify:\/\/collections\/makeup-revolution",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -207,11 +198,11 @@
           "settings": {
             "badge_text": "Best Seller",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify://shop_images/LAGirl_1_a78db249-29dd-4969-9ea3-3a37b44e8a58.png",
+            "brand_name_image": "shopify:\/\/shop_images\/LAGirl_1_a78db249-29dd-4969-9ea3-3a37b44e8a58.png",
             "subtitle": "All shades & styles, always in demand",
-            "image": "shopify://shop_images/LA_Girl_8aa613b1-44b2-4c0a-a30d-a42e1aaf27ed.jpg",
+            "image": "shopify:\/\/shop_images\/LA_Girl_8aa613b1-44b2-4c0a-a30d-a42e1aaf27ed.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/l-a-girl",
+            "cta_link": "shopify:\/\/collections\/l-a-girl",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -221,11 +212,11 @@
           "settings": {
             "badge_text": "Big Margins >>>",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify://shop_images/Milani_1.png",
+            "brand_name_image": "shopify:\/\/shop_images\/Milani_1.png",
             "subtitle": "Italian glam, set for instant sales",
-            "image": "shopify://shop_images/Milani_cdba26ee-e19b-469c-923b-b4bdbcc6aa65.jpg",
+            "image": "shopify:\/\/shop_images\/Milani_cdba26ee-e19b-469c-923b-b4bdbcc6aa65.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/milani",
+            "cta_link": "shopify:\/\/collections\/milani",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -235,11 +226,11 @@
           "settings": {
             "badge_text": "Fast Seller",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify://shop_images/Focallure_1.png",
+            "brand_name_image": "shopify:\/\/shop_images\/Focallure_1.png",
             "subtitle": "Tint your way to bigger sales",
-            "image": "shopify://shop_images/Focallure.jpg",
+            "image": "shopify:\/\/shop_images\/Focallure.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/focallure",
+            "cta_link": "shopify:\/\/collections\/focallure",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -249,11 +240,11 @@
           "settings": {
             "badge_text": "In demand",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify://shop_images/JESSUP_1_67202456-d13b-40f4-9284-64cfc5831534.png",
+            "brand_name_image": "shopify:\/\/shop_images\/JESSUP_1_67202456-d13b-40f4-9284-64cfc5831534.png",
             "subtitle": "Pro brushes trusted worldwide",
-            "image": "shopify://shop_images/Jessup_Beauty.jpg",
+            "image": "shopify:\/\/shop_images\/Jessup_Beauty.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/jessup",
+            "cta_link": "shopify:\/\/collections\/jessup",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -263,11 +254,11 @@
           "settings": {
             "badge_text": "Classic",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify://shop_images/Ardell_1.png",
+            "brand_name_image": "shopify:\/\/shop_images\/Ardell_1.png",
             "subtitle": "Lashes that sell themselves",
-            "image": "shopify://shop_images/Ardell_a8337c74-93fa-4ed3-82f2-a9fa268019dd.jpg",
+            "image": "shopify:\/\/shop_images\/Ardell_a8337c74-93fa-4ed3-82f2-a9fa268019dd.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/ardell",
+            "cta_link": "shopify:\/\/collections\/ardell",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -277,11 +268,11 @@
           "settings": {
             "badge_text": "Trending",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify://shop_images/Lamel.png",
+            "brand_name_image": "shopify:\/\/shop_images\/Lamel.png",
             "subtitle": "Lip oils that keep selling out",
-            "image": "shopify://shop_images/Lamel.jpg",
+            "image": "shopify:\/\/shop_images\/Lamel.jpg",
             "cta_text": "see brand",
-            "cta_link": "shopify://collections/lamel-1",
+            "cta_link": "shopify:\/\/collections\/lamel-1",
             "cta_bg": "#ffffff",
             "cta_icon_border": "#d1d5db"
           }
@@ -291,9 +282,9 @@
           "settings": {
             "badge_text": "Popular",
             "badge_bg": "#fde047",
-            "brand_name_image": "shopify://shop_images/DrPawPaw_1.png",
+            "brand_name_image": "shopify:\/\/shop_images\/DrPawPaw_1.png",
             "subtitle": "The balm everyone asks for",
-            "image": "shopify://shop_images/Dr._Paw_Paw.jpg",
+            "image": "shopify:\/\/shop_images\/Dr._Paw_Paw.jpg",
             "cta_text": "see brand",
             "cta_link": "#",
             "cta_bg": "#ffffff",
@@ -316,14 +307,14 @@
         "heading": "Explore the brands we’ve got",
         "subheading": "",
         "cols_lg": 4,
-        "additional_image_1": "shopify://shop_images/Pinkflash_80b48e4e-34dc-4462-83f6-c5a0b54ee2c7.png",
-        "additional_cta_link_1": "shopify://collections/pinkflash",
-        "additional_image_2": "shopify://shop_images/Koric_be5a3483-d866-46b7-8250-91190e8ac71c.png",
-        "additional_cta_link_2": "shopify://collections/koric",
-        "additional_image_3": "shopify://shop_images/LN_Pro_0b3a0045-9f9f-4c17-949e-9ca14650e7b7.png",
-        "additional_cta_link_3": "shopify://collections/ln-pro",
-        "additional_image_4": "shopify://shop_images/Relove.png",
-        "additional_cta_link_4": "shopify://collections/revolution-relove"
+        "additional_image_1": "shopify:\/\/shop_images\/Pinkflash_80b48e4e-34dc-4462-83f6-c5a0b54ee2c7.png",
+        "additional_cta_link_1": "shopify:\/\/collections\/pinkflash",
+        "additional_image_2": "shopify:\/\/shop_images\/Koric_be5a3483-d866-46b7-8250-91190e8ac71c.png",
+        "additional_cta_link_2": "shopify:\/\/collections\/koric",
+        "additional_image_3": "shopify:\/\/shop_images\/LN_Pro_0b3a0045-9f9f-4c17-949e-9ca14650e7b7.png",
+        "additional_cta_link_3": "shopify:\/\/collections\/ln-pro",
+        "additional_image_4": "shopify:\/\/shop_images\/Relove.png",
+        "additional_cta_link_4": "shopify:\/\/collections\/revolution-relove"
       }
     },
     "two_images_notice_CJWUme": {
@@ -333,7 +324,7 @@
       ],
       "name": "Two images with notice",
       "settings": {
-        "image_left": "shopify://shop_images/LAST_IMAGE_DESKTOP_cdfb91b9-1d62-45f6-b389-879f4a3bac14.jpg",
+        "image_left": "shopify:\/\/shop_images\/LAST_IMAGE_DESKTOP_cdfb91b9-1d62-45f6-b389-879f4a3bac14.jpg",
         "image-link": "",
         "alt_left": "Brush Set",
         "image-link-second": "",
@@ -357,8 +348,8 @@
         "padding_bottom_mobile": 0,
         "heading_text": "",
         "link": "#",
-        "image": "shopify://shop_images/category_image.jpg",
-        "image_mobile": "shopify://shop_images/category_image-mob.jpg"
+        "image": "shopify:\/\/shop_images\/category_image.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/category_image-mob.jpg"
       }
     },
     "collection_category_WQY69b": {
@@ -367,100 +358,100 @@
         "item_3Fqzje": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Foundation_693a1309-2c03-4f34-bdfd-9f4de6b34d34.png",
+            "image": "shopify:\/\/shop_images\/Foundation_693a1309-2c03-4f34-bdfd-9f4de6b34d34.png",
             "title": "Foundation",
             "alt": "Foundation",
-            "link": "shopify://collections/foundation"
+            "link": "shopify:\/\/collections\/foundation"
           }
         },
         "item_HrWeRH": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Blush_1cd004b5-e131-40d6-9889-7b3fc099dace.png",
+            "image": "shopify:\/\/shop_images\/Blush_1cd004b5-e131-40d6-9889-7b3fc099dace.png",
             "title": "Blush",
             "alt": "Blush",
-            "link": "shopify://collections/blush"
+            "link": "shopify:\/\/collections\/blush"
           }
         },
         "item_JJhdzy": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Bronzer.png",
+            "image": "shopify:\/\/shop_images\/Bronzer.png",
             "title": "Bronzer",
             "alt": "",
-            "link": "shopify://collections/bronzer"
+            "link": "shopify:\/\/collections\/bronzer"
           }
         },
         "item_MLyAWh": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Concealer.png",
+            "image": "shopify:\/\/shop_images\/Concealer.png",
             "title": "Concealer",
             "alt": "Concealer",
-            "link": "shopify://collections/concealer"
+            "link": "shopify:\/\/collections\/concealer"
           }
         },
         "item_JjHLi7": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Contour.png",
+            "image": "shopify:\/\/shop_images\/Contour.png",
             "title": "Contour",
             "alt": "Contour",
-            "link": "shopify://collections/contour"
+            "link": "shopify:\/\/collections\/contour"
           }
         },
         "item_6TaAjW": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Loose_Powder.png",
+            "image": "shopify:\/\/shop_images\/Loose_Powder.png",
             "title": "Loose Powder",
             "alt": "Loose Powder",
-            "link": "shopify://collections/loose-powder"
+            "link": "shopify:\/\/collections\/loose-powder"
           }
         },
         "item_ci9fbN": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Setting_spray_40fbf273-7011-4a6f-80e3-bb71ca393f44.png",
+            "image": "shopify:\/\/shop_images\/Setting_spray_40fbf273-7011-4a6f-80e3-bb71ca393f44.png",
             "title": "Setting Spray",
             "alt": "Setting Spray",
-            "link": "shopify://collections/spray"
+            "link": "shopify:\/\/collections\/spray"
           }
         },
         "item_KTMdeM": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Primer_29171552-ece7-493c-9f2d-569d6182df77.png",
+            "image": "shopify:\/\/shop_images\/Primer_29171552-ece7-493c-9f2d-569d6182df77.png",
             "title": "Primer",
             "alt": "Primer",
-            "link": "shopify://collections/face-primer"
+            "link": "shopify:\/\/collections\/face-primer"
           }
         },
         "item_HqfdqB": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Contour_Highlight.png",
+            "image": "shopify:\/\/shop_images\/Contour_Highlight.png",
             "title": "Contour & Highlight",
             "alt": "Contour & Highlight",
-            "link": "shopify://collections/contour-highlighter"
+            "link": "shopify:\/\/collections\/contour-highlighter"
           }
         },
         "item_ChnTXk": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Compact.png",
+            "image": "shopify:\/\/shop_images\/Compact.png",
             "title": "Compact",
             "alt": "Compact",
-            "link": "shopify://collections/compact"
+            "link": "shopify:\/\/collections\/compact"
           }
         },
         "item_p6TLcN": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Highlighter.png",
+            "image": "shopify:\/\/shop_images\/Highlighter.png",
             "title": "Highlighter",
             "alt": "Highlighter",
-            "link": "shopify://collections/highlighter"
+            "link": "shopify:\/\/collections\/highlighter"
           }
         }
       },
@@ -486,7 +477,7 @@
         "title": "Face",
         "subtext": "Foundations, powders & more that sell fast",
         "button_label": "View All",
-        "button_link": "shopify://collections/face"
+        "button_link": "shopify:\/\/collections\/face"
       }
     },
     "collection_category_zDCktc": {
@@ -495,55 +486,55 @@
         "item_4TeDYB": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Lip_Balm.png",
+            "image": "shopify:\/\/shop_images\/Lip_Balm.png",
             "title": "Lip Balm",
             "alt": "Lip Balm",
-            "link": "shopify://collections/lip-balm"
+            "link": "shopify:\/\/collections\/lip-balm"
           }
         },
         "item_xarqQz": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Lip_Liner.png",
+            "image": "shopify:\/\/shop_images\/Lip_Liner.png",
             "title": "Lip Liner",
             "alt": "Lip Liner",
-            "link": "shopify://collections/lip-liner"
+            "link": "shopify:\/\/collections\/lip-liner"
           }
         },
         "item_CgNUxn": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Lipstick.png",
+            "image": "shopify:\/\/shop_images\/Lipstick.png",
             "title": "Lipstick",
             "alt": "Lipstick",
-            "link": "shopify://collections/lipsticks"
+            "link": "shopify:\/\/collections\/lipsticks"
           }
         },
         "item_jhzETd": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Liquid_Lipstick.png",
+            "image": "shopify:\/\/shop_images\/Liquid_Lipstick.png",
             "title": "Liquid Lipstick",
             "alt": "Liquid Lipstick",
-            "link": "shopify://collections/liquid-lipstick"
+            "link": "shopify:\/\/collections\/liquid-lipstick"
           }
         },
         "item_jjQgEQ": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Lip_Gloss.png",
+            "image": "shopify:\/\/shop_images\/Lip_Gloss.png",
             "title": "Lip Gloss",
             "alt": "Lip Gloss",
-            "link": "shopify://collections/lip-gloss"
+            "link": "shopify:\/\/collections\/lip-gloss"
           }
         },
         "item_UxKdiM": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Lip_Scrub.png",
+            "image": "shopify:\/\/shop_images\/Lip_Scrub.png",
             "title": "Lip Scrub",
             "alt": "Lip Scrub",
-            "link": "shopify://collections/lip-scrub"
+            "link": "shopify:\/\/collections\/lip-scrub"
           }
         }
       },
@@ -564,7 +555,7 @@
         "title": "Lips",
         "subtext": "Bulk supply of lip shades and care products",
         "button_label": "View All",
-        "button_link": "shopify://collections/lips"
+        "button_link": "shopify:\/\/collections\/lips"
       }
     },
     "collection_category_FMVrx9": {
@@ -573,64 +564,64 @@
         "item_Xr8kRa": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Eyeshadow.png",
+            "image": "shopify:\/\/shop_images\/Eyeshadow.png",
             "title": "Eyeshadow",
             "alt": "Eyeshadow",
-            "link": "shopify://collections/eyeshadow"
+            "link": "shopify:\/\/collections\/eyeshadow"
           }
         },
         "item_Q97rbV": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Eyeliner.png",
+            "image": "shopify:\/\/shop_images\/Eyeliner.png",
             "title": "Eyeliner",
             "alt": "Eyeliner",
-            "link": "shopify://collections/eyeliner"
+            "link": "shopify:\/\/collections\/eyeliner"
           }
         },
         "item_Wzw4na": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Eyelashes.png",
+            "image": "shopify:\/\/shop_images\/Eyelashes.png",
             "title": "Eyelashes",
             "alt": "Eyelashes",
-            "link": "shopify://collections/eyelashes"
+            "link": "shopify:\/\/collections\/eyelashes"
           }
         },
         "item_tUykpr": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Kajal.png",
+            "image": "shopify:\/\/shop_images\/Kajal.png",
             "title": "Kajal",
             "alt": "Kajal",
-            "link": "shopify://collections/kajal"
+            "link": "shopify:\/\/collections\/kajal"
           }
         },
         "item_eCreqK": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Mascara.png",
+            "image": "shopify:\/\/shop_images\/Mascara.png",
             "title": "Mascara",
             "alt": "Mascara",
-            "link": "shopify://collections/mascara"
+            "link": "shopify:\/\/collections\/mascara"
           }
         },
         "item_6HqWQn": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Eyebrow_Enhancer.png",
+            "image": "shopify:\/\/shop_images\/Eyebrow_Enhancer.png",
             "title": "Eyebrow Enhancer",
             "alt": "Eyebrow Enhancer",
-            "link": "shopify://collections/eyebrow"
+            "link": "shopify:\/\/collections\/eyebrow"
           }
         },
         "item_CnAYWk": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Eyeprimer.png",
+            "image": "shopify:\/\/shop_images\/Eyeprimer.png",
             "title": "Eyeprimer",
             "alt": "Eyeprimer",
-            "link": "shopify://collections/eyeprimer"
+            "link": "shopify:\/\/collections\/eyeprimer"
           }
         }
       },
@@ -652,7 +643,7 @@
         "title": "Eyes",
         "subtext": "Wide selection of eye makeup",
         "button_label": "View All",
-        "button_link": "shopify://collections/eyes"
+        "button_link": "shopify:\/\/collections\/eyes"
       }
     },
     "collection_category_8bVNT8": {
@@ -661,55 +652,55 @@
         "item_bGtFFh": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Brush_set.png",
+            "image": "shopify:\/\/shop_images\/Brush_set.png",
             "title": "Brush Set",
             "alt": "Brush set",
-            "link": "shopify://collections/brush-set"
+            "link": "shopify:\/\/collections\/brush-set"
           }
         },
         "item_X7wFXQ": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Face_Brush.png",
+            "image": "shopify:\/\/shop_images\/Face_Brush.png",
             "title": "Face Brush",
             "alt": "Face Brush",
-            "link": "shopify://collections/face-brush"
+            "link": "shopify:\/\/collections\/face-brush"
           }
         },
         "item_wLzWfG": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Eye_Brush.png",
+            "image": "shopify:\/\/shop_images\/Eye_Brush.png",
             "title": "Eye Brush",
             "alt": "Eye Brush",
-            "link": "shopify://collections/eye-brush"
+            "link": "shopify:\/\/collections\/eye-brush"
           }
         },
         "item_JbdRhx": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Lip_Brush.png",
+            "image": "shopify:\/\/shop_images\/Lip_Brush.png",
             "title": "Lip Brush",
             "alt": "Lip Brush",
-            "link": "shopify://collections/lip-brush"
+            "link": "shopify:\/\/collections\/lip-brush"
           }
         },
         "item_UBDbX9": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Sponges_Applicators.png",
+            "image": "shopify:\/\/shop_images\/Sponges_Applicators.png",
             "title": "Sponges & Applicators",
             "alt": "Sponges & Applicators",
-            "link": "shopify://collections/sponges-applicators"
+            "link": "shopify:\/\/collections\/sponges-applicators"
           }
         },
         "item_nKcDca": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Eyelashes_829bec9e-2813-4ac8-b1f8-4ea4cfd6a1ef.png",
+            "image": "shopify:\/\/shop_images\/Eyelashes_829bec9e-2813-4ac8-b1f8-4ea4cfd6a1ef.png",
             "title": "Eyelashes",
             "alt": "Eyelashes",
-            "link": "shopify://collections/eyelashes"
+            "link": "shopify:\/\/collections\/eyelashes"
           }
         }
       },
@@ -741,11 +732,11 @@
       ],
       "name": "Two images with notice",
       "settings": {
-        "image_left": "shopify://shop_images/LAST_IMAGE_DESKTOP_cdfb91b9-1d62-45f6-b389-879f4a3bac14.jpg",
-        "image-link": "https://www.hokdistributors.com/products/jessup-14pcs-light-gray-comprehensive-collection-4pc-set-1-full-size-product-worth-25-value-free?_pos=5&_sid=63818ec70&_ss=r",
+        "image_left": "shopify:\/\/shop_images\/LAST_IMAGE_DESKTOP_cdfb91b9-1d62-45f6-b389-879f4a3bac14.jpg",
+        "image-link": "https:\/\/www.hokdistributors.com\/products\/jessup-14pcs-light-gray-comprehensive-collection-4pc-set-1-full-size-product-worth-25-value-free?_pos=5&_sid=63818ec70&_ss=r",
         "alt_left": "Brush Set",
-        "image-link-second": "https://www.hokdistributors.com/search?q=Milani+Conceal+%2B+Perfect+2-in-1+Foundation&options%5Bprefix%5D=last",
-        "image_right": "shopify://shop_images/2_LAST_IMAGE_DESKTOP_96ca2e57-0abc-41a6-87fc-f1c5c60dfea9.jpg",
+        "image-link-second": "https:\/\/www.hokdistributors.com\/search?q=Milani+Conceal+%2B+Perfect+2-in-1+Foundation&options%5Bprefix%5D=last",
+        "image_right": "shopify:\/\/shop_images\/2_LAST_IMAGE_DESKTOP_96ca2e57-0abc-41a6-87fc-f1c5c60dfea9.jpg",
         "alt_right": "Foundation+Concealer",
         "notice": "All sales are final. In case of damaged items or disperancies, please reach out within 48 hours of delivery for resolution"
       }

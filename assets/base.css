@@ -390,7 +390,26 @@ select#mobileCountryCodeDropdown {
 .hidden {
   display: none !important;
 }
+.non_hover_hidden{
+    display: none;
+}
+.center-translate{
+  translate: -50%;
+}
 
+.modal-path{
+  /* clip-path: polygon(75% 2%, 80% 0, 85% 2%, 100% 2%, 100% 101%, 0 100%, 0 2%); */  
+  background-size: contain;
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.catalog-overlay{
+  background-image: url(https://cdn.shopify.com/s/files/1/0719/3119/9705/files/BOXXXXX.png?v=1759316695);
+}
+.bulk-order-overlay{
+  background-image: url(https://cdn.shopify.com/s/files/1/0719/3119/9705/files/bulk-overlay.png?v=1759321244);
+}
 .visually-hidden {
   position: absolute !important;
   overflow: hidden;
@@ -2579,9 +2598,9 @@ input[type='checkbox'] {
   .header--top-left,
   .header--middle-left:not(.header--has-menu) {
     grid-template-areas:
-      'heading icons'
-      'navigation navigation';
-    grid-template-columns: 1fr auto;
+      'heading search_input icons'
+      'navigation navigation country_logo';
+    grid-template-columns: auto 1fr auto;
   }
 
   .header--top-left.drawer-menu,
@@ -2620,7 +2639,7 @@ input[type='checkbox'] {
   }
 
   .header:not(.header--middle-left, .header--middle-center) .header__inline-menu {
-    margin-top: 1.05rem;
+    margin-top: 2.05rem;
   }
 }
 
@@ -2710,7 +2729,17 @@ input[type='checkbox'] {
     text-align: center;
   }
 }
-
+/* Header search */
+.header__search_input {
+  display: none;
+  grid-area: search_input;
+}
+/* Header search */
+.header__india_logo {
+  display: none;
+  justify-content: end;
+  grid-area: country_logo;
+}
 /* Header icons */
 .header__icons {
   display: flex;
@@ -2916,7 +2945,9 @@ details[open] .modal-overlay::after {
   .search-modal__form {
     max-width: 74.2rem;
   }
-
+  .header__search_input , .header__india_logo {
+    display: flex;
+  }
   .search-modal__close-button {
     position: initial;
     margin-left: 0.5rem;
