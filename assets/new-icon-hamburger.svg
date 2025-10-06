@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-hamburger new-hamburger" width="51" height="48" viewBox="0 0 51 48" fill="none">
+    <g filter="url(#filter0_d_172_2705)">
+    <rect x="10" y="8" width="31" height="28" rx="8" fill="white" shape-rendering="crispEdges"/>
+    <rect width="19" height="12" transform="translate(16 16)" fill="white"/>
+    <path d="M16 16H35" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M16 22H35" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M16 28H35" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <defs>
+    <filter id="filter0_d_172_2705" x="0" y="0" width="51" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feOffset dy="2"/>
+    <feGaussianBlur stdDeviation="5"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.466699 0 0 0 0 0.466699 0 0 0 0 0.466699 0 0 0 0.25 0"/>
+    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_172_2705"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_172_2705" result="shape"/>
+    </filter>
+    </defs>
+</svg>

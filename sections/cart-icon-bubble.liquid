@@ -1,9 +1,10 @@
-{% if cart == empty %}
+{% comment %} {% if cart == empty %}
   <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
 {% else %}
   <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
-{% endif %}
-
+{% endif %} {% endcomment %}
+ <span class="svg-wrapper">{{ 'new-icon-cart.svg' | inline_asset_content }}</span>
+ {% comment %} <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/cart-new.png" alt="cart-icon" class="icon icon-cart new-cart-icon" width="27" height="27" loading="eager"/> {% endcomment %}
 <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
 {%- if cart != empty -%}
   <div class="cart-count-bubble">

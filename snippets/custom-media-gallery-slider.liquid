@@ -1,6 +1,5 @@
 <div class="sticky top-[20%] product-gallery-product md:mt-[72px] md:mb-[72px] md:max-h-[430px] flex gap-[56px] items-start lg:pr-[33px]">
   <!-- Thumbnail Slider -->
-
   <div class="hidden md:!block">
     <div class="swiper-button-prev thumb-prev">
       <svg
@@ -46,7 +45,8 @@
     </div>
   </div>
   <!-- Main Slider -->
-  <div class="swiper main-swiper  flex-1">
+  <div class="swiper main-swiper flex-1">
+    <div class="wishlist-engine absolute right-[10px] md:right-[10px] lg:right-[50px] top-[10px] z-[2]" data-product_id="{{  product.id }}" data-variant_id="{{ product.selected_or_first_available_variant.id }}" data-full_button="false" data-css="true"></div>
     <div class="swiper-wrapper">
       {% for media in product.media %}
         <div class="swiper-slide " data-media-id="{{ media.id }}" data-swiper-slide-index="{{ forloop.index0 }} ">
@@ -55,7 +55,7 @@
               <img
                 src="{{ media | image_url}}"
                 alt="{{ media.alt | escape }}"
-                class="w-[460px] h-auto"
+                class="w-[460px] h-auto mx-auto"
                 width="100%"
                 height="100%"
               >

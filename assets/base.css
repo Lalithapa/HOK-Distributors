@@ -396,7 +396,6 @@ select#mobileCountryCodeDropdown {
 .center-translate{
   translate: -50%;
 }
-
 .modal-path{
   /* clip-path: polygon(75% 2%, 80% 0, 85% 2%, 100% 2%, 100% 101%, 0 100%, 0 2%); */  
   background-size: contain;
@@ -404,12 +403,10 @@ select#mobileCountryCodeDropdown {
   background-position: center;
   background-repeat: no-repeat;
 }
-.catalog-overlay{
-  background-image: url(https://cdn.shopify.com/s/files/1/0719/3119/9705/files/BOXXXXX.png?v=1759316695);
+.wishlist-engine-button{
+  background: transparent !important;
 }
-.bulk-order-overlay{
-  background-image: url(https://cdn.shopify.com/s/files/1/0719/3119/9705/files/bulk-overlay.png?v=1759321244);
-}
+
 .visually-hidden {
   position: absolute !important;
   overflow: hidden;
@@ -1024,8 +1021,19 @@ summary::-webkit-details-marker {
     padding-right: 0;
   }
 }
-
+.catalog-overlay{
+  background-image: url(https://cdn.shopify.com/s/files/1/0719/3119/9705/files/Rectangle_34625306.png);
+}
+.bulk-order-overlay{
+  background-image: url(https://cdn.shopify.com/s/files/1/0719/3119/9705/files/Rectangle_34625307.png);
+}
 @media screen and (min-width: 990px) {
+  .catalog-overlay{
+    background-image: url(https://cdn.shopify.com/s/files/1/0719/3119/9705/files/BOXXXXX.png);
+  }
+  .bulk-order-overlay{
+    background-image: url(https://cdn.shopify.com/s/files/1/0719/3119/9705/files/bulk-overlay.png);
+  }
   .title,
   .title-wrapper-with-link {
     margin: 5rem 0 3rem;
@@ -2301,13 +2309,14 @@ input[type='checkbox'] {
 }
 
 .cart-count-bubble {
+  display: none;
+  /* display: flex; */
   position: absolute;
   background-color: rgb(var(--color-button));
   color: rgb(var(--color-button-text));
   height: 1.7rem;
   width: 1.7rem;
   border-radius: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
@@ -2579,8 +2588,12 @@ input[type='checkbox'] {
 
 .header {
   display: grid;
-  grid-template-areas: 'left-icons heading icons';
-  grid-template-columns: 1fr 2fr 1fr;
+  /* grid-template-areas: 'left-icons heading icons'; */
+  grid-template-areas:
+        "left-icons heading icons"
+        "search_input search_input search_input"
+        "navigation navigation country_logo";
+  grid-template-columns: auto 3fr auto;
   align-items: center;
 }
 
@@ -2659,7 +2672,8 @@ input[type='checkbox'] {
 .header__heading,
 .header__heading-link {
   grid-area: heading;
-  justify-self: center;
+  /* justify-self: center; */
+  justify-self: start;
 }
 
 .header__heading-link {
@@ -2712,7 +2726,7 @@ input[type='checkbox'] {
     margin-left: -0.75rem;
   }
 
-  .header__heading,
+  .header__heading, 
   .header__heading-link {
     justify-self: start;
   }
@@ -2731,12 +2745,11 @@ input[type='checkbox'] {
 }
 /* Header search */
 .header__search_input {
-  display: none;
+  display: flex;
   grid-area: search_input;
 }
 /* Header search */
 .header__india_logo {
-  display: none;
   justify-content: end;
   grid-area: country_logo;
 }
@@ -2773,6 +2786,10 @@ input[type='checkbox'] {
   width: 44px;
   height: 44px;
 }
+.header__icon .svg-wrapper .new-cart-icon {
+  width: 27px;
+  height: 27px;
+}
 
 .header__icon::after {
   content: none;
@@ -2788,6 +2805,11 @@ input[type='checkbox'] {
   width: 2rem;
   fill: none;
   vertical-align: middle;
+}
+
+svg.icon.icon-hamburger.new-hamburger {
+  width: unset;
+  height: unset;
 }
 
 .header__icon,
@@ -2865,6 +2887,14 @@ menu-drawer + .header__search {
 }
 
 @media screen and (min-width: 990px) {
+  .header__icon .svg-wrapper .new-cart-icon {
+    width: 22px;
+     height: 20px;
+  }
+  
+  .header__india_logo {
+    display:flex;
+  }
   .header:not(.header--top-center) * > .header__search,
   .header--top-center > .header__search {
     display: inline-flex;
@@ -2944,9 +2974,6 @@ details[open] .modal-overlay::after {
 @media screen and (min-width: 990px) {
   .search-modal__form {
     max-width: 74.2rem;
-  }
-  .header__search_input , .header__india_logo {
-    display: flex;
   }
   .search-modal__close-button {
     position: initial;
