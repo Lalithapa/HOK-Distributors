@@ -95,7 +95,7 @@
   @media screen and (min-width: 990px) {
     .header {
       padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      /* padding-bottom: {{ section.settings.padding_bottom }}px; */
     }
   }
 {%- endstyle -%}
@@ -117,6 +117,12 @@
     assign header_tag = 'sticky-header'
   endif
 %}
+{%  capture exit %} 
+ <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" class="cursor-pointer">
+  <path d="M1 11L11 0.999999" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M11 11L0.999999 0.999999" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+{% endcapture %}
 
 <{{ header_tag }}
   {% if header_tag == 'sticky-header' %}
@@ -222,6 +228,260 @@
         </h1>
       {%- endif -%}
     {%- endif -%}
+    <!-- overlay -->
+    <div id="model-overlay" class="fixed inset-0 bg-[#17171794] z-[1000] opacity-0 hidden invisible pointer-events-none" onclick="closeModal('all')"><wbr></div>
+    <div class="header__search_input desktop_screen">
+       <!-- Top action bar -->
+        <div class="w-full bg-white">
+          <div class="max-w-[1200px] mx-auto px-0 py-2 lg:px-4 flex items-center gap-[6px] lg:gap-[20px] flex-col lg:flex-row">
+            <!-- Search pill -->
+            <div class="flex-1 w-full">
+              <div 
+                class="relative w-full h-[45px] rounded-full lg:border lg:border-neutral-300 bg-white pl-[20px] lg:pl-[48px] pr-4 text-[14px] text-neutral-400 cursor-pointer flex items-center !shadow-[0_2px_6px_0_rgba(164,164,164,0.25)] lg:!shadow-none"
+                onclick="document.querySelector('details-modal.header__search details').setAttribute('open', true);
+                document.body.classList.add('overflow-hidden');"
+              >
+                <!-- search icon -->
+                <span class="absolute right-[18px] lg:right-auto lg:!left-[18px] top-0 flex h-full items-center pointer-events-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M15.6604 15.6667L18.3271 18.3333" stroke="#393939" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.33333 15.6667C12.3834 15.6667 15.6667 12.3834 15.6667 8.33333C15.6667 4.28324 12.3834 1 8.33333 1C4.28324 1 1 4.28324 1 8.33333C1 12.3834 4.28324 15.6667 8.33333 15.6667Z" stroke="black" stroke-width="1.75"/>
+                    <path d="M13.6667 13.6667L19.0001 19" stroke="black" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <div class="flex items-center pl-2 text-[#B0AEAE]">
+                  Search by&nbsp;
+                  <span id="typewriter" class="font-medium text-[#575656]">“SKU”</span>
+                </div>
+                </div>
+            </div>
+            <!-- Pills -->
+            <div class="flex items-center w-full lg:w-max gap-2 bg-white rounded-[30px] lg:border-[1.5px] lg:border-[#DDDBDB] py-[3.5px] px-[4.5px] !shadow-[0_2px_10px_0_rgba(164,164,164,0.25)] lg:!shadow-none">
+              <!-- Catalogue (yellow) -->
+              <div class="relative inline-block transition order-2 lg:order-1">
+                  <!-- Trigger -->
+                  <button
+                    type="button"
+                    class="py-[6px] lg:py-[6.5px] px-[12px] lg:px-[18px] text-[13px] lg:text-[14px] rounded-full bg-[#EDCC31] text-[#222529] font-medium shadow-[0_2px_10px_0_rgba(191,231,252,0.56)] hover:opacity-90 transition"
+                    onclick="openModal('catalogue-modal')"
+                  >
+                    <span class="inline-flex items-center gap-[6px]">
+                      Catalogue
+                      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
+                        <path d="M1 1L5.33278 5.59537C5.5366 5.81155 5.88285 5.80335 6.0762 5.57776L10 1"
+                              stroke="black" stroke-width="1.25" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <!-- Modal (initially invisible) -->
+                  <div id="catalogue-modal"
+                      class="absolute top-[40px] left-[-100%] lg:left-auto lg:right-[-10px] w-[360px] h-[417px] z-[1000] modal-path catalog-overlay opacity-0 hidden invisible pointer-events-none transition-opacity">
+                    <!-- panel -->
+                    <div class="flex items-center flex-col relative w-full rounded-xl px-[24px] pt-[40px] pb-[30px]">
+                      <!-- header -->
+                      <div class="mb-[30px]">
+                        <div class="flex justify-between items-start gap-4">
+                          <p class="text-[13px] leading-snug text-black">
+                            <span>Browse SKUs and product details —</span><br/>
+                            <span class="font-semibold">click to download</span> the catalogue.
+                          </p>
+                          <button type="button" aria-label="Close"
+                                  class="shrink-0 rounded-full p-1 hover:bg-neutral-100"
+                                  onclick="closeModal('catalogue-modal')"> {{ exit }}</button>
+                        </div>
+                      </div>
+                      <!-- list -->
+                      <div class="flex flex-col gap-[24px] w-4/5 text-[#3A3A3A] mx-auto">
+                        <!-- item 1 -->
+                        <div class="font-semibold">
+                          <div class="flex items-center gap-2 text-[13px]">
+                            Price drop picks&nbsp;
+                            <span class="text-[#4B6BA5] text-[11px]">{Upto 70% Off}</span>
+                            <span>:</span>
+                          </div>
+                          <hr class="border-[#C4C4C4] !mt-0 !mb-3"/>
+                         <a href="javascript:void(0)" class="flex items-center justify-center rounded-full bg-[#e3e3e3] cursor-not-allowed text-[#969696] font-semibold text-[14px]
+                                            py-3 text-center shadow-[0_2px_10px_0_rgba(191,231,252,0.56)] hover:opacity-90 uppercase">
+                            Coming Soon &nbsp; 
+                            {% comment %} <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                              <path d="M5.75 1C5.75 0.585786 6.08579 0.25 6.5 0.25C6.91421 0.25 7.25 0.585786 7.25 1H6.5H5.75ZM7.03033 14.5303C6.73744 14.8232 6.26256 14.8232 5.96967 14.5303L1.1967 9.75736C0.903806 9.46447 0.903806 8.98959 1.1967 8.6967C1.48959 8.40381 1.96447 8.40381 2.25736 8.6967L6.5 12.9393L10.7426 8.6967C11.0355 8.40381 11.5104 8.40381 11.8033 8.6967C12.0962 8.98959 12.0962 9.46447 11.8033 9.75736L7.03033 14.5303ZM6.5 1H7.25L7.25 14H6.5H5.75L5.75 1H6.5Z" fill="black"/>
+                            </svg> {% endcomment %}
+                          </a>
+                        </div>
+
+                        <!-- item 2 -->
+                        <div class="font-semibold">
+                          <div class="flex items-center gap-2 text-[13px]">
+                            Limited restock :
+                          </div>
+                          <hr class="border-[#C4C4C4] !mt-0 !mb-3"/>
+                          <a href="javascript:void(0)" class="flex items-center justify-center rounded-full bg-[#e3e3e3] cursor-not-allowed text-[#969696] font-semibold text-[14px]
+                                            py-3 text-center shadow-[0_2px_10px_0_rgba(191,231,252,0.56)] hover:opacity-90 uppercase">
+                            Coming Soon &nbsp; 
+                            {% comment %} <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                              <path d="M5.75 1C5.75 0.585786 6.08579 0.25 6.5 0.25C6.91421 0.25 7.25 0.585786 7.25 1H6.5H5.75ZM7.03033 14.5303C6.73744 14.8232 6.26256 14.8232 5.96967 14.5303L1.1967 9.75736C0.903806 9.46447 0.903806 8.98959 1.1967 8.6967C1.48959 8.40381 1.96447 8.40381 2.25736 8.6967L6.5 12.9393L10.7426 8.6967C11.0355 8.40381 11.5104 8.40381 11.8033 8.6967C12.0962 8.98959 12.0962 9.46447 11.8033 9.75736L7.03033 14.5303ZM6.5 1H7.25L7.25 14H6.5H5.75L5.75 1H6.5Z" fill="black"/>
+                            </svg> {% endcomment %}
+                          </a>
+                        </div>
+                        <!-- item 3 -->
+                        <div class="font-semibold">
+                          <div class="flex items-center gap-2 text-[13px]">
+                            Everyday essentials :
+                          </div>
+                          <hr class="border-[#C4C4C4] !mt-0 !mb-3"/>
+                          <a href="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/Catalogue-Regular.pdf" target="_blank" download="Catalogue.pdf" class="flex items-center justify-center rounded-full bg-[#EDCC31] text-[#222529] font-semibold text-[14px]
+                                            py-3 text-center shadow-[0_2px_10px_0_rgba(191,231,252,0.56)] hover:opacity-90">
+                            DOWNLOAD &nbsp; 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                              <path d="M5.75 1C5.75 0.585786 6.08579 0.25 6.5 0.25C6.91421 0.25 7.25 0.585786 7.25 1H6.5H5.75ZM7.03033 14.5303C6.73744 14.8232 6.26256 14.8232 5.96967 14.5303L1.1967 9.75736C0.903806 9.46447 0.903806 8.98959 1.1967 8.6967C1.48959 8.40381 1.96447 8.40381 2.25736 8.6967L6.5 12.9393L10.7426 8.6967C11.0355 8.40381 11.5104 8.40381 11.8033 8.6967C12.0962 8.98959 12.0962 9.46447 11.8033 9.75736L7.03033 14.5303ZM6.5 1H7.25L7.25 14H6.5H5.75L5.75 1H6.5Z" fill="black"/>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <div class="relative inline-block transition order-1">
+                <!-- Bulk order button -->
+                <button 
+                  class="py-[6px] lg:py-[6.5px] px-[12px] lg:px-[18px] text-[13px] lg:text-[14px] text-[#434141] rounded-full bg-[#FBFAF5] border border-[#EDEDED] font-medium shadow-[0_2px_10px_0_rgba(191,189,189,0.25)] hover:bg-neutral-50 transition" 
+                  onclick="openModal('bulk-order-modal')"
+                >
+                  <span class="inline-flex items-center gap-[6px]">
+                    Bulk order
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
+                      <path d="M1 1L5.33278 5.59537C5.5366 5.81155 5.88285 5.80335 6.0762 5.57776L10 1" stroke="black" stroke-width="1.25" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                </button>
+
+                <!-- Bulk Order Modal -->
+                  <div id="bulk-order-modal"
+                      class="absolute top-[40px] left-0 lg:left-auto lg:right-[-10px] w-[360px] h-[520px] z-[1000] modal-path bulk-order-overlay opacity-0 hidden invisible pointer-events-none transition-opacity">
+                    <!-- panel -->
+                    <div class="relative rounded-xl px-[24px] pt-[40px] pb-[30px] w-[90%] mx-auto">
+                      <!-- header -->
+                      <div class="mb-[6px]">
+                        <div class="flex justify-between items-start gap-4">
+                          <p class="text-[13px] leading-snug text-black font-medium">
+                            Place bulk order in <span class="font-bold">3 simple steps</span> :
+                          </p>
+                          <button type="button" aria-label="Close"
+                                  class="shrink-0 rounded-full p-1 hover:bg-neutral-100"
+                                  onclick="closeModal('bulk-order-modal')">{{ exit }}</button>
+                        </div>
+                        </div>
+                        <hr class="border-[#C4C4C4] !mt-0 !mb-[20px]"/>
+
+                      <div class="w-[90%] mx-auto">
+                         <!-- Steps -->
+                        <div class="space-y-2 mb-[16px] text-[12px]">
+                          <p><span class="font-bold text-[#4B6BA5]">STEP 1</span> : Type a product name or SKU</p>
+                          <p><span class="font-bold text-[#4B6BA5]">STEP 2</span> : Select the right variant</p>
+                          <p><span class="font-bold text-[#4B6BA5]">STEP 3</span> : Place the order!</p>
+                        </div>
+                        <!-- Preview mockup -->
+                        <div class="w-full mb-[16px]">
+                          <img src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/preview-bulk-order.png" loading="lazy" width="230" height="100%" alt="Bulk preview mockup" class="mx-auto"/>
+                        </div>
+                      </div>
+                      <!-- CTA -->
+                      <a href="/pages/quick-order-form" class="flex items-center justify-center rounded-full bg-[#EDCC31] text-[#222529] font-semibold text-[14px] py-3 text-center shadow-[0_2px_10px_0_rgba(191,231,252,0.56)] hover:opacity-90">
+                            LET’S BUILD YOUR ORDER &nbsp; 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" fill="none">
+                              <path d="M1.5 5.75C1.08579 5.75 0.75 6.08579 0.75 6.5C0.75 6.91421 1.08579 7.25 1.5 7.25L1.5 6.5L1.5 5.75ZM15.0303 7.03033C15.3232 6.73744 15.3232 6.26256 15.0303 5.96967L10.2574 1.1967C9.96447 0.903806 9.48959 0.903806 9.1967 1.1967C8.90381 1.48959 8.90381 1.96447 9.1967 2.25736L13.4393 6.5L9.1967 10.7426C8.90381 11.0355 8.90381 11.5104 9.1967 11.8033C9.48959 12.0962 9.96447 12.0962 10.2574 11.8033L15.0303 7.03033ZM1.5 6.5L1.5 7.25L14.5 7.25L14.5 6.5L14.5 5.75L1.5 5.75L1.5 6.5Z" fill="black"/>
+                            </svg>
+                          </a>
+                    </div>
+                  </div>
+
+              </div>
+              <!-- Track (white + hand icon) -->
+              <button class="desktop_screen order-1 py-[6px] lg:py-[6.5px] px-[12px] lg:px-[18px] text-[13px] lg:text-[14px] text-[#222529] rounded-full bg-[#FBFAF5] border border-[#EDEDED] font-medium shadow-[0_2px_10px_0_rgba(191,189,189,0.25)] hover:bg-neutral-50 transition"
+              onclick="window.location.href='https://www.trackon.in/courier-tracking';" >
+                <span class="inline-flex items-center gap-[6px]">
+                  Track
+                  <!-- pointer/hand icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 17 17" fill="none">
+                    <path d="M9.88579 5.40212H12.4005C12.7192 5.40212 13.0249 5.52892 13.25 5.75455L16.1374 8.64855C16.3619 8.87351 16.4879 9.17832 16.4879 9.49611V13.0623C16.4879 13.725 15.9507 14.2623 15.2879 14.2623H9.88579M9.88579 5.40212V14.2623M9.88579 5.40212C9.88567 4.75886 9.36418 4.23746 8.72092 4.23746H8.23759M9.88579 14.2623H2.20019C1.53746 14.2623 1.00021 13.725 1.00019 13.0623L1.00003 5.43749C1.00001 4.77474 1.53727 4.23746 2.20003 4.23746H2.45992M6.73755 9.5H5.23755M5.23755 9.5C4.73755 8.5 2.73755 5.5 2.45992 4.23746M5.23755 9.5C5.73755 8.5 7.73755 6 8.23759 4.23746M5.23755 9.5H3.73755M8.23759 4.23746C8.23759 3.32493 7.73755 1 5.23755 1C3.23755 1 2.45992 2.90225 2.45992 4.23746" stroke="#191919" stroke-linecap="round"/>
+                    <circle cx="5.375" cy="4.375" r="0.875" fill="black" stroke="black"/>
+                    <path d="M12.488 5.6311V8.4311C12.488 9.09385 13.0253 9.6311 13.688 9.6311H16.488" stroke="#191919" stroke-linecap="round"/>
+                    <circle cx="3.5" cy="15.3623" r="1" stroke="black"/>
+                    <circle cx="13.988" cy="15.3623" r="1" stroke="black"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="mobile_screen ml-auto mr-[10px] flex-row gap-[8px] justify-around items-center order-2">
+                <a href="https://www.trackon.in/courier-tracking">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 17 17" fill="none">
+                    <path d="M9.88579 5.40212H12.4005C12.7192 5.40212 13.0249 5.52892 13.25 5.75455L16.1374 8.64855C16.3619 8.87351 16.4879 9.17832 16.4879 9.49611V13.0623C16.4879 13.725 15.9507 14.2623 15.2879 14.2623H9.88579M9.88579 5.40212V14.2623M9.88579 5.40212C9.88567 4.75886 9.36418 4.23746 8.72092 4.23746H8.23759M9.88579 14.2623H2.20019C1.53746 14.2623 1.00021 13.725 1.00019 13.0623L1.00003 5.43749C1.00001 4.77474 1.53727 4.23746 2.20003 4.23746H2.45992M6.73755 9.5H5.23755M5.23755 9.5C4.73755 8.5 2.73755 5.5 2.45992 4.23746M5.23755 9.5C5.73755 8.5 7.73755 6 8.23759 4.23746M5.23755 9.5H3.73755M8.23759 4.23746C8.23759 3.32493 7.73755 1 5.23755 1C3.23755 1 2.45992 2.90225 2.45992 4.23746" stroke="#191919" stroke-linecap="round"/>
+                    <circle cx="5.375" cy="4.375" r="0.875" fill="black" stroke="black"/>
+                    <path d="M12.488 5.6311V8.4311C12.488 9.09385 13.0253 9.6311 13.688 9.6311H16.488" stroke="#191919" stroke-linecap="round"/>
+                    <circle cx="3.5" cy="15.3623" r="1" stroke="black"/>
+                    <circle cx="13.988" cy="15.3623" r="1" stroke="black"/>
+                  </svg>
+                </a>
+                <a href="/apps/wishlist">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="18" viewBox="0 0 22 20" fill="none">
+                    <rect width="22" height="20" fill="url(#pattern0_2810_7411)"></rect>
+                    <defs>
+                    <pattern id="pattern0_2810_7411" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2810_7411" transform="matrix(0.00195312 0 0 0.00214844 0 -0.05)"></use>
+                    </pattern>
+                    <image id="image0_2810_7411" width="512" height="512" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"></image>
+                    </defs>
+                  </svg>
+                </a>
+                <a href="/account">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 15 19" fill="none">
+                    <circle cx="7.3999" cy="4.5" r="3.6" stroke="black" stroke-width="1.2"></circle>
+                    <path d="M7.40039 10.9004C9.10377 10.9004 10.6756 11.2498 11.8438 11.8438C12.9789 12.4209 13.9004 13.3272 13.9004 14.5C13.9004 15.6728 12.9789 16.5791 11.8438 17.1562C10.6756 17.7502 9.10377 18.0996 7.40039 18.0996C5.69679 18.0996 4.12429 17.7503 2.95605 17.1562C1.82091 16.5791 0.900391 15.6728 0.900391 14.5C0.900391 13.3272 1.82091 12.4209 2.95605 11.8438C4.12429 11.2497 5.69679 10.9004 7.40039 10.9004Z" stroke="black" stroke-width="1.2"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  <script>
+    const HIDE = ['opacity-0','hidden','invisible','pointer-events-none'];
+    const show = el => el && el.classList.remove(...HIDE);
+    const hide = el => el && el.classList.add(...HIDE);
+
+    function openModal(id) {
+      show(document.getElementById(id));
+      show(document.getElementById('model-overlay'));
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeModal(id = 'all') {
+      if (id === 'all') {
+        document.querySelectorAll('.modal-path').forEach(hide);
+      } else {
+        hide(document.getElementById(id));
+      }
+      hide(document.getElementById('model-overlay'));
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Close all on ESC
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal('all');
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        // Check if current page is cart page
+        if (window.location.href === "https://www.hokdistributors.com/cart") {
+          // Find all link[rel="stylesheet"] elements
+          document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+            if (link.href.includes("netterm.css")) {
+              link.remove();
+              console.log("Removed netterm.css from cart page");
+            }
+          });
+        }
+      });
+  </script>
 
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       <div class="desktop-localization-wrapper">
@@ -248,7 +508,11 @@
         {%- endif -%}
       </div>
       {% render 'header-search', input_id: 'Search-In-Modal' %}
-
+      <a href="/apps/wishlist" class="header__icon link focus-inset small-hide flex items-center header__icon--wishlist"
+        rel="nofollow">
+        <span class="svg-wrapper">{{ 'icon-wishlist.svg' | inline_asset_content }}</span>
+        <span class="visually-hidden">Wishlist</span>
+      </a>
       {%- if shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
@@ -260,11 +524,15 @@
               {%- if customer and customer.has_avatar? -%}
                 {{ customer | avatar }}
               {%- else -%}
-                <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+                <span class="svg-wrapper">
+                 {{ 'new-acount.svg' | inline_asset_content }}
+                  </span>
               {%- endif -%}
             </account-icon>
           {%- else -%}
-            <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+            <span class="svg-wrapper">
+             {{ 'new-acount.svg' | inline_asset_content }}
+            </span>
           {%- endif -%}
           <span class="visually-hidden">
             {%- liquid
@@ -284,13 +552,28 @@
             {% render block %}
         {%- endcase -%}
       {%- endfor -%}
-
+      <div class="mobile_screen justify-center items-center">
+        <!-- Wrapper (use wherever you need the flag) -->
+          <div class="relative">
+            <!-- The flag icon (trigger) -->
+            <img
+              src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/indian_logo.png"
+              width="27" height="27" alt="India flag" loading="lazy"
+              class="cursor-pointer"
+            />
+          </div>
+      </div>
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        {% if cart == empty %}
-          <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
+        {% comment %} {% if cart == empty %}
+           <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span> 
+           <span class="svg-wrapper">{{ 'new-icon-cart.svg' | inline_asset_content }}</span>
         {% else %}
           <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
-        {% endif %}
+          <span class="svg-wrapper">{{ 'new-icon-cart.svg' | inline_asset_content }}</span>
+        {% endif %} {% endcomment %}
+        <span class="svg-wrapper"> 
+          {{ 'new-icon-cart.svg' | inline_asset_content }}
+        </span>
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
@@ -301,6 +584,30 @@
           </div>
         {%- endif -%}
       </a>
+    </div>
+    <div class="header__india_logo desktop_screen">
+      <!-- Wrapper (use wherever you need the flag) -->
+        <div class="relative inline-block group">
+          <!-- Tooltip -->
+          <div
+            class="w-[200px] absolute top-0 right-full -translate-x-1/2 text-center
+                  flex items-center gap-2 rounded-full
+                  bg-white/95 shadow-[0_6px_18px_rgba(0,0,0,0.15)]
+                  px-3 py-1.5
+                  opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100
+                  transition duration-200 pointer-events-none"
+          >
+            <span class="text-[12px] leading-[15px] text-[#6C96A9] font-semibold">
+              We currently serve customers only in India!
+            </span>
+          </div>
+          <!-- The flag icon (trigger) -->
+          <img
+            src="https://cdn.shopify.com/s/files/1/0719/3119/9705/files/indian_logo.png"
+            width="27" height="27" alt="India flag" loading="lazy"
+            class="cursor-pointer"
+          />
+        </div>
     </div>
   </header>
 </{{ header_tag }}>
@@ -424,6 +731,39 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
+  const texts = ["“SKU”", "“Product name”", "“Brand”", "“Category”"];
+  let count = 0;
+  let index = 0;
+  let currentText = "";
+  let letter = "";
+  const speed = 120; // typing speed in ms
+  const eraseSpeed = 60; // erasing speed in ms
+  const delayBetween = 1500; // pause before erasing
+
+  function type() {
+    if (index < texts[count].length) {
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      document.getElementById("typewriter").textContent = letter;
+      setTimeout(type, speed);
+    } else {
+      setTimeout(erase, delayBetween);
+    }
+  }
+
+  function erase() {
+    if (index > 0) {
+      currentText = texts[count];
+      letter = currentText.slice(0, --index);
+      document.getElementById("typewriter").textContent = letter;
+      setTimeout(erase, eraseSpeed);
+    } else {
+      count = (count + 1) % texts.length;
+      setTimeout(type, speed);
+    }
+  }
+
+  type();
 {% endjavascript %}
 
 <script type="application/ld+json">

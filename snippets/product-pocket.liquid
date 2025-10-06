@@ -7,14 +7,15 @@ if template.name contains 'collection' or  template.name contains 'search'
 endif
 %}
 <!-- Product Pocket Card -->
-<div class="h-full bg-white rounded-2xl shadow-md overflow-hidden{% unless collection_card %} max-w-[360px] box-shadow-pocket{% endunless %}">
+<div class="h-full relative bg-white rounded-2xl shadow-md overflow-hidden{% unless collection_card %} max-w-[360px] box-shadow-pocket{% endunless %}">
+  <div class="wishlist-engine absolute right-[10px] top-[10px] z-[2]" data-product_id="{{ product.id }}" data-variant_id="{{ product.selected_or_first_available_variant.id }}" data-full_button="false" data-css="true"></div>
   <a href="{% if customer %}{{ card_product.url }}{% else %}/account{% endif %}" aria-label="{{ card_product.title | escape }}">
     <!-- Top: bundle visuals -->
     <div class="image-container">
       <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
         <!-- Plus sign -->
         <div class="relative">
-          <div class="aspect-[1] bg-[#F9F9F9] overflow-hidden group{% unless collection_card %} rounded-xl{% endunless %}">
+           <div class="aspect-[1] bg-[#F9F9F9] overflow-hidden group{% unless collection_card %} rounded-xl{% endunless %}">
             {% comment %} <div class="absolute -left-3 -bottom-3 w-20 h-20 rounded-full bg-pink-200/70 blur-[2px]">
             </div> {% endcomment %}
             {% if card_product.images.size > 1 %}

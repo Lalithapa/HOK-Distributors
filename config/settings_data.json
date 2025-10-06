@@ -453,7 +453,9 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "@media screen and (max-width: 990px) {.tmenu_nav, .creditsyard-floating-widget {display: none !important; }}",
+      ".tmenu_nav {justify-content: space-between; max-width: 900px;}",
+      "a.tmenu_item_link[title=\"About us\"] span {font-weight: 600 !important; color: #6c96a9 !important;}",
+      " @media screen and (max-width: 990px) {.tmenu_nav, .creditsyard-floating-widget {display: none !important; }}",
       "a.tmenu_item_link[aria-expanded=\"true\"] .tmenu_item_text,.tmenu_item_text:hover {font-weight: 600 !important;}",
       ".tmenu_submenu_mega_position_fullwidth {padding: 10px 40px !important;}",
       ".tmenu_item--root > .tmenu_submenu {border-top: 1px solid #eaeaea !important; box-shadow: unset !important;}",
