@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -23,19 +14,19 @@
         "pill_MeF8DC": {
           "type": "pill",
           "settings": {
-            "text": "#1 distributor of <strong class=\"!text-[#304853] \">global</strong> brands"
+            "text": "#1 distributor of <strong class=\"!text-[#304853] \">global<\/strong> brands"
           }
         },
         "pill_fYYRVB": {
           "type": "pill",
           "settings": {
-            "text": "100% <strong>authentic </strong>distributors"
+            "text": "100% <strong>authentic <\/strong>distributors"
           }
         },
         "pill_knJYxH": {
           "type": "pill",
           "settings": {
-            "text": "<strong class=\"!text-[#304853]\">Trusted</strong> by 200+ clients"
+            "text": "<strong class=\"!text-[#304853]\">Trusted<\/strong> by 200+ clients"
           }
         },
         "pill_nEmDNz": {
@@ -61,12 +52,12 @@
       "name": "about-us-top",
       "settings": {
         "enable": true,
-        "desktop_image": "shopify://shop_images/Rectangle_34625276_cc953226-8155-4820-a983-348e25736042.png",
-        "mobile_image": "shopify://shop_images/Rectangle_34625240_224d5b5d-652f-4839-bbba-aaac0c7ea498.png",
+        "desktop_image": "shopify:\/\/shop_images\/Rectangle_34625276_cc953226-8155-4820-a983-348e25736042.png",
+        "mobile_image": "shopify:\/\/shop_images\/Rectangle_34625240_224d5b5d-652f-4839-bbba-aaac0c7ea498.png",
         "alt": "Beauty distributor hero image",
         "heading": "Your trusted beauty distributor partner",
         "location_text": "Headquartered in Delhi",
-        "body": "<p>From our roots in 2012 introducing Fini to India, to building HOK Makeup into a category leader, Kanvar Group has led premium beauty brand distribution. Our journey includes strategic launches of L.A. Girl, Milani, Revolution Beauty, and many more across India and Bangladesh.</p>",
+        "body": "<p>From our roots in 2012 introducing Fini to India, to building HOK Makeup into a category leader, Kanvar Group has led premium beauty brand distribution. Our journey includes strategic launches of L.A. Girl, Milani, Revolution Beauty, and many more across India and Bangladesh.<\/p>",
         "show_pills": true,
         "pt": 0,
         "pb": 40
@@ -141,7 +132,7 @@
         "subtext": "Subsidiary of Kanvar Group, HOK Distributor is serving both the professional and retail customers. We provide the ultimate shopping experience with unrivalled range, choice, value, convenience, service and expertise. We are proud to supply you with the world's top brands and always keep you in the know-how of latest trends.",
         "pills_heading": "We have a variety of essentials for :",
         "pills_note": "offering you a one-stop solution for fast-moving cosmetics",
-        "image": "shopify://shop_images/Rectangle_34625281_b6fd1c96-9bd1-4720-aba5-a769659d92d4.png",
+        "image": "shopify:\/\/shop_images\/Rectangle_34625281_b6fd1c96-9bd1-4720-aba5-a769659d92d4.png",
         "alt": "Face perfecting palette and blending brush",
         "pt": 0,
         "pb": 0,
@@ -158,48 +149,48 @@
           "type": "point",
           "settings": {
             "title": "Associating with HOK Makeup Distributor makes you authorized retail partner of",
-            "subtext": "<span class=\"text-[#757575] !text-[14px] not-italic font-[500] leading-normal\">  LA Girl, Revolution Beauty <span class=\"text-[#000]\">and </span>Wet n Wild.</span>"
+            "subtext": "<span class=\"text-[#757575] !text-[14px] not-italic font-[500] leading-normal\">  LA Girl, Revolution Beauty <span class=\"text-[#000]\">and <\/span>Wet n Wild.<\/span>"
           }
         },
         "point_JnVaNh": {
           "type": "point",
           "settings": {
-            "title": "<p>Shop directly from the authorized and exclusive importer and distributor in India.</p>",
+            "title": "<p>Shop directly from the authorized and exclusive importer and distributor in India.<\/p>",
             "subtext": ""
           }
         },
         "point_eMreRN": {
           "type": "point",
           "settings": {
-            "title": "<p>Easy access to international brands.</p>",
+            "title": "<p>Easy access to international brands.<\/p>",
             "subtext": ""
           }
         },
         "point_cXAiJK": {
           "type": "point",
           "settings": {
-            "title": "<p>Dedicated Support Manager for best services.</p>",
+            "title": "<p>Dedicated Support Manager for best services.<\/p>",
             "subtext": ""
           }
         },
         "point_pfJWRj": {
           "type": "point",
           "settings": {
-            "title": "<p>Free full-size product and brand displays for shops/salons.</p>",
+            "title": "<p>Free full-size product and brand displays for shops\/salons.<\/p>",
             "subtext": ""
           }
         },
         "point_Ynxin3": {
           "type": "point",
           "settings": {
-            "title": "<p>Helps you claim GST tax back.</p>",
+            "title": "<p>Helps you claim GST tax back.<\/p>",
             "subtext": ""
           }
         },
         "point_bBXd6i": {
           "type": "point",
           "settings": {
-            "title": "<p>20,000 sq. ft warehouse capacity with ~100 employees.</p>",
+            "title": "<p>20,000 sq. ft warehouse capacity with ~100 employees.<\/p>",
             "subtext": ""
           }
         }
@@ -231,7 +222,7 @@
         "logo_CmPTJX": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/23.png",
+            "logo": "shopify:\/\/shop_images\/23.png",
             "alt": "Focallure",
             "badge_bg": "#edeaff",
             "link": "",
@@ -241,7 +232,7 @@
         "logo_PzhQrG": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625277.png",
+            "logo": "shopify:\/\/shop_images\/Rectangle_34625277.png",
             "alt": "Koric",
             "badge_bg": "#dff6e5",
             "link": "",
@@ -251,7 +242,7 @@
         "logo_UfUehW": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625278.png",
+            "logo": "shopify:\/\/shop_images\/Rectangle_34625278.png",
             "alt": "Milani",
             "badge_bg": "#fde2e1",
             "link": "",
@@ -261,7 +252,7 @@
         "logo_ctGEeK": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/23.png",
+            "logo": "shopify:\/\/shop_images\/23.png",
             "alt": "Koric",
             "badge_bg": "#fff0bd",
             "link": "",
@@ -271,7 +262,7 @@
         "logo_XGm9Vj": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/23_9ec5b160-021a-432e-99eb-090299315cab.png",
+            "logo": "shopify:\/\/shop_images\/23_9ec5b160-021a-432e-99eb-090299315cab.png",
             "alt": "Dr. PAWPAW",
             "badge_bg": "#eef9d6",
             "link": "",
@@ -281,7 +272,7 @@
         "logo_XwGw39": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625278.png",
+            "logo": "shopify:\/\/shop_images\/Rectangle_34625278.png",
             "alt": "Focallure",
             "badge_bg": "#efefef",
             "link": "",
@@ -291,7 +282,7 @@
         "logo_rXHtty": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/23.png",
+            "logo": "shopify:\/\/shop_images\/23.png",
             "alt": "Koric",
             "badge_bg": "#fff0bd",
             "link": "",
@@ -301,7 +292,7 @@
         "logo_DT9Vdb": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625277_cc940bf1-a2c4-4d57-9687-69cd2ed8e1b2.png",
+            "logo": "shopify:\/\/shop_images\/Rectangle_34625277_cc940bf1-a2c4-4d57-9687-69cd2ed8e1b2.png",
             "alt": "Wet n Wild",
             "badge_bg": "#ddeeff",
             "link": "",
@@ -311,7 +302,7 @@
         "logo_M6eLra": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625277.png",
+            "logo": "shopify:\/\/shop_images\/Rectangle_34625277.png",
             "alt": "Milani",
             "badge_bg": "#ddebff",
             "link": "",
@@ -321,7 +312,7 @@
         "logo_h9DGtx": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625278.png",
+            "logo": "shopify:\/\/shop_images\/Rectangle_34625278.png",
             "alt": "Dr. PAWPAW",
             "badge_bg": "#eafad2",
             "link": "",
@@ -331,7 +322,7 @@
         "logo_NLmqjd": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/23_9ec5b160-021a-432e-99eb-090299315cab.png",
+            "logo": "shopify:\/\/shop_images\/23_9ec5b160-021a-432e-99eb-090299315cab.png",
             "alt": "Focallure",
             "badge_bg": "#eee6ff",
             "link": "",
@@ -341,7 +332,7 @@
         "logo_VmrAem": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625278.png",
+            "logo": "shopify:\/\/shop_images\/Rectangle_34625278.png",
             "alt": "Milani",
             "badge_bg": "#fde2e1",
             "link": "",
@@ -351,7 +342,7 @@
         "logo_YaafPj": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/23_9ec5b160-021a-432e-99eb-090299315cab.png",
+            "logo": "shopify:\/\/shop_images\/23_9ec5b160-021a-432e-99eb-090299315cab.png",
             "alt": "Focallure",
             "badge_bg": "#eee6ff",
             "link": "",
@@ -361,7 +352,7 @@
         "logo_yX68hh": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625277.png",
+            "logo": "shopify:\/\/shop_images\/Rectangle_34625277.png",
             "alt": "Koric",
             "badge_bg": "#dff6e5",
             "link": "",
@@ -371,7 +362,7 @@
         "logo_iAMwnm": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/23_9ec5b160-021a-432e-99eb-090299315cab.png",
+            "logo": "shopify:\/\/shop_images\/23_9ec5b160-021a-432e-99eb-090299315cab.png",
             "alt": "Focallure",
             "badge_bg": "#eee6ff",
             "link": "",
@@ -395,7 +386,7 @@
         "logo_YaafPj",
         "logo_yX68hh",
         "logo_iAMwnm"
-      ], 
+      ],
       "name": "Brand partners grid",
       "settings": {
         "heading": "Our Brand Partners",
@@ -411,7 +402,7 @@
         "pill_dnjNdp": {
           "type": "pill",
           "settings": {
-            "text": "marketing" 
+            "text": "marketing"
           }
         },
         "pill_nYwUim": {
@@ -488,16 +479,16 @@
         "margin_top_mobile": 20,
         "margin_bottom_mobile": 20,
         "heading": "Meet our team",
-        "body": "<p>We believe beauty is personal, powerful, and playful. And we make sure to bring you the latest trends and must-have products. Every shade, every product, every trend is chosen to help you shine ✨</p>",
-        "top_image_1": "shopify://shop_images/Rectangle_34625274.png",
+        "body": "<p>We believe beauty is personal, powerful, and playful. And we make sure to bring you the latest trends and must-have products. Every shade, every product, every trend is chosen to help you shine ✨<\/p>",
+        "top_image_1": "shopify:\/\/shop_images\/Rectangle_34625274.png",
         "top_image_1_alt": "Team photo 1",
-        "top_image_2": "shopify://shop_images/Rectangle_34625277uu.png",
+        "top_image_2": "shopify:\/\/shop_images\/Rectangle_34625277uu.png",
         "top_image_2_alt": "Team photo 2",
-        "desktop_image": "shopify://shop_images/Rectangle_34625279.png",
-        "mobile_image": "shopify://shop_images/Rectangle_34625279_d562f37e-ee3c-4dc1-927c-b10a23e53502.png",
+        "desktop_image": "shopify:\/\/shop_images\/Rectangle_34625279.png",
+        "mobile_image": "shopify:\/\/shop_images\/Rectangle_34625279_d562f37e-ee3c-4dc1-927c-b10a23e53502.png",
         "bottom_image_alt": "Group photo",
         "pills_heading": "We bring together",
-        "note": "<p>dedicated to ensuring seamless service for our partners.</p>",
+        "note": "<p>dedicated to ensuring seamless service for our partners.<\/p>",
         "pt": 40,
         "pb": 0,
         "notice": "All sales are final. In case of damaged items or discrepancies, please reach out within 48 hours of delivery for resolution."
