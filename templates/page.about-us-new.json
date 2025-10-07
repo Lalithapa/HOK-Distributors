@@ -228,62 +228,12 @@
     "about_us_brand_partners_logo_3Hby3T": {
       "type": "about-us-brand-partners-logo",
       "blocks": {
-        "logo_CmPTJX": {
+        "logo_NLmqjd": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/23.png",
+            "logo": "shopify://shop_images/Revollution_logo.png",
             "alt": "Focallure",
-            "badge_bg": "#edeaff",
-            "link": "",
-            "new_tab": true
-          }
-        },
-        "logo_PzhQrG": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625277.png",
-            "alt": "Koric",
-            "badge_bg": "#dff6e5",
-            "link": "",
-            "new_tab": true
-          }
-        },
-        "logo_UfUehW": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625278.png",
-            "alt": "Milani",
-            "badge_bg": "#fde2e1",
-            "link": "",
-            "new_tab": true
-          }
-        },
-        "logo_ctGEeK": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Ardell_logo.png",
-            "alt": "Koric",
-            "badge_bg": "#fff0bd",
-            "link": "",
-            "new_tab": true
-          }
-        },
-        "logo_XGm9Vj": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/23_9ec5b160-021a-432e-99eb-090299315cab.png",
-            "alt": "Dr. PAWPAW",
-            "badge_bg": "#eef9d6",
-            "link": "",
-            "new_tab": true
-          }
-        },
-        "logo_XwGw39": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Jessup_1_f92d8a36-86f5-4d95-bc31-a9e401e648ed.png",
-            "alt": "Focallure",
-            "badge_bg": "#efefef",
+            "badge_bg": "#ebe4ff",
             "link": "",
             "new_tab": true
           }
@@ -291,9 +241,9 @@
         "logo_rXHtty": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/LA_Girl.png",
+            "logo": "shopify://shop_images/Rectangle_34625311.png",
             "alt": "Koric",
-            "badge_bg": "#fff0bd",
+            "badge_bg": "#e4ffe9",
             "link": "",
             "new_tab": true
           }
@@ -301,9 +251,9 @@
         "logo_DT9Vdb": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Lamel_logo.png",
+            "logo": "shopify://shop_images/Rectangle_34625309.png",
             "alt": "Wet n Wild",
-            "badge_bg": "#ddeeff",
+            "badge_bg": "#ffe4e4",
             "link": "",
             "new_tab": true
           }
@@ -311,9 +261,79 @@
         "logo_M6eLra": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/LN_Pro_logo.png",
+            "logo": "shopify://shop_images/Rectangle_34625308_ef6835e5-4c0f-43cb-a495-769b162282d6.png",
             "alt": "Milani",
-            "badge_bg": "#ddebff",
+            "badge_bg": "#d5f0ff",
+            "link": "",
+            "new_tab": true
+          }
+        },
+        "logo_yX68hh": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/giverny.png",
+            "alt": "Koric",
+            "badge_bg": "#ffe4f1",
+            "link": "",
+            "new_tab": true
+          }
+        },
+        "logo_XwGw39": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Rectangle_34625312.png",
+            "alt": "Focallure",
+            "badge_bg": "#e6e6e6",
+            "link": "",
+            "new_tab": true
+          }
+        },
+        "logo_CmPTJX": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/adreell.png",
+            "alt": "Focallure",
+            "badge_bg": "#fff7ca",
+            "link": "",
+            "new_tab": true
+          }
+        },
+        "logo_PzhQrG": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/pinknew.png",
+            "alt": "Koric",
+            "badge_bg": "#e4f0ff",
+            "link": "",
+            "new_tab": true
+          }
+        },
+        "logo_UfUehW": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Rectangle_34625313.png",
+            "alt": "Milani",
+            "badge_bg": "#eeffca",
+            "link": "",
+            "new_tab": true
+          }
+        },
+        "logo_ctGEeK": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Rectangle_34625314.png",
+            "alt": "Koric",
+            "badge_bg": "#ffe3ca",
+            "link": "",
+            "new_tab": true
+          }
+        },
+        "logo_XGm9Vj": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Rectangle_34625277_ca9b88e1-e64e-4ec6-976d-cbc4433eb799.png",
+            "alt": "Dr. PAWPAW",
+            "badge_bg": "#ebe4ff",
             "link": "",
             "new_tab": true
           }
@@ -321,19 +341,9 @@
         "logo_h9DGtx": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Pinkflash_logo.png",
+            "logo": "shopify://shop_images/23.png",
             "alt": "Dr. PAWPAW",
-            "badge_bg": "#eafad2",
-            "link": "",
-            "new_tab": true
-          }
-        },
-        "logo_NLmqjd": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Revollution_logo.png",
-            "alt": "Focallure",
-            "badge_bg": "#eee6ff",
+            "badge_bg": "#e4ffe9",
             "link": "",
             "new_tab": true
           }
@@ -341,7 +351,7 @@
         "logo_VmrAem": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625278.png",
+            "logo": "shopify://shop_images/Rectangle_34625277_118e9ee8-b5a6-4616-8265-d07459fcb0d8.png",
             "alt": "Milani",
             "badge_bg": "#fde2e1",
             "link": "",
@@ -351,19 +361,9 @@
         "logo_YaafPj": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/23_9ec5b160-021a-432e-99eb-090299315cab.png",
+            "logo": "shopify://shop_images/Rectangle_34625277_561ff441-5124-44df-b9fd-603d14003a39.png",
             "alt": "Focallure",
-            "badge_bg": "#eee6ff",
-            "link": "",
-            "new_tab": true
-          }
-        },
-        "logo_yX68hh": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Rectangle_34625277.png",
-            "alt": "Koric",
-            "badge_bg": "#dff6e5",
+            "badge_bg": "#e6e6e6",
             "link": "",
             "new_tab": true
           }
@@ -373,27 +373,27 @@
           "settings": {
             "logo": "shopify://shop_images/23_9ec5b160-021a-432e-99eb-090299315cab.png",
             "alt": "Focallure",
-            "badge_bg": "#eee6ff",
+            "badge_bg": "#ffe4f1",
             "link": "",
             "new_tab": true
           }
         }
       },
       "block_order": [
+        "logo_NLmqjd",
+        "logo_rXHtty",
+        "logo_DT9Vdb",
+        "logo_M6eLra",
+        "logo_yX68hh",
+        "logo_XwGw39",
         "logo_CmPTJX",
         "logo_PzhQrG",
         "logo_UfUehW",
         "logo_ctGEeK",
         "logo_XGm9Vj",
-        "logo_XwGw39",
-        "logo_rXHtty",
-        "logo_DT9Vdb",
-        "logo_M6eLra",
         "logo_h9DGtx",
-        "logo_NLmqjd",
         "logo_VmrAem",
         "logo_YaafPj",
-        "logo_yX68hh",
         "logo_iAMwnm"
       ],
       "name": "Brand partners grid",
