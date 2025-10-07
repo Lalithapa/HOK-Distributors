@@ -9,35 +9,32 @@
     {% if section.settings.subtext != blank %}
       <div class="mt-[16px]  !text-[#717171]  !text-[18px] not-italic font-medium leading-normal mb-[24px] py-0 px-[15px] lg:py-0 lg:px-0">
         {{ section.settings.subtext }}
-      </div>
+      </div>  
     {% endif %}
-
     <div class="mt-8 lg:mt-10 !grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 lg:gap-x-[25px] gap-y-[20px] justify-center items-center lg:max-w-[85%] m-auto xl:mt-[40px]">
       {% for block in section.blocks %}
         {% if block.type == 'logo' %}
           <div class="rounded-[20px] w-[138px] h-[124px] xl:w-[180px] xl:h-[170px] 2xl:w-[212px] 2xl:h-[190px] flex items-center justify-center shadow-[inset_9px_7px_15px_-4px_#E6E6E6]  bg-[#fff]  p-5 md:p-7 transition-transform duration-200 group-hover:-translate-y-0.5 m-auto">    
                 {% if block.settings.logo != blank %}
+                  <div  class="w-[90px] h-auto lg:w-[124px] lg:h-[65px] md:h-[58px] rounded-[10px] px-[5px] py-0" style="background-color: {{ block.settings.badge_bg }};">
                   <img
                     src="{{ block.settings.logo | image_url: width: 124 }}"
                     alt="{{ block.settings.alt | escape }}"
-                    class="w-[88px] h-auto lg:w-[124px] lg:h-[70px] object-contain {% if section.settings.grayscale %}grayscale group-hover:grayscale-0 transition{% endif %}"
+                    class="w-[88px] h-auto lg:w-[124px] lg:h-[65px] object-contain {% if section.settings.grayscale %}grayscale group-hover:grayscale-0 transition{% endif %}"
                     loading="lazy"
                     width="100%"
-                    height="auto"
+                    height="auto" 
                     >
+                    </div>
                 {% else %}
                   <span class="text-xs text-gray-400">Upload logo</span>
-                {% endif %}
-             
+                {% endif %} 
             </div>
-
-       
         {% endif %}
       {% endfor %}
     </div>
   </div>
 </section>
-
 {% schema %}
 {
   "name": "Brand partners grid",
