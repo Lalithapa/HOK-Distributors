@@ -36,7 +36,7 @@
           "type": "msg",
           "settings": {
             "text": "Get Distributor offers on whatsapp —  Join channel",
-            "link": "https:\/\/whatsapp.com\/channel\/0029VbBWEYP4IBhAbhTLss2U",
+            "link": "https://whatsapp.com/channel/0029VbBWEYP4IBhAbhTLss2U",
             "audience": "all",
             "italic": false
           }
@@ -60,9 +60,9 @@
       "name": "Announcement login bar",
       "settings": {
         "cta_out_label": "Unlock discounted price — Sign in 30 seconds →",
-        "cta_out_link": "\/account",
+        "cta_out_link": "/account",
         "cta_in_label": "Buy UAE's best seller | Giverny gifting sets →",
-        "cta_in_link": "shopify:\/\/collections\/giverny"
+        "cta_in_link": "shopify://collections/giverny"
       }
     },
     "header": {
@@ -72,7 +72,7 @@
         "mobile_logo_position": "center",
         "menu": "navigation",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "always",
+        "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
