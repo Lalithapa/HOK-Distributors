@@ -605,6 +605,9 @@
   .\!h-auto {
     height: auto !important;
   }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
   .h-7 {
     height: calc(var(--spacing) * 7);
   }
@@ -625,6 +628,9 @@
   }
   .h-\[20px\] {
     height: 20px;
+  }
+  .h-\[22px\] {
+    height: 22px;
   }
   .h-\[25px\] {
     height: 25px;
@@ -683,6 +689,9 @@
   .w-4\/5 {
     width: calc(4/5 * 100%);
   }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
   .w-7 {
     width: calc(var(--spacing) * 7);
   }
@@ -712,6 +721,9 @@
   }
   .w-\[16\%\] {
     width: 16%;
+  }
+  .w-\[20px\] {
+    width: 20px;
   }
   .w-\[24px\] {
     width: 24px;
@@ -1414,6 +1426,9 @@
   }
   .px-\[4\.5px\] {
     padding-inline: 4.5px;
+  }
+  .px-\[5px\] {
+    padding-inline: 5px;
   }
   .px-\[6px\] {
     padding-inline: 6px;
@@ -2460,6 +2475,11 @@
       display: none;
     }
   }
+  .md\:h-\[58px\] {
+    @media (width >= 48rem) {
+      height: 58px;
+    }
+  }
   .md\:max-h-\[430px\] {
     @media (width >= 48rem) {
       max-height: 430px;
@@ -2742,9 +2762,9 @@
       height: 60px;
     }
   }
-  .lg\:h-\[70px\] {
+  .lg\:h-\[65px\] {
     @media (width >= 64rem) {
-      height: 70px;
+      height: 65px;
     }
   }
   .lg\:min-h-\[44px\] {
@@ -3432,9 +3452,49 @@
       width: 180px;
     }
   }
+  .xl\:w-\[calc\(100\%-33px\)\] {
+    @media (width >= 80rem) {
+      width: calc(100% - 33px);
+    }
+  }
   .xl\:grid-cols-5 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+  .xl\:\!pr-\[2\.5rem\] {
+    @media (width >= 80rem) {
+      padding-right: 2.5rem !important;
+    }
+  }
+  .xl\:pr-\[2\.5rem\] {
+    @media (width >= 80rem) {
+      padding-right: 2.5rem;
+    }
+  }
+  .xl\:pr-\[20px\] {
+    @media (width >= 80rem) {
+      padding-right: 20px;
+    }
+  }
+  .xl\:\!pl-\[2\.5rem\] {
+    @media (width >= 80rem) {
+      padding-left: 2.5rem !important;
+    }
+  }
+  .xl\:pl-\[2\.5rem\] {
+    @media (width >= 80rem) {
+      padding-left: 2.5rem;
+    }
+  }
+  .xl\:pl-\[20px\] {
+    @media (width >= 80rem) {
+      padding-left: 20px;
+    }
+  }
+  .xl\:pl-\[33px\] {
+    @media (width >= 80rem) {
+      padding-left: 33px;
     }
   }
   .xl\:text-\[56px\] {

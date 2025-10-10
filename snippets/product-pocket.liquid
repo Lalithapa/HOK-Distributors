@@ -8,7 +8,7 @@ endif
 %}
 <!-- Product Pocket Card -->
 <div class="h-full relative bg-white rounded-2xl shadow-md overflow-hidden{% unless collection_card %} max-w-[360px] box-shadow-pocket{% endunless %}">
-  <div class="wishlist-engine absolute right-[10px] top-[10px] z-[2]" data-product_id="{{ product.id }}" data-variant_id="{{ product.selected_or_first_available_variant.id }}" data-full_button="false" data-css="true"></div>
+  <div class="wishlist-engine absolute right-[10px] top-[10px] z-[2]" data-product_id="{{ card_product.id }}" data-variant_id="{{ card_product.selected_or_first_available_variant.id }}" data-full_button="false" data-css="true"></div>
   <a href="{% if customer %}{{ card_product.url }}{% else %}/account{% endif %}" aria-label="{{ card_product.title | escape }}">
     <!-- Top: bundle visuals -->
     <div class="image-container">
