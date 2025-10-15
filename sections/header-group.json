@@ -17,7 +17,7 @@
         "msg_ULV9wP": {
           "type": "msg",
           "settings": {
-            "text": "We focus on growing your profits",
+            "text": "<p>We focus on growing your profits</p>",
             "link": "#",
             "audience": "all",
             "italic": false
@@ -26,7 +26,7 @@
         "msg_7JiedL": {
           "type": "msg",
           "settings": {
-            "text": "4+1 Free on Every Order",
+            "text": "<p>4+1 Free on Every Order</p>",
             "link": "#",
             "audience": "all",
             "italic": false
@@ -35,7 +35,7 @@
         "msg_ygihDB": {
           "type": "msg",
           "settings": {
-            "text": "Get Distributor offers on whatsapp —  Join channel",
+            "text": "<p>Get Distributor offers on whatsapp —  <em>Join channel</em></p>",
             "link": "https://whatsapp.com/channel/0029VbBWEYP4IBhAbhTLss2U",
             "audience": "all",
             "italic": false
@@ -44,7 +44,7 @@
         "msg_FGTY9Y": {
           "type": "msg",
           "settings": {
-            "text": "Free delivery-Pan India",
+            "text": "<p>Free delivery-Pan India</p>",
             "link": "#",
             "audience": "all",
             "italic": false
