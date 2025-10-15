@@ -80,7 +80,9 @@
 }
 
 /* base */
-
+.whitespace-nowrap a p em{
+  text-decoration: underline;
+}
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
