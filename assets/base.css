@@ -2786,10 +2786,10 @@ input[type='checkbox'] {
   height: 100%;
 }
 
-.header__icon .svg-wrapper {
+/* .header__icon .svg-wrapper {
   width: 44px;
   height: 44px;
-}
+} */
 .header__icon .svg-wrapper .new-cart-icon {
   width: 27px;
   height: 27px;
