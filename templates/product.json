@@ -57,9 +57,10 @@
         },
         "offers_zQQPAw": {
           "type": "offers",
+          "disabled": true,
           "settings": {
-            "custom_rich_text_offer": "<ul><li>Free Eyeliner on orders over ₹799<\/li><li>Free Eyeliner and Liquid Lipstick on orders over ₹1499<\/li><\/ul>",
-            "custom_image": "shopify:\/\/shop_images\/call_1.png"
+            "custom_rich_text_offer": "<ul><li>Free Eyeliner on orders over ₹799</li><li>Free Eyeliner and Liquid Lipstick on orders over ₹1499</li></ul>",
+            "custom_image": "shopify://shop_images/call_1.png"
           }
         },
         "product_detail_BeDLAW": {
