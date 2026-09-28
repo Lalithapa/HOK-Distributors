@@ -1,10 +1,10 @@
 <div class="product-details">
   <h3 class="text-[#000] !text-[14px] font-semibold  not-italic  leading-normal">Product Details</h3>
 
-  <p class="text-[#606060] text-[12px]">
+  {% comment %} <p class="text-[#606060] text-[12px]">
     <span class="text-[#171717] font-semibold">Shade</span><br>
     {{ product.metafields.custom.product_shade }}
-  </p>
+  </p> {% endcomment %}
 
   <div id="more-details" class="hidden">
     {% comment %} {% if product.metafields.custom.custom_formulation %}
@@ -61,15 +61,15 @@
         <span class="text-[#171717] font-semibold">Country of origin :</span>
         {{ product.metafields.custom.product_country_of_origin }}
       </p>
-    {% endif %}
-
+    {% endif %}{% endcomment %}
+    {{ product.description  | remove: 'DESCRIPTION'}}
     {% if product.metafields.custom.product_return_policy %}
       <p class="text-[#606060] text-[12px]">
         <span class="text-[#171717] font-semibold">Return policy</span><br>
         {{ product.metafields.custom.product_return_policy }}
       </p>
-    {% endif %} {% endcomment %}
-     {{ product.description  | remove: 'DESCRIPTION'}}
+    {% endif %} 
+    
   </div>
 
   {% comment %}
