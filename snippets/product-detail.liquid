@@ -7,7 +7,7 @@
   </p>
 
   <div id="more-details" class="hidden">
-    {% if product.metafields.custom.custom_formulation %}
+    {% comment %} {% if product.metafields.custom.custom_formulation %}
       <p class="text-[#606060] text-[12px]">
         <span class="text-[#171717] font-semibold">Formulation</span><br>
         {{ product.metafields.custom.custom_formulation }}
@@ -68,7 +68,8 @@
         <span class="text-[#171717] font-semibold">Return policy</span><br>
         {{ product.metafields.custom.product_return_policy }}
       </p>
-    {% endif %}
+    {% endif %} {% endcomment %}
+     {{ product.description }}
   </div>
 
   {% comment %}
