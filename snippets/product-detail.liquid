@@ -69,7 +69,7 @@
         {{ product.metafields.custom.product_return_policy }}
       </p>
     {% endif %} {% endcomment %}
-     {{ product.description }}
+     {{ product.description  | remove: 'description'}}
   </div>
 
   {% comment %}
