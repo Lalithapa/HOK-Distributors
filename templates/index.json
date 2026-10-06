@@ -119,7 +119,7 @@
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 12,
         "heading": "New items",
-        "collection": "all-products",
+        "collection": "new-arrivals",
         "products_to_show": 7,
         "section_bg": "bg-white",
         "navigation": false,
